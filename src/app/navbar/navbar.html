@@ -1,0 +1,94 @@
+<nav class="w-full bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Left: Logo -->
+            <div class="flex items-center gap-3">
+                <img src="/logo.png" alt="Superdry Logo" class="h-70 w-auto">
+            </div>
+
+            <!-- Center: Menu (Desktop) -->
+            <ul class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-800">
+                <li><a href="#" class="hover:text-[#05266e]">About Us</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">Products and Services</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">Knowledge Center</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">CSR</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">Events</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">Media</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">Video</a></li>
+                <li><a href="#" class="hover:text-[#05266e]">Office Network</a></li>
+            </ul>
+
+            <!-- Right: CTA + Icons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#"
+                    class="bg-[#05266e] text-white px-5 py-2 text-sm font-semibold hover:bg-[#001030] transition">
+                    CONTACT US →
+                </a>
+
+                <button class="text-gray-700 hover:text-[#05266e]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+
+                <button class="text-gray-700 hover:text-[#05266e]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 010 20a15.3 15.3 0 010-20z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="lg:hidden text-gray-700 hover:text-[#05266e] transition" (click)="isOpen = !isOpen"
+                aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
+<div
+  class="lg:hidden overflow-hidden transition-all duration-300 ease-in-out
+         bg-white border-t"
+  [class.max-h-0]="!isOpen"
+  [class.max-h-[500px]]="isOpen"
+  [class.opacity-0]="!isOpen"
+  [class.opacity-100]="isOpen"
+>
+  <ul
+    class="flex flex-col px-6 py-4 gap-4 text-sm font-medium
+           transform transition-transform duration-300 ease-in-out"
+    [class.-translate-y-4]="!isOpen"
+    [class.translate-y-0]="isOpen"
+  >
+    <li><a href="#" class="hover:text-[#05266e]">About Us</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">Products and Services</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">Knowledge Center</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">CSR</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">Events</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">Media</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">Video</a></li>
+    <li><a href="#" class="hover:text-[#05266e]">Office Network</a></li>
+
+    <a
+      href="#"
+      class="mt-2 bg-[#05266e] text-white px-4 py-2 text-center font-semibold"
+    >
+      CONTACT US →
+    </a>
+  </ul>
+</div>
+
+</nav>
