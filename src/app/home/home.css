@@ -91,3 +91,12 @@ input#img-3:checked ~ .carousel-dots label[for="img-3"] {
     'GRAD' 0,
     'opsz' 48;                   /* VERY IMPORTANT */
 }
+
+
+.clip-left {
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.clip-right {
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+}

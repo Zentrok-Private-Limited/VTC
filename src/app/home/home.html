@@ -1,20 +1,96 @@
-<!-- hero section start  -->
-<swiper-container class="h-[350px] md:h-[450px]" slides-per-view="1" loop="true" autoplay-delay="4000" navigation="true"
-    pagination="true">
-    <swiper-slide>
-        <img src="/banner1.png" class="w-full h-full object-cover" />
-    </swiper-slide>
+<!-- hero section start -->
+<header class="relative w-full h-[420px] sm:h-[520px] md:h-[620px] lg:h-[720px] overflow-hidden">
 
-    <swiper-slide>
-        <img src="/banner2.png" class="w-full h-full object-cover" />
-    </swiper-slide>
+  <!-- Background slides -->
+  <div
+    class="absolute inset-0 transition-opacity duration-700 pointer-events-none"
+    *ngFor="let slide of heroSlides; let i = index"
+    [class.opacity-100]="i === heroIndex"
+    [class.opacity-0]="i !== heroIndex"
+  >
+    <img
+      [src]="slide.bg"
+      class="w-full h-full object-cover scale-110 blur-2xl"
+      alt=""
+    />
+  </div>
 
-    <swiper-slide>
-        <img src="/banner3.png" class="w-full h-full object-cover" />
-    </swiper-slide>
-</swiper-container>
+  <!-- Foreground images -->
+  <div class="relative z-10 flex items-center justify-center h-full px-4">
+    <div
+      class="relative
+             w-full max-w-[1200px]
+             h-[220px] sm:h-[260px] md:h-[320px] lg:h-[370px]"
+    >
 
-<!-- hero section end  -->
+      <!-- Left image -->
+      <img
+        [src]="heroSlides[heroIndex].left"
+        class="absolute left-0 sm:left-4 top-0
+               w-[60%] sm:w-[55%]
+               h-full object-cover
+               clip-left transition-all duration-700
+               shadow-2xl"
+        alt=""
+      />
+
+      <!-- Right image -->
+      <img
+        [src]="heroSlides[heroIndex].right"
+        class="absolute right-0 sm:right-4
+               top-6 sm:top-8
+               w-[60%] sm:w-[55%]
+               h-full object-cover
+               clip-right transition-all duration-700
+               shadow-2xl"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="absolute top-6 sm:top-10 w-full text-center z-20 px-4">
+    <h1 class="text-white text-xl sm:text-2xl md:text-4xl font-semibold tracking-wide">
+      {{ heroSlides[heroIndex].title }}
+    </h1>
+  </div>
+
+  <!-- Prev / Next buttons -->
+  <button
+    (click)="prevHero()"
+    class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2
+           bg-black/50 hover:bg-black/70 text-white
+           w-9 h-9 sm:w-10 sm:h-10
+           rounded-full flex items-center justify-center
+           z-30">
+    ‹
+  </button>
+
+  <button
+    (click)="nextHero()"
+    class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2
+           bg-black/50 hover:bg-black/70 text-white
+           w-9 h-9 sm:w-10 sm:h-10
+           rounded-full flex items-center justify-center
+           z-30">
+    ›
+  </button>
+
+  <!-- Pagination dots -->
+  <div class="absolute bottom-6 sm:bottom-10 w-full flex justify-center gap-3 z-20">
+    <span
+      *ngFor="let slide of heroSlides; index as i"
+      (click)="goToHero(i)"
+      class="w-2.5 h-2.5 sm:w-3 sm:h-3
+             rounded-full cursor-pointer transition"
+      [class.bg-white]="i === heroIndex"
+      [class.bg-white/40]="i !== heroIndex">
+    </span>
+  </div>
+
+</header>
+<!-- hero section end -->
+ 
 <!-- about section start -->
 <section class="about py-12">
     <div class="max-w-7xl mx-auto px-4">
@@ -211,7 +287,7 @@
 
 
 <div class="py-5">
-    <img src="banner1.png" alt="" class="w-full h-100 object-cover">
+    <img src="banner3.png" alt="" class="w-full h-100 object-cover">
 </div>
 
 <!-- desktop view  -->

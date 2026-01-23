@@ -5,12 +5,11 @@ import {
   QueryList,
   ViewChildren,
   Inject,
-  PLATFORM_ID, CUSTOM_ELEMENTS_SCHEMA
+  PLATFORM_ID,
+  CUSTOM_ELEMENTS_SCHEMA
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-// hero.component.ts
-import { register } from 'swiper/element/bundle';
-register(); 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -21,121 +20,148 @@ register();
 })
 export class Home implements AfterViewInit {
 
+  /* ---------------- COUNTER ---------------- */
   @ViewChildren('counter') counters!: QueryList<ElementRef<HTMLElement>>;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
 
-    // 🔒 IMPORTANT: Browser check
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const target = Number(el.getAttribute('data-target'));
+          this.animateCounter(el, target);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.6 });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target as HTMLElement;
-            const target = Number(el.getAttribute('data-target'));
-            this.animateCounter(el, target);
-            observer.unobserve(el);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    this.counters.forEach(counter =>
-      observer.observe(counter.nativeElement)
-    );
+    this.counters.forEach(c => observer.observe(c.nativeElement));
   }
 
   private animateCounter(el: HTMLElement, target: number) {
-    let current = 0;
-    const duration = 1200;
     const start = performance.now();
+    const duration = 1200;
 
     const update = (time: number) => {
       const progress = Math.min((time - start) / duration, 1);
-      const value = Math.floor(progress * target);
-      el.innerText = value.toLocaleString();
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      } else {
-        el.innerText = target.toLocaleString();
-      }
+      el.innerText = Math.floor(progress * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(update);
     };
 
     requestAnimationFrame(update);
   }
 
-   currentIndex = 0;
+  /* ---------------- HERO SLIDER ---------------- */
+  /* ================= HERO SLIDER ================= */
 
-  slides = [
+  heroIndex = 0;
+
+  heroSlides = [
     {
-      image: '/process1.png',
-      caption: 'Welcome to Venice',
-      description: 'A breathtaking view of the mountains during sunrise.'
+      bg: '/banner1.png',
+      left: 'banner2.png',
+      right: 'banner3.png',
+      title: 'Advanced Moisture Protection'
     },
     {
-      image: '/process2.png',
-      caption: 'Packaging',
-      description: 'A serene forest path surrounded by tall trees.'
+      bg: 'banner2.png',
+      left: 'banner3.png',
+      right: 'banner1.png',
+      title: 'Engineered for Global Shipping'
     },
     {
-      image: '/process3.png',
-      caption: 'Shipping',
-      description: 'A sunny beach with golden sand and clear blue water.' 
-    },
-    {
-      image: '/process4.png',
-      caption: 'Retail',
-      description: 'A sunny beach with golden sand and clear blue water.' 
+      bg: 'banner3.png',
+      left: 'banner2.png',
+      right: 'banner3.png',
+      title: 'Engineered for Global Shipping'
     }
   ];
 
-  prev() {
+  prevHero() {
+    console.log('Prev hero clicked');
+    this.heroIndex =
+      this.heroIndex === 0 ? this.heroSlides.length - 1 : this.heroIndex - 1;
+  }
+
+
+  nextHero() {
+    this.heroIndex =
+      (this.heroIndex + 1) % this.heroSlides.length;
+  }
+
+  goToHero(index: number) {
+    this.heroIndex = index;
+  }
+
+
+  /* ================= MOBILE CAROUSEL ================= */
+
+  currentIndex = 0;
+
+  slides = [
+    { image: '/process1.png', caption: 'Production', description: 'Moisture protection starts at source.' },
+    { image: '/process2.png', caption: 'Packaging', description: 'Humidity controlled inside packaging.' },
+    { image: '/process3.png', caption: 'Shipping', description: 'Prevents container rain & sweat.' },
+    { image: '/process4.png', caption: 'Retail', description: 'Dry & damage-free delivery.' }
+  ];
+
+  prevSlide() {
     this.currentIndex =
       this.currentIndex === 0 ? this.slides.length - 1 : this.currentIndex - 1;
   }
 
-  next() {
+  nextSlide() {
     this.currentIndex =
-      this.currentIndex === this.slides.length - 1 ? 0 : this.currentIndex + 1;
+      (this.currentIndex + 1) % this.slides.length;
   }
 
-  goTo(index: number) {
+  goToSlide(index: number) {
     this.currentIndex = index;
   }
 
+
+  /* ================= SAFETY ALIAS (IMPORTANT) ================= */
+  /* Ye error ko permanently khatam karega,
+     chahe HTML me kahin bhi purana code reh jaye */
+
+  prev() {
+    this.prevSlide();
+  }
+
+  next() {
+    this.nextSlide();
+  }
+
+  goTo(index: number) {
+    this.goToSlide(index);
+  }
+  /* ---------------- FAQ ---------------- */
   activeIndex: number | null = null;
 
   faqs = [
     {
-      question: 'Advanced Moisture Control.',
-      answer: 'Our solutions actively remove and lock moisture inside packaging and containers, reducing humidity to safe levels and protecting goods from mold, corrosion, and condensation.'
+      question: 'Advanced Moisture Control',
+      answer: 'Actively removes moisture to protect goods from mold and corrosion.'
     },
     {
-      question: 'High-Performance Desiccants.',
-      answer: 'Yes, CodePen offers a free plan along with a Pro plan for advanced features.'
+      question: 'High-Performance Desiccants',
+      answer: 'Engineered to absorb multiple times their weight in moisture.'
     },
     {
-      question: 'Can I share my pens?',
-      answer: 'Engineered for superior absorption — our desiccants can absorb many times their weight in moisture and remain effective across a wide range of temperatures and environments.'
+      question: 'Comprehensive Protection Strategy',
+      answer: 'Risk analysis, optimized placement, and ongoing support.'
     },
     {
-      question: 'Comprehensive Protection Strategys.',
-      answer: 'We don’t just sell products — we provide a complete moisture prevention approach that includes risk identification, optimized desiccant application, and ongoing support.'
+      question: 'Trusted by Global Leaders',
+      answer: 'Used worldwide across industries and supply chains.'
     },
     {
-      question: 'Trusted by Global Leaders.',
-      answer: 'Our solutions are relied on by major brands and industries worldwide to keep their goods dry, safe, and free from damage during transport and long-term storage.'
-    },
-    {
-      question: 'Quality & Compliance.',
-      answer: 'We adhere to strict quality standards, ensuring our products meet international safety and performance regulations.'
+      question: 'Quality & Compliance',
+      answer: 'Meets international safety and performance standards.'
     }
   ];
 
@@ -143,4 +169,3 @@ export class Home implements AfterViewInit {
     this.activeIndex = this.activeIndex === index ? null : index;
   }
 }
-
