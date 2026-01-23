@@ -109,4 +109,38 @@ export class Home implements AfterViewInit {
   goTo(index: number) {
     this.currentIndex = index;
   }
+
+  activeIndex: number | null = null;
+
+  faqs = [
+    {
+      question: 'Advanced Moisture Control.',
+      answer: 'Our solutions actively remove and lock moisture inside packaging and containers, reducing humidity to safe levels and protecting goods from mold, corrosion, and condensation.'
+    },
+    {
+      question: 'High-Performance Desiccants.',
+      answer: 'Yes, CodePen offers a free plan along with a Pro plan for advanced features.'
+    },
+    {
+      question: 'Can I share my pens?',
+      answer: 'Engineered for superior absorption — our desiccants can absorb many times their weight in moisture and remain effective across a wide range of temperatures and environments.'
+    },
+    {
+      question: 'Comprehensive Protection Strategys.',
+      answer: 'We don’t just sell products — we provide a complete moisture prevention approach that includes risk identification, optimized desiccant application, and ongoing support.'
+    },
+    {
+      question: 'Trusted by Global Leaders.',
+      answer: 'Our solutions are relied on by major brands and industries worldwide to keep their goods dry, safe, and free from damage during transport and long-term storage.'
+    },
+    {
+      question: 'Quality & Compliance.',
+      answer: 'We adhere to strict quality standards, ensuring our products meet international safety and performance regulations.'
+    }
+  ];
+
+  toggleFaq(index: number) {
+    this.activeIndex = this.activeIndex === index ? null : index;
+  }
 }
+
