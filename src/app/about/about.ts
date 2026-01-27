@@ -14,9 +14,9 @@ export class About implements OnInit, OnDestroy {
   intervalId: any;
 
   banners = [
-    { image: '/banner1.png', title: 'First Banner' },
-    { image: '/banner2.png', title: 'Second Banner' },
-    { image: '/banner3.png', title: 'Third Banner' }
+    { image: '/banner1.png', title: 'Delivering innovative moisture protection solutions backed by expertise, reliability, and trust.' },
+    { image: '/banner2.png', title: 'Committed to protecting product value through advanced technology and industry-focused solutions.' },
+    { image: '/banner3.png', title: 'Combining innovation, experience, and service to prevent moisture damage across the supply chain.' }
   ];
 
   constructor(private zone: NgZone) {}
