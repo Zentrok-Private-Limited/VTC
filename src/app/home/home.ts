@@ -54,8 +54,6 @@ export class Home implements AfterViewInit {
 
     requestAnimationFrame(update);
   }
-
-  /* ---------------- HERO SLIDER ---------------- */
   /* ================= HERO SLIDER ================= */
 
   heroIndex = 0;
@@ -168,4 +166,5 @@ export class Home implements AfterViewInit {
   toggleFaq(index: number) {
     this.activeIndex = this.activeIndex === index ? null : index;
   }
+  activeSolution: 'box' | 'container' = 'box';
 }
