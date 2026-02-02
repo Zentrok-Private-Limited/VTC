@@ -200,62 +200,56 @@
 <!-- A complete system of protection  start-->
 
 <section class="py-10">
-  <div class="max-w-5xl mx-auto px-4">
+    <div class="max-w-5xl mx-auto px-4">
 
-    <!-- Header -->
-    <div class="mb-16 text-center">
-      <h2 class="text-4xl font-bold text-blue-900">
-        Moisture Protection
-        <span class="text-blue-600"> Solutions</span>
-      </h2>
+        <!-- Header -->
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl font-bold text-blue-900">
+                Moisture Protection
+                <span class="text-blue-600"> Solutions</span>
+            </h2>
 
-      <!-- Button Switch -->
-      <div class="flex justify-center mt-10">
-        <div class="flex gap-3">
+            <!-- Button Switch -->
+            <div class="flex justify-center mt-10">
+                <div class="flex gap-3">
 
-          <button
-            (click)="activeSolution = 'box'"
-            [ngClass]="activeSolution === 'box'
-              ? 'bg-black text-white'
+                    <button (click)="activeSolution = 'box'" [ngClass]="activeSolution === 'box'
+              ? 'bg-[#05266e] text-white'
               : 'bg-white text-black border border-gray-300'"
-            class="px-8 py-3 text-sm font-semibold rounded-full transition"
-          >
-            In-Box Desiccants
-          </button>
+                        class="px-8 py-3 text-sm font-semibold rounded-full transition">
+                        In-Box Desiccants
+                    </button>
 
-          <button
-            (click)="activeSolution = 'container'"
-            [ngClass]="activeSolution === 'container'
-              ? 'bg-black text-white'
+                    <button (click)="activeSolution = 'container'" [ngClass]="activeSolution === 'container'
+              ? 'bg-[#05266e] text-white'
               : 'bg-white text-black border border-gray-300'"
-            class="px-8 py-3 text-sm font-semibold rounded-full transition"
-          >
-            Container Desiccants
-          </button>
+                        class="px-8 py-3 text-sm font-semibold rounded-full transition">
+                        Container Desiccants
+                    </button>
 
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mt-6 max-w-2xl mx-auto text-gray-700">
+
+                <!-- In-Box -->
+                <p *ngIf="activeSolution === 'box'">
+                    Built to absorb excess moisture inside poly bags, cartons, boxes, and small
+                    packages. In-Box Desiccants help maintain safe humidity levels and protect
+                    products from mold, mildew, corrosion, and caking during storage and transit.
+                </p>
+
+                <!-- Container -->
+                <p *ngIf="activeSolution === 'container'">
+                    Designed specifically for ocean containers, Container Desiccants prevent
+                    container rain and cargo sweat. They help protect bulk goods, garments,
+                    agricultural produce, and industrial cargo from moisture-related damage.
+                </p>
+
+            </div>
         </div>
-      </div>
-
-      <!-- Description -->
-      <div class="mt-6 max-w-2xl mx-auto text-gray-700">
-
-        <!-- In-Box -->
-        <p *ngIf="activeSolution === 'box'">
-          Built to absorb excess moisture inside poly bags, cartons, boxes, and small
-          packages. In-Box Desiccants help maintain safe humidity levels and protect
-          products from mold, mildew, corrosion, and caking during storage and transit.
-        </p>
-
-        <!-- Container -->
-        <p *ngIf="activeSolution === 'container'">
-          Designed specifically for ocean containers, Container Desiccants prevent
-          container rain and cargo sweat. They help protect bulk goods, garments,
-          agricultural produce, and industrial cargo from moisture-related damage.
-        </p>
-
-      </div>
     </div>
-  </div>
 </section>
 
 
@@ -379,61 +373,64 @@
     </div>
 </div>
 <!-- mobile view end -->
- <!-- A complete system of protection  end-->
-  <!-- Certified start -->
- <!-- <section class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
-      Why this is our best ever Routine?
-    </h2>
-    <p class="text-gray-600 max-w-2xl mx-auto mb-14">
-      You can directly select what you are looking for and we will hook you with the right product line.
-    </p>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 items-center">
-      <div class="flex flex-col items-center gap-3">
-        <span class="material-symbols-outlined text-5xl text-black">
-          eco
-        </span>
-        <p class="text-sm font-medium text-gray-800">
-          Vegan Certified
+<!-- A complete system of protection  end-->
+<!-- Certified start -->
+<section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3">
+            Why this is our best ever Routine?
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-14">
+            You can directly select what you are looking for and we will hook you with the right product line.
         </p>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <span class="text-4xl font-serif italic text-black">
-          fssai
-        </span>
-        <p class="text-sm font-medium text-gray-800">
-          FSSAI
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <span class="material-symbols-outlined text-5xl text-black">
-          medication
-        </span>
-        <p class="text-sm font-medium text-gray-800">
-          Food Supplement
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <span class="material-symbols-outlined text-5xl text-black">
-          grain
-        </span>
-        <p class="text-sm font-medium text-gray-800">
-          Gluten-Free
-        </p>
-      </div>
-      <div class="flex flex-col items-center gap-3">
-        <span class="material-symbols-outlined text-5xl text-black">
-          verified
-        </span>
-        <p class="text-sm font-medium text-gray-800">
-          Non GMO
-        </p>
-      </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 items-center">
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-5xl text-black">
+                    eco
+                </span>
+                <p class="text-sm font-medium text-gray-800">
+                    Vegan Certified
+                </p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-5xl text-black">
+                    description
+                </span>
+                <p class="text-sm font-medium text-gray-800">
+                    DMF Compliant
+                </p>
+            </div>
 
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-6xl text-black">
+                    verified
+                </span>
+                <p class="text-sm font-medium text-gray-800">
+                    RoHS Certified
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-5xl text-black">
+                    flag
+                </span>
+                <p class="text-sm font-medium text-gray-800">
+                    Made in India
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-5xl text-black">
+                    verified
+                </span>
+                <p class="text-sm font-medium text-gray-800">
+                    Non GMO
+                </p>
+            </div>
+
+        </div>
     </div>
-  </div>
-</section> -->
+</section>
 <!-- certified end   -->
 
 <!-- why vtc faqs start   -->

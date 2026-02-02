@@ -1,0 +1,68 @@
+<div class="about md:h-40">
+  <h2 class="text-blue-900 text-2xl p-5 font-bold md:pt-30 md:ps-15">Products and Services</h2>
+</div>
+<div class="md:px-15">
+  <h1 class="text-3xl md:mt-5 font-bold">Incubic</h1>
+</div>
+<section class="py-5">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+
+      <!-- Content -->
+      <div class="md:col-span-7">
+        <hr class="border-gray-300 mb-6">
+
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Calcium-Based Desiccants</strong> are high-performance moisture absorbers made primarily
+          from <strong>calcium chloride (CaCl₂)</strong>. They work by absorbing moisture from the air and converting it
+          into a
+          liquid or gel form, making them highly effective in high-humidity environments. Compared to
+          traditional silica gel, calcium-based desiccants offer much higher moisture absorption capacity.
+          They are commonly used in in-box packaging for electronics, pharmaceuticals, garments, food
+          packaging, and other moisture-sensitive products to protect them from humidity damage.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-4">
+          One of the key advantages of calcium-based desiccants is their ability to provide <strong>long-lasting
+            moisture control</strong>, even during sea freight, long-term storage, and humid climate conditions. These
+          desiccants are designed with leak-proof packaging to safely contain absorbed moisture. Because of
+          their strong and reliable performance, they are widely used in logistics, export packaging, and
+          industrial applications to prevent corrosion, mold growth, and product deterioration.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="md:col-span-5 flex justify-center">
+        <img src="/banner2.png" alt="VIMS Techno Crafts In-Box Desiccants" class="w-full max-w-md ">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-5 mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-3 mb-20 gap-8">
+
+    <a *ngFor="let c of categories" [routerLink]="[
+        '/in-box-desiccants',
+        'incubic',
+        c.slug
+      ]" class="group border border-gray-200 rounded-2xl p-8 text-center
+             transition-all duration-300
+             hover:shadow-xl hover:-translate-y-2 bg-white">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        {{ c.name }}
+      </h3>
+
+      <!-- CTA BUTTON -->
+      <span class="inline-flex items-center justify-center mt-6 px-6 py-2
+               rounded-full border border-black
+               text-black font-semibold text-sm
+               transition-all duration-300
+               group-hover:bg-black group-hover:text-white">
+        View Products →
+      </span>
+    </a>
+
+  </div>
+</div>

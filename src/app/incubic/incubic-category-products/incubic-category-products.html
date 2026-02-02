@@ -1,0 +1,43 @@
+<div class="about md:h-40">
+  <h2 class="text-blue-900 text-2xl p-5 font-bold md:pt-30 md:ps-15">Products and Services</h2>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-12">
+
+  <!-- Breadcrumb (optional but recommended) -->
+  <!-- <app-breadcrumb /> -->
+
+  <h1 class="text-3xl font-semibold mb-8">
+    {{ category?.name }}
+  </h1>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <a
+      *ngFor="let p of category?.products"
+      [routerLink]="[
+        '/in-box-desiccants',
+        'incubic',
+        category.slug,
+        p.slug
+      ]"
+      class="group border rounded-xl p-6
+             hover:shadow-xl transition"
+    >
+      <h3 class="text-xl font-semibold mb-2">
+        {{ p.name }}
+      </h3>
+
+      <p class="text-gray-600 text-sm">
+        {{ p.shortDesc }}
+      </p>
+
+      <span
+        class="inline-block mt-4 text-sm font-medium
+               group-hover:underline"
+      >
+        View Details →
+      </span>
+    </a>
+
+  </div>
+</div>

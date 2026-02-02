@@ -1,86 +1,150 @@
 <nav class="w-full bg-white border-b fixed z-50">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex items-center justify-between h-19">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
 
-            <!-- Left: Logo -->
-            <div class="flex items-center">
-                <a href="/"><img src="/logo2.png" alt="Superdry Logo" class="h-10 w-auto"></a>
-            </div>
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center">
+        <img src="/logo2.png" alt="Logo" class="h-10 w-auto">
+      </a>
 
-            <!-- Center: Menu (Desktop) -->
-            <ul class="hidden lg:flex items-center gap-9 text-sm font-medium text-gray-800">
-                <li><a href="/about" class="hover:text-[#05266e]">About Us</a></li>
-                <li><a href="/services" class="hover:text-[#05266e]">Products and Services</a></li>
-                <li><a href="#" class="hover:text-[#05266e]">Knowledge Center</a></li>
-                <li><a href="#" class="hover:text-[#05266e]">CSR</a></li>
-            </ul>
+      <!-- ================= DESKTOP MENU ================= -->
+      <ul class="hidden lg:flex items-center gap-9 text-sm font-medium text-gray-800">
 
-            <!-- Right: CTA + Icons -->
-            <div class="hidden lg:flex items-center gap-4">
-                <a href="/contact"
-                    class="bg-[#05266e] text-white px-5 py-2 text-sm font-semibold hover:bg-[#001030] transition">
-                    CONTACT US →
+        <li>
+          <a routerLink="/about" class="hover:text-[#05266e]">About Us</a>
+        </li>
+
+        <!-- Products Dropdown -->
+        <li class="relative group">
+          <span class="flex items-center gap-1 cursor-pointer hover:text-[#05266e]">
+            Products & Services
+            <svg class="w-4 h-4 mt-[2px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 top-full mt-6 w-[420px] bg-white border shadow-lg
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                   transition-all duration-200">
+            <div class="grid grid-cols-2 p-4 gap-4">
+
+              <!-- In-Box -->
+              <div>
+                <a routerLink="/in-box-desiccants" class="block font-bold mb-2 hover:text-blue-900">
+                  In-Box Desiccants
                 </a>
 
-                <button class="text-gray-700 hover:text-[#05266e]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
+                <a routerLink="/calcium-based" class="block py-1 hover:text-blue-900">
+                  Calcium-Based Desiccants
+                </a>
 
-                <button class="text-gray-700 hover:text-[#05266e]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 010 20a15.3 15.3 0 010-20z"></path>
-                    </svg>
-                </button>
+                <a routerLink="/in-box-desiccants/incubic" class="block py-1 font-semibold hover:text-blue-900">
+                  Incubic
+                </a>
+
+                <div class="pl-3 mt-2 space-y-1">
+                  <a routerLink="/in-box-desiccants/incubic/clay-desiccants" class="block hover:text-blue-900">
+                    Clay Desiccants
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/silica-gel-round-beads" class="block hover:text-blue-900">
+                    Silica Gel Round Beads
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/silica-gel-granules" class="block hover:text-blue-900">
+                    Silica Gel Granules
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/molecular-sieve-desiccants"
+                    class="block hover:text-blue-900">
+                    Molecular Sieve
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/indicating-specialty-desiccants"
+                    class="block hover:text-blue-900">
+                    Indicating & Specialty
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/food-grade-desiccants" class="block hover:text-blue-900">
+                    Food Grade
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/activated-carbon" class="block hover:text-blue-900">
+                    Activated Carbon
+                  </a>
+                  <a routerLink="/in-box-desiccants/incubic/oxygen-absorbers" class="block hover:text-blue-900">
+                    Oxygen Absorbers
+                  </a>
+                </div>
+              </div>
+
+              <!-- Other -->
+              <div>
+                <a class="block font-bold mb-2 hover:text-blue-900">
+                  Container Desiccants
+                </a>
+                <a class="block py-1 hover:text-blue-900">DS</a>
+                <a class="block py-1 hover:text-blue-900">SQ</a>
+                <a class="block py-1 hover:text-blue-900">SQ / TP / DB</a>
+              </div>
+
             </div>
+          </div>
+        </li>
 
-            <!-- Mobile menu button -->
-            <button class="lg:hidden text-gray-700 p-3 hover:text-[#05266e] transition" (click)="isOpen = !isOpen"
-                aria-label="Open menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
+        <li><a class="hover:text-[#05266e]">Knowledge Center</a></li>
+        <li><a class="hover:text-[#05266e]">CSR</a></li>
+      </ul>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:block">
+        <a routerLink="/contact" class="bg-[#05266e] text-white px-5 py-2 text-sm font-semibold hover:bg-[#001030]">
+          CONTACT US →
+        </a>
+      </div>
+
+      <!-- ================= MOBILE BUTTON ================= -->
+      <button class="lg:hidden p-3" (click)="toggleMenu()" aria-label="Open menu">
+        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
     </div>
+  </div>
 
-    <!-- Mobile Menu -->
-    <!-- Mobile Menu -->
-<div
-  class="lg:hidden overflow-hidden transition-all duration-300 ease-in-out
-         bg-white border-t"
-  [class.max-h-0]="!isOpen"
-  [class.max-h-[500px]]="isOpen"
-  [class.opacity-0]="!isOpen"
-  [class.opacity-100]="isOpen"
->
-  <ul
-    class="flex flex-col px-6 py-4 gap-4 text-sm font-medium
-           transform transition-transform duration-300 ease-in-out"
-    [class.-translate-y-4]="!isOpen"
-    [class.translate-y-0]="isOpen"
-  >
-    <li><a href="/about" class="hover:text-[#05266e]">About Us</a></li>
-    <li><a href="#" class="hover:text-[#05266e]">Products and Services</a></li>
-    <li><a href="#" class="hover:text-[#05266e]">Knowledge Center</a></li>
-    <li><a href="#" class="hover:text-[#05266e]">CSR</a></li>
+  <!-- ================= MOBILE MENU ================= -->
+  <div class="lg:hidden bg-white border-t overflow-hidden transition-all duration-300" [class.max-h-0]="!isOpen"
+    [class.max-h-screen]="isOpen">
+    <ul class="px-6 py-4 space-y-4 text-sm font-medium">
 
-    <a
-      href="/contact"
-      class="mt-2 bg-[#05266e] text-white px-4 py-2 text-center font-semibold"
-    >
-      CONTACT US →
-    </a>
-  </ul>
-</div>
+      <li><a routerLink="/about">About Us</a></li>
 
+      <!-- Mobile Products -->
+      <li>
+        <button class="w-full flex justify-between items-center" (click)="isProductsOpen = !isProductsOpen">
+          Products & Services
+          <svg class="w-4 h-4 transition-transform" [class.rotate-180]="isProductsOpen" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div class="pl-4 mt-3 space-y-2 overflow-hidden transition-all duration-300" [class.max-h-0]="!isProductsOpen"
+          [class.max-h-screen]="isProductsOpen">
+          <a routerLink="/in-box-desiccants">In-Box Desiccants</a>
+          <a routerLink="/in-box-desiccants/incubic">Incubic</a>
+
+          <div class="pl-3 space-y-1 text-gray-700">
+            <a routerLink="/in-box-desiccants/incubic/clay-desiccants">Clay</a>
+            <a routerLink="/in-box-desiccants/incubic/silica-gel-round-beads">Round Beads</a>
+            <a routerLink="/in-box-desiccants/incubic/silica-gel-granules">Granules</a>
+            <a routerLink="/in-box-desiccants/incubic/molecular-sieve-desiccants">Molecular Sieve</a>
+            <a routerLink="/in-box-desiccants/incubic/indicating-specialty-desiccants">Indicating</a>
+            <a routerLink="/in-box-desiccants/incubic/food-grade-desiccants">Food Grade</a>
+            <a routerLink="/in-box-desiccants/incubic/activated-carbon">Activated Carbon</a>
+            <a routerLink="/in-box-desiccants/incubic/oxygen-absorbers">Oxygen Absorbers</a>
+          </div>
+        </div>
+      </li>
+
+      <li><a routerLink="/contact">Contact Us</a></li>
+    </ul>
+  </div>
 </nav>
