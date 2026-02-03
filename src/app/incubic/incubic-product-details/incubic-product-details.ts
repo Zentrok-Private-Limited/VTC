@@ -9,7 +9,6 @@ import { INCUBIC_DATA } from '../incubic.data';
   templateUrl: './incubic-product-details.html',
 })
 export class IncubicProductDetails {
-
   product: any;
   category: any;
   selectedImage: string | null = null;

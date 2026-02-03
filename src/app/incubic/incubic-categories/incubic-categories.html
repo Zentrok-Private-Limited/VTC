@@ -40,7 +40,7 @@
   </div>
 </section>
 
-<div class="max-w-7xl mx-auto px-5 mt-20">
+<!-- <div class="max-w-7xl mx-auto px-5 mt-20">
   <div class="grid grid-cols-1 md:grid-cols-3 mb-20 gap-8">
 
     <a *ngFor="let c of categories" [routerLink]="[
@@ -54,7 +54,6 @@
         {{ c.name }}
       </h3>
 
-      <!-- CTA BUTTON -->
       <span class="inline-flex items-center justify-center mt-6 px-6 py-2
                rounded-full border border-black
                text-black font-semibold text-sm
@@ -65,4 +64,56 @@
     </a>
 
   </div>
-</div>
+</div> -->
+
+<section class="bg-white max-w-5xl mx-auto py-10 px-6 text-center relative">
+
+  <!-- 🔘 Category Filters -->
+  <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+    <button
+      *ngFor="let category of categorie"
+      (click)="filterCategory(category)"
+      [ngClass]="{
+        'bg-blue-900 text-white': selectedCategory === category.slug,
+        'bg-white text-gray-700 border-gray-300 hover:bg-gray-100':
+          selectedCategory !== category.slug
+      }"
+      class="px-4 py-2 rounded-full border transition-all text-xs sm:text-sm"
+    >
+      {{ category.name }}
+    </button>
+  </div>
+
+  <!-- 🧩 Product Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div
+      *ngFor="let project of filteredProjects"
+      (click)="openProject(project)"
+      class="cursor-pointer group relative bg-white
+             border border-gray-200 rounded-2xl shadow-md
+             hover:shadow-xl hover:-translate-y-1
+             transition-all duration-300"
+    >
+
+      <!-- Image -->
+      <div class="relative overflow-hidden rounded-t-2xl">
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          class="w-full h-56 object-cover
+                 transition-transform duration-500
+                 group-hover:scale-110"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="p-3 bg-[#05266e] text-left">
+        <p class="text-white text-bold text-center text-md">
+          Size: {{ project.gram }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>

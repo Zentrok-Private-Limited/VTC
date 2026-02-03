@@ -17,14 +17,16 @@
         <!-- Products Dropdown -->
         <li class="relative group">
           <span class="flex items-center gap-1 cursor-pointer hover:text-[#05266e]">
-            Products & Services
+            <a routerLink="/services">
+              Products & Services
+            </a>
             <svg class="w-4 h-4 mt-[2px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </span>
 
           <!-- Dropdown -->
-          <div class="absolute left-0 top-full mt-6 w-[420px] bg-white border shadow-lg
+          <div class="absolute left-0 top-full mt-7 w-[420px] bg-white border shadow-lg
                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
                    transition-all duration-200">
             <div class="grid grid-cols-2 p-4 gap-4">
@@ -126,22 +128,58 @@
           </svg>
         </button>
 
-        <div class="pl-4 mt-3 space-y-2 overflow-hidden transition-all duration-300" [class.max-h-0]="!isProductsOpen"
+        <div class="pl-4 mt-3 overflow-hidden transition-all duration-300" [class.max-h-0]="!isProductsOpen"
           [class.max-h-screen]="isProductsOpen">
-          <a routerLink="/in-box-desiccants">In-Box Desiccants</a>
-          <a routerLink="/in-box-desiccants/incubic">Incubic</a>
+          <!-- Main links -->
+          <a routerLink="/in-box-desiccants" class="block py-2 text-sm font-medium text-gray-800">
+            In-Box Desiccants
+          </a>
+          <a routerLink="/calcium-based" class="block py-1 hover:text-blue-900">
+            Calcium-Based Desiccants
+          </a>
 
-          <div class="pl-3 space-y-1 text-gray-700">
-            <a routerLink="/in-box-desiccants/incubic/clay-desiccants">Clay</a>
-            <a routerLink="/in-box-desiccants/incubic/silica-gel-round-beads">Round Beads</a>
-            <a routerLink="/in-box-desiccants/incubic/silica-gel-granules">Granules</a>
-            <a routerLink="/in-box-desiccants/incubic/molecular-sieve-desiccants">Molecular Sieve</a>
-            <a routerLink="/in-box-desiccants/incubic/indicating-specialty-desiccants">Indicating</a>
-            <a routerLink="/in-box-desiccants/incubic/food-grade-desiccants">Food Grade</a>
-            <a routerLink="/in-box-desiccants/incubic/activated-carbon">Activated Carbon</a>
-            <a routerLink="/in-box-desiccants/incubic/oxygen-absorbers">Oxygen Absorbers</a>
+          <a routerLink="/in-box-desiccants/incubic" class="block py-2 text-sm font-semibold text-blue-900">
+            Incubic
+          </a>
+
+          <!-- Sub links -->
+          <div class="mt-2 pl-3 space-y-2 border-l border-gray-200">
+            <a routerLink="/in-box-desiccants/incubic/clay-desiccants" class="block py-1 text-sm text-gray-600">
+              Clay Desiccants
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/silica-gel-round-beads" class="block py-1 text-sm text-gray-600">
+              Silica Gel Round Beads
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/silica-gel-granules" class="block py-1 text-sm text-gray-600">
+              Silica Gel Granules
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/molecular-sieve-desiccants"
+              class="block py-1 text-sm text-gray-600">
+              Molecular Sieve Desiccants
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/indicating-specialty-desiccants"
+              class="block py-1 text-sm text-gray-600">
+              Indicating Specialty Desiccants
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/food-grade-desiccants" class="block py-1 text-sm text-gray-600">
+              Food Grade Desiccants
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/activated-carbon" class="block py-1 text-sm text-gray-600">
+              Activated Carbon
+            </a>
+
+            <a routerLink="/in-box-desiccants/incubic/oxygen-absorbers" class="block py-1 text-sm text-gray-600">
+              Oxygen Absorbers
+            </a>
           </div>
         </div>
+
       </li>
 
       <li><a routerLink="/contact">Contact Us</a></li>
