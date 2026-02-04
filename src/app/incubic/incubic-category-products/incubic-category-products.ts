@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { INCUBIC_DATA } from '../incubic.data';
@@ -10,35 +10,43 @@ import { INCUBIC_DATA } from '../incubic.data';
   templateUrl: './incubic-category-products.html',
   styleUrl: './incubic-category-products.css',
 })
-export class IncubicCategoryProducts {
+export class IncubicCategoryProducts implements OnInit {
 
-  category: any;
-  product: any;
-
+  category: any = null;
+  product: any = null;
   selectedImage = '';
 
-  constructor(private route: ActivatedRoute) {
-    const categorySlug = this.route.snapshot.paramMap.get('category');
-    const productSlug = this.route.snapshot.paramMap.get('product');
+  constructor(private route: ActivatedRoute) {}
 
-    // 🔹 Find category
-    this.category = INCUBIC_DATA.find(
-      c => c.slug === categorySlug
-    );
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
 
-    // 🔹 Find product inside category
-    this.product = this.category?.products?.find(
-      (p: any) => p.slug === productSlug
-    );
+      const categorySlug = params.get('category');
+      const productSlug = params.get('product');
 
-    // 🔹 Default image (first product image)
-    if (this.product?.images?.length) {
-      this.selectedImage = this.product.images[0];
-    }
-    // fallback (just in case)
-    else if (this.category?.images?.length) {
-      this.selectedImage = this.category.images[0];
-    }
+      // 🔹 Find category
+      this.category = INCUBIC_DATA.find(
+        c => c.slug === categorySlug
+      );
+
+      // 🔹 Find product inside category
+      if (this.category && productSlug) {
+        this.product = this.category.products?.find(
+          (p: any) => p.slug === productSlug
+        );
+      } else {
+        this.product = null;
+      }
+
+      // 🔹 Default image priority
+      if (this.product?.images?.length) {
+        this.selectedImage = this.product.images[0];
+      } else if (this.category?.images?.length) {
+        this.selectedImage = this.category.images[0];
+      } else {
+        this.selectedImage = '';
+      }
+    });
   }
 
   // 🔹 Thumbnail click

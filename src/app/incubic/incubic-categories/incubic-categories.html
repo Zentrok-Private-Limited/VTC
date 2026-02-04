@@ -70,19 +70,20 @@
 
   <!-- 🔘 Category Filters -->
   <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
-    <button
-      *ngFor="let category of categorie"
-      (click)="filterCategory(category)"
-      [ngClass]="{
-        'bg-blue-900 text-white': selectedCategory === category.slug,
-        'bg-white text-gray-700 border-gray-300 hover:bg-gray-100':
-          selectedCategory !== category.slug
-      }"
-      class="px-4 py-2 rounded-full border transition-all text-xs sm:text-sm"
-    >
-      {{ category.name }}
-    </button>
-  </div>
+  <button
+    *ngFor="let category of categorie"
+    (click)="filterCategory(category)"
+    [ngClass]="{
+      'bg-blue-900 text-white': selectedCategory === category.slug,
+      'bg-white text-gray-700 border-gray-300 hover:bg-gray-100':
+        selectedCategory !== category.slug
+    }"
+    class="px-4 py-2 rounded-full border transition-all text-xs sm:text-sm"
+  >
+    {{ category.name }}
+  </button>
+</div>
+
 
   <!-- 🧩 Product Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

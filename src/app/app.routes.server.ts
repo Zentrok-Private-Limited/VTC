@@ -37,10 +37,6 @@ export const serverRoutes: ServerRoute[] = [
     path: 'in-box-desiccants/incubic/:category/:product',
     renderMode: RenderMode.Client,
   },
-  {
-    path: 'product/:id',
-    renderMode: RenderMode.Client,
-  },
 
   /* -------- FALLBACK -------- */
   {

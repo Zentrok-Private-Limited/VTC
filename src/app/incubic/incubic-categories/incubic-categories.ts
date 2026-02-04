@@ -24,40 +24,34 @@ interface Product {
   styleUrl: './incubic-categories.css',
 })
 export class IncubicCategories {
-
-  // (optional) agar future me data chahiye
   categoriesData = INCUBIC_CATEGORIES;
 
-  // 🔹 Category buttons
   categorie: Category[] = [
-    { name: 'All', slug: 'all' },
     { name: 'Clay Desiccants', slug: 'clay-desiccants' },
     { name: 'Silica Gel Round Beads', slug: 'silica-gel-round-beads' },
     { name: 'Silica Gel Granules', slug: 'silica-gel-granules' },
-    { name: 'Molecular Sieve', slug: 'molecular-sieve' },
-    { name: 'Indicating & Specialty', slug: 'indicating-specialty' },
-    { name: 'Food Grade Desiccants', slug: 'food-grade' },
+    { name: 'Molecular Sieve', slug: 'molecular-sieve-desiccants' },
+    { name: 'Indicating & Specialty Desiccants', slug: 'indicating-specialty-desiccants' },
+    { name: 'Food Grade Desiccants', slug: 'food-grade-desiccants' },
     { name: 'Activated Carbon', slug: 'activated-carbon' },
     { name: 'Oxygen Absorbers', slug: 'oxygen-absorbers' }
   ];
 
-  selectedCategory = 'all';
 
-  // 🔹 Products (abhi static, baad me INCUBIC_DATA se aa sakta hai)
+  selectedCategory = 'clay-desiccants';
   projects: Product[] = [
-    // 🔹 CLAY DESICCANTS
     {
       title: '1g Clay Desiccant',
       slug: '1g-clay',
       categorySlug: 'clay-desiccants',
-      image: 'images/clay.jpg',
+      image: '/banner1.png',
       gram: '1g'
     },
     {
       title: '2g Clay Desiccant',
       slug: '2g-clay',
       categorySlug: 'clay-desiccants',
-      image: 'images/clay.jpg',
+      image: '/banner2.png',
       gram: '2g'
     },
 
@@ -66,14 +60,14 @@ export class IncubicCategories {
       title: '2g Silica Gel Round Beads',
       slug: '2g-silica-round',
       categorySlug: 'silica-gel-round-beads',
-      image: 'images/silica-round.jpg',
+      image: '/banner1.png',
       gram: '2g SG'
     },
     {
       title: '5g Silica Gel Round Beads',
       slug: '5g-silica-round',
       categorySlug: 'silica-gel-round-beads',
-      image: 'images/silica-round.jpg',
+      image: '/banner2.png',
       gram: '5g SG'
     },
 
@@ -82,135 +76,143 @@ export class IncubicCategories {
       title: '1g Silica Gel Granules',
       slug: '1g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'images/silica-granules.jpg',
+      image: 'banner1.png',
       gram: '1g SGG'
     },
     {
       title: '2g Silica Gel Granules',
       slug: '2g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'images/silica-granules.jpg',
+      image: 'banner2.png',
       gram: '2g SGG'
     },
     {
       title: '5g Silica Gel Granules',
       slug: '5g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'images/silica-granules.jpg',
+      image: 'banner3.png',
       gram: '5g SGG'
     },
     {
       title: '10g Silica Gel Granules',
       slug: '10g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'images/silica-granules.jpg',
+      image: 'banner1.png',
       gram: '10g SGG'
     },
 
-    // 🔹 MOLECULAR SIEVE
+    // 🔹 MOLECULAR SIEVE (LISTING / GRID)
     {
-      title: '3A Molecular Sieve',
-      slug: '3a-molecular-sieve',
-      categorySlug: 'molecular-sieve',
-      image: 'images/molecular-sieve.jpg',
-      gram: '5g'
+      title: '1g Molecular Sieve',
+      slug: '1g-molecular-sieve',
+      categorySlug: 'molecular-sieve-desiccants', 
+      image: '/banner1.png',
+      gram: '1g MS'
     },
     {
-      title: '4A Molecular Sieve',
-      slug: '4a-molecular-sieve',
-      categorySlug: 'molecular-sieve',
-      image: 'images/molecular-sieve.jpg',
-      gram: '10g'
-    },
-
-    // 🔹 INDICATING & SPECIALTY
-    {
-      title: 'Orange Indicating Silica Gel',
-      slug: 'orange-indicating-silica',
-      categorySlug: 'indicating-specialty',
-      image: 'images/indicating.jpg',
-      gram: '5g'
+      title: '2g Molecular Sieve',
+      slug: '2g-molecular-sieve',
+      categorySlug: 'molecular-sieve-desiccants', 
+      image: '/banner2.png',
+      gram: '2g MS'
     },
     {
-      title: 'Humidity Indicator Card',
-      slug: 'humidity-indicator-card',
-      categorySlug: 'indicating-specialty',
-      image: 'images/humidity-card.jpg',
-      gram: 'N/A'
+      title: '5g Molecular Sieve',
+      slug: '5g-molecular-sieve',
+      categorySlug: 'molecular-sieve-desiccants', 
+      image: '/banner3.png',
+      gram: '5g MS'
     },
-
+    // 🔹 INDICATING & SPECIALTY (LISTING)
+    {
+      title: '1g Indicating Desiccant',
+      slug: '1g-indicating-desiccant',
+      categorySlug: 'indicating-specialty-desiccants',
+      image: '/banner1.png',
+      gram: '1g IS'
+    },
+    {
+      title: '2g Indicating Desiccant',
+      slug: '2g-indicating-desiccant',
+      categorySlug: 'indicating-specialty-desiccants',
+      image: '/banner2.png',
+      gram: '2g IS'
+    },
     // 🔹 FOOD GRADE DESICCANTS
     {
-      title: 'Food Grade Clay Desiccant',
-      slug: 'food-grade-clay',
-      categorySlug: 'food-grade',
-      image: 'images/food-grade-clay.jpg',
-      gram: '2g'
+      title: '1g Food Grade Desiccant',
+      slug: '1g-food-grade-desiccant',
+      categorySlug: 'food-grade-desiccants',
+      image: '/banner1.png',
+      gram: '1g FG'
     },
     {
-      title: 'Food Grade Silica Gel',
-      slug: 'food-grade-silica',
-      categorySlug: 'food-grade',
-      image: 'images/food-grade-silica.jpg',
-      gram: '5g'
+      title: '2g Food Grade Desiccant',
+      slug: '2g-food-grade-desiccant',
+      categorySlug: 'food-grade-desiccants',
+      image: '/banner2.png',
+      gram: '2g FG'
+    },
+    {
+      title: '5g Food Grade Desiccant',
+      slug: '5g-food-grade-desiccant',
+      categorySlug: 'food-grade-desiccants',
+      image: '/banner3.png',
+      gram: '5g FG'
     },
 
     // 🔹 ACTIVATED CARBON
     {
-      title: 'Activated Carbon Pellets',
-      slug: 'activated-carbon-pellets',
+      title: '5g Activated Carbon',
+      slug: '5g-activated-carbon',
       categorySlug: 'activated-carbon',
-      image: 'images/activated-carbon.jpg',
-      gram: '10g'
+      image: '/banner2.png',
+      gram: '5g AC'
     },
     {
-      title: 'Activated Carbon Granules',
-      slug: 'activated-carbon-granules',
+      title: '10g Activated Carbon',
+      slug: '10g-activated-carbon',
       categorySlug: 'activated-carbon',
-      image: 'images/activated-carbon.jpg',
-      gram: '20g'
+      image: '/banner3.png',
+      gram: '10g AC'
     },
-
     // 🔹 OXYGEN ABSORBERS
     {
       title: '50cc Oxygen Absorber',
       slug: '50cc-oxygen-absorber',
       categorySlug: 'oxygen-absorbers',
-      image: 'images/oxygen-absorber.jpg',
-      gram: '50cc'
+      image: '/banner1.png',
+      gram: '50cc OA'
     },
     {
       title: '100cc Oxygen Absorber',
       slug: '100cc-oxygen-absorber',
       categorySlug: 'oxygen-absorbers',
-      image: 'images/oxygen-absorber.jpg',
-      gram: '100cc'
+      image: '/banner2.png',
+      gram: '100cc OA'
     }
   ];
 
+  ngOnInit() {
+    this.filteredProjects = this.projects.filter(
+      p => p.categorySlug === 'clay-desiccants'
+    );
+  }
 
-
-  // 🔹 Filtered products
   filteredProjects: Product[] = [];
 
   constructor(private router: Router) {
-    // default: show all products
     this.filteredProjects = this.projects;
   }
 
-  // ✅ Category filter
   filterCategory(category: Category) {
     this.selectedCategory = category.slug;
 
-    this.filteredProjects =
-      category.slug === 'all'
-        ? this.projects
-        : this.projects.filter(
-          product => product.categorySlug === category.slug
-        );
+    this.filteredProjects = this.projects.filter(
+      product => product.categorySlug === category.slug
+    );
   }
 
-  // ✅ Product detail page navigation
   openProject(product: Product) {
     this.router.navigate([
       '/in-box-desiccants',

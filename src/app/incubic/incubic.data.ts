@@ -39,40 +39,78 @@ export const INCUBIC_DATA = [
     slug: 'clay-desiccants',
     name: 'Clay Desiccants',
 
-    /* CATEGORY IMAGES (banner / overview) */
+    /* CATEGORY IMAGES */
     images: [
       '/banner1.png',
       '/banner2.png',
       '/banner3.png'
     ],
 
+    /* OVERVIEW */
     description1:
       'VTC® Clay Desiccant is an environmentally responsible moisture control solution made from high-quality natural clay minerals. Designed with sustainability in mind, it is packed in durable, biodegradable packaging material that ensures effective protection while reducing environmental impact.',
+
     description2:
       'This clay desiccant demonstrates excellent moisture adsorption properties and responds efficiently to changes in ambient humidity. It is widely used across industries such as food packaging, pharmaceuticals, medical devices, electronics, and general industrial storage.',
 
+    /* KEY FEATURES */
+    features: [
+      'Environment friendly natural clay',
+      'High moisture adsorption capacity',
+      'Biodegradable packaging material',
+      'Cost-effective moisture control solution',
+      'Chemically inert and non-toxic'
+    ],
+
+    /* APPLICATIONS */
+    applications: [
+      'Food packaging',
+      'Pharmaceuticals',
+      'Medical devices',
+      'Electronics',
+      'Industrial storage',
+      'Logistics & shipping'
+    ],
+
+    /* TECHNICAL SPECIFICATIONS (TABLE) */
+    specifications: {
+      material: 'Activated Natural Clay',
+      adsorptionCapacity: 'Up to 30% @ 90% RH',
+      packaging: 'Tyvek / Non-woven / Paper',
+      compliance: [
+        'DIN 55473',
+        'MIL-D-3464E',
+        'REACH compliant',
+        'RoHS compliant'
+      ],
+      shelfLife: '2 years (sealed condition)'
+    },
+
+    /* PRODUCT VARIANTS */
     products: [
       {
         slug: '1g-clay',
         name: '1g Clay Desiccant',
-
-        /* PRODUCT IMAGES (main gallery) */
+        gram: '1g',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
         ],
+        packaging: 'Tyvek / Paper',
+        usage: 'Small cartons, electronics'
       },
       {
         slug: '2g-clay',
         name: '2g Clay Desiccant',
-
-        /* PRODUCT IMAGES (main gallery) */
+        gram: '2g',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
         ],
+        packaging: 'Tyvek / Paper',
+        usage: 'Medium cartons, pharma packs'
       }
     ]
   },
@@ -81,6 +119,7 @@ export const INCUBIC_DATA = [
     slug: 'silica-gel-round-beads',
     name: 'Silica Gel Round Beads Desiccants',
 
+    /* CATEGORY IMAGES */
     images: [
       '/banner1.png',
       '/banner2.png',
@@ -89,14 +128,31 @@ export const INCUBIC_DATA = [
 
     description1:
       'VTC® Silica Gel Round Beads Desiccants are manufactured from high-purity amorphous silica and are designed to provide superior moisture protection in sealed packaging environments.',
+
     description2:
-      'These round bead desiccants offer high adsorption capacity and are widely used across electronics, pharmaceuticals, food packaging, and industrial storage.',
+      'These round bead desiccants offer high adsorption capacity, excellent thermal stability, and are widely used across electronics, pharmaceuticals, food packaging, and industrial storage.',
+
+    /* OPTIONAL – CATEGORY LEVEL DETAILS (Superdryers style) */
+    features: [
+      'High moisture adsorption capacity',
+      'Uniform spherical bead structure',
+      'Chemically inert and non-toxic',
+      'Excellent thermal and chemical stability'
+    ],
+
+    applications: [
+      'Electronics packaging',
+      'Pharmaceuticals',
+      'Food packaging',
+      'Optical instruments',
+      'Industrial storage'
+    ],
 
     products: [
       {
         slug: '1g-silica-round',
         name: '1g Silica Gel Round Beads',
-        gram: '1g',
+        gram: '1g SG',
         images: [
           '/banner1.png',
           '/banner2.png',
@@ -126,7 +182,7 @@ export const INCUBIC_DATA = [
       {
         slug: '10g-silica-round',
         name: '10g Silica Gel Round Beads',
-        gram: '10g',
+        gram: '10g SG',
         images: [
           '/banner1.png',
           '/banner2.png',
@@ -149,8 +205,27 @@ export const INCUBIC_DATA = [
 
   description1:
     'VTC® Silica Gel Granules Desiccants are produced from high-purity amorphous silica and engineered to deliver efficient moisture control across a wide range of packaging and storage environments.',
+
   description2:
-    'These silica gel granules provide excellent thermal stability and high adsorption capacity, making them suitable for demanding industrial applications across electronics, pharmaceuticals, food packaging, and industrial storage.',
+    'These silica gel granules offer excellent thermal stability and high adsorption capacity, making them ideal for demanding applications in electronics, pharmaceuticals, food packaging, and industrial storage.',
+
+  /* CATEGORY FEATURES */
+  features: [
+    'High moisture adsorption capacity',
+    'Excellent thermal and chemical stability',
+    'Free-flowing granular structure',
+    'Non-toxic and chemically inert',
+    'Consistent performance in sealed packaging'
+  ],
+
+  /* CATEGORY APPLICATIONS */
+  applications: [
+    'Electronics and electrical components',
+    'Pharmaceutical packaging',
+    'Food packaging',
+    'Industrial storage',
+    'Machinery and spare parts'
+  ],
 
   products: [
     {
@@ -208,51 +283,58 @@ export const INCUBIC_DATA = [
     ],
 
     description1:
-      'VTC® Molecular Sieve Desiccants are premium synthetic aluminosilicate materials engineered to provide highly selective and efficient moisture adsorption. With a uniform pore structure, molecular sieves are capable of adsorbing water molecules even at very low humidity levels.',
+      'VTC® Molecular Sieve Desiccants are premium synthetic aluminosilicate materials engineered for highly selective moisture adsorption, even at extremely low humidity levels.',
+
     description2:
-      'These desiccants deliver superior drying performance compared to conventional silica gel and clay desiccants. They are widely used in pharmaceutical packaging, electronics, optical devices, diagnostics, and industrial applications where stringent moisture control is critical.',
+      'They deliver superior drying performance compared to conventional silica gel and clay desiccants and are widely used in pharmaceuticals, electronics, diagnostics, medical devices, and industrial packaging applications.',
+
+    /* CATEGORY FEATURES */
+    features: [
+      'Highly selective adsorption of water molecules',
+      'Effective at very low relative humidity levels',
+      'Uniform pore size structure',
+      'Excellent thermal and chemical stability',
+      'Long service life'
+    ],
+
+    /* CATEGORY APPLICATIONS */
+    applications: [
+      'Pharmaceutical packaging',
+      'Medical devices',
+      'Electronics',
+      'Optical instruments',
+      'Industrial and diagnostic packaging'
+    ],
 
     products: [
       {
-        slug: '3a-molecular-sieve',
-        name: '3A Molecular Sieve',
+        slug: '1g-molecular-sieve',
+        name: '1g Molecular Sieve Desiccant',
+        gram: '1g MS',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          '3A Molecular Sieve selectively adsorbs water molecules while excluding larger molecules, making it ideal for moisture control in sensitive packaging applications.',
-        features: [
-          'Selective adsorption of water',
-          'Effective at very low humidity levels',
-          'High mechanical strength'
-        ],
-        applications: [
-          'Pharmaceutical packaging',
-          'Medical devices',
-          'Electronics'
         ]
       },
       {
-        slug: '4a-molecular-sieve',
-        name: '4A Molecular Sieve',
+        slug: '2g-molecular-sieve',
+        name: '2g Molecular Sieve Desiccant',
+        gram: '2g MS',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          '4A Molecular Sieve offers high moisture adsorption capacity and is suitable for a wide range of industrial and packaging applications.',
-        features: [
-          'High adsorption capacity',
-          'Stable under high temperatures',
-          'Long service life'
-        ],
-        applications: [
-          'Electronics',
-          'Optical instruments',
-          'Industrial storage'
+        ]
+      },
+      {
+        slug: '5g-molecular-sieve',
+        name: '5g Molecular Sieve Desiccant',
+        gram: '5g MS',
+        images: [
+          '/banner1.png',
+          '/banner2.png',
+          '/banner3.png'
         ]
       }
     ]
@@ -270,72 +352,48 @@ export const INCUBIC_DATA = [
     ],
 
     description1:
-      'VTC® Indicating & Specialty Desiccants are advanced moisture control solutions designed to not only absorb moisture but also provide visual indication of humidity levels. These desiccants help users easily monitor moisture conditions inside sealed packaging.',
+      'Indicating & specialty desiccants are advanced moisture control solutions designed to absorb moisture while simultaneously providing a clear visual indication of humidity levels inside sealed packaging.',
+
     description2:
-      'Specialty desiccants are engineered for applications requiring precise moisture control, humidity indication, or specific performance characteristics. They are widely used in electronics, pharmaceuticals, diagnostics, optical devices, and sensitive industrial applications.',
+      'These desiccants are used in applications where precise moisture monitoring is critical, helping prevent damage caused by excess humidity in sensitive products.',
+
+    /* CATEGORY FEATURES */
+    features: [
+      'Visual humidity indication',
+      'Reliable moisture adsorption',
+      'Easy monitoring of saturation level',
+      'Non-toxic and safe handling',
+      'Available in multiple sizes'
+    ],
+
+    /* CATEGORY APPLICATIONS */
+    applications: [
+      'Electronics packaging',
+      'Pharmaceutical packaging',
+      'Medical devices',
+      'Optical instruments',
+      'Sensitive industrial components'
+    ],
 
     products: [
       {
-        slug: 'orange-indicating-silica-gel',
-        name: 'Orange Indicating Silica Gel',
+        slug: '1g-indicating-desiccant',
+        name: '1g Indicating Desiccant',
+        gram: '1g IS',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          'Orange Indicating Silica Gel changes color from orange to green as it absorbs moisture, offering a safe and environmentally friendly alternative to traditional blue indicating silica gel.',
-        features: [
-          'Clear color change indication',
-          'Cobalt chloride free',
-          'High moisture adsorption efficiency'
-        ],
-        applications: [
-          'Electronics',
-          'Pharmaceutical packaging',
-          'Optical instruments'
         ]
       },
       {
-        slug: 'humidity-indicator-cards',
-        name: 'Humidity Indicator Cards',
+        slug: '2g-indicating-desiccant',
+        name: '2g Indicating Desiccant',
+        gram: '2g IS',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          'Humidity Indicator Cards provide a simple and reliable method to visually monitor relative humidity levels inside sealed packages and containers.',
-        features: [
-          'Instant humidity level indication',
-          'Easy to read color spots',
-          'Multiple RH range options'
-        ],
-        applications: [
-          'Electronics packaging',
-          'Medical devices',
-          'Logistics and storage'
-        ]
-      },
-      {
-        slug: 'specialty-desiccant-packets',
-        name: 'Specialty Desiccant Packets',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ],
-        description:
-          'Specialty Desiccant Packets are custom-engineered solutions designed to meet specific moisture control requirements across diverse industries.',
-        features: [
-          'Custom formulations available',
-          'Tailored moisture performance',
-          'Industry-specific solutions'
-        ],
-        applications: [
-          'Diagnostics',
-          'Aerospace components',
-          'High-value industrial products'
         ]
       }
     ]
@@ -353,51 +411,58 @@ export const INCUBIC_DATA = [
     ],
 
     description1:
-      'VTC® Food Grade Desiccants are specially designed moisture control solutions developed for direct and indirect contact with food products. Manufactured using food-safe raw materials and compliant packaging, these desiccants help maintain freshness, texture, and shelf life.',
+      'Food Grade Desiccants are specially designed moisture control solutions developed for direct and indirect contact with food products, helping preserve quality and freshness.',
+
     description2:
-      'They effectively control excess moisture while meeting stringent food safety and hygiene standards. Food grade desiccants are widely used in packaged foods, nutraceuticals, confectionery, dry foods, and agricultural products.',
+      'They effectively control excess moisture while meeting stringent food safety and hygiene standards, making them ideal for use in packaged foods, nutraceuticals, and agricultural products.',
+
+    /* CATEGORY FEATURES */
+    features: [
+      'Food-safe and non-toxic materials',
+      'Complies with food safety standards',
+      'Effective moisture control',
+      'Odorless and chemically inert',
+      'Suitable for direct and indirect food contact'
+    ],
+
+    /* CATEGORY APPLICATIONS */
+    applications: [
+      'Dry food packaging',
+      'Confectionery',
+      'Nutraceuticals',
+      'Spices and seasonings',
+      'Agricultural products'
+    ],
 
     products: [
       {
-        slug: 'food-grade-clay-desiccant',
-        name: 'Food Grade Clay Desiccant',
+        slug: '1g-food-grade-desiccant',
+        name: '1g Food Grade Desiccant',
+        gram: '1g FG',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          'Food Grade Clay Desiccants are made from natural minerals and packed in food-safe, breathable packaging to ensure effective moisture absorption without compromising food safety.',
-        features: [
-          'Food-safe and non-toxic',
-          'Eco-friendly natural clay',
-          'Effective moisture control'
-        ],
-        applications: [
-          'Dry food packaging',
-          'Spices and seasonings',
-          'Agricultural products'
         ]
       },
       {
-        slug: 'food-grade-silica-gel',
-        name: 'Food Grade Silica Gel',
+        slug: '2g-food-grade-desiccant',
+        name: '2g Food Grade Desiccant',
+        gram: '2g FG',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          'Food Grade Silica Gel provides high moisture adsorption performance and is suitable for use in food and nutraceutical packaging applications.',
-        features: [
-          'High adsorption capacity',
-          'Chemically inert',
-          'Complies with food safety standards'
-        ],
-        applications: [
-          'Confectionery packaging',
-          'Nutraceuticals',
-          'Processed food products'
+        ]
+      },
+      {
+        slug: '5g-food-grade-desiccant',
+        name: '5g Food Grade Desiccant',
+        gram: '5g FG',
+        images: [
+          '/banner1.png',
+          '/banner2.png',
+          '/banner3.png'
         ]
       }
     ]
@@ -415,51 +480,48 @@ export const INCUBIC_DATA = [
     ],
 
     description1:
-      'VTC® Activated Carbon is a highly porous adsorbent material designed for effective removal of odors, gases, and volatile organic compounds (VOCs). Manufactured from high-quality raw materials, it offers excellent adsorption efficiency across a wide range of applications.',
+      'Activated Carbon is a highly porous adsorbent material designed for effective removal of odors, gases, and volatile organic compounds (VOCs) from enclosed environments.',
+
     description2:
-      'Activated carbon is widely used for air purification, odor control, moisture-sensitive packaging, and industrial filtration. Its high surface area and adsorption capacity make it an ideal solution for applications requiring reliable contaminant control.',
+      'It is widely used in air purification, odor control, moisture-sensitive packaging, and industrial applications due to its high surface area and excellent adsorption efficiency.',
+
+    /* CATEGORY FEATURES */
+    features: [
+      'High surface area for superior adsorption',
+      'Effective odor and gas removal',
+      'Low dust generation',
+      'Chemically stable and non-toxic',
+      'Suitable for packaging and air purification'
+    ],
+
+    /* CATEGORY APPLICATIONS */
+    applications: [
+      'Air purification',
+      'Electronics packaging',
+      'Odor control',
+      'Industrial gas filtration',
+      'Moisture-sensitive packaging'
+    ],
 
     products: [
       {
-        slug: 'activated-carbon-pellets',
-        name: 'Activated Carbon Pellets',
+        slug: '5g-activated-carbon',
+        name: '5g Activated Carbon',
+        gram: '5g AC',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          'Activated Carbon Pellets are designed for uniform airflow and high adsorption efficiency, making them suitable for air and gas purification applications.',
-        features: [
-          'High surface area',
-          'Excellent odor and gas adsorption',
-          'Low dust generation'
-        ],
-        applications: [
-          'Air purification',
-          'Electronics packaging',
-          'Industrial gas filtration'
         ]
       },
       {
-        slug: 'activated-carbon-granules',
-        name: 'Activated Carbon Granules',
+        slug: '10g-activated-carbon',
+        name: '10g Activated Carbon',
+        gram: '10g AC',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          'Activated Carbon Granules provide fast adsorption kinetics and are widely used for odor control and contaminant removal.',
-        features: [
-          'Rapid adsorption rate',
-          'High purity material',
-          'Versatile application range'
-        ],
-        applications: [
-          'Odor control',
-          'Food packaging',
-          'Chemical storage'
         ]
       }
     ]
@@ -477,51 +539,48 @@ export const INCUBIC_DATA = [
     ],
 
     description1:
-      'VTC® Oxygen Absorbers are designed to effectively reduce oxygen levels inside sealed packaging, helping to prevent oxidation, mold growth, and spoilage. By creating a low-oxygen environment, these absorbers significantly extend product shelf life and maintain quality.',
+      'Oxygen Absorbers are designed to reduce oxygen levels inside sealed packaging, preventing oxidation, microbial growth, and spoilage of sensitive products.',
+
     description2:
-      'Oxygen absorbers are widely used in food packaging, pharmaceuticals, nutraceuticals, and sensitive industrial products. They are a reliable solution for protecting products from oxygen-related degradation without the need for preservatives.',
+      'By creating a low-oxygen environment, they help extend shelf life and maintain product quality in food, pharmaceutical, nutraceutical, and industrial packaging applications.',
+
+    /* CATEGORY FEATURES */
+    features: [
+      'Rapid oxygen absorption',
+      'Helps extend product shelf life',
+      'Prevents oxidation and mold growth',
+      'Food-safe and non-toxic',
+      'Works without preservatives'
+    ],
+
+    /* CATEGORY APPLICATIONS */
+    applications: [
+      'Food packaging',
+      'Pharmaceutical products',
+      'Nutraceuticals',
+      'Medical supplies',
+      'Moisture and oxygen-sensitive goods'
+    ],
 
     products: [
       {
         slug: '50cc-oxygen-absorber',
         name: '50cc Oxygen Absorber',
+        gram: '50cc OA',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          '50cc Oxygen Absorbers are ideal for small packaging formats and effectively remove residual oxygen to protect sensitive products.',
-        features: [
-          'Rapid oxygen absorption',
-          'Helps extend shelf life',
-          'Safe and easy to use'
-        ],
-        applications: [
-          'Dry food packaging',
-          'Nutraceuticals',
-          'Pharmaceutical products'
         ]
       },
       {
         slug: '100cc-oxygen-absorber',
         name: '100cc Oxygen Absorber',
+        gram: '100cc OA',
         images: [
           '/banner1.png',
           '/banner2.png',
           '/banner3.png'
-        ],
-        description:
-          '100cc Oxygen Absorbers provide higher oxygen absorption capacity and are suitable for medium-sized packaging applications.',
-        features: [
-          'Higher absorption capacity',
-          'Consistent performance',
-          'Improves product stability'
-        ],
-        applications: [
-          'Food packaging',
-          'Medical supplies',
-          'Industrial storage'
         ]
       }
     ]

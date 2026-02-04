@@ -63,12 +63,10 @@ export const routes: Routes = [
         .then(m => m.IncubicProductDetails),
   },
 
-  /* ---------------- GENERIC SINGLE PRODUCT ---------------- */
-  {
-    path: 'product/:id',
+  /* ---------------- Container Desiccants ---------------- */
+{
+    path: 'container-desiccants',
     loadComponent: () =>
-      import('./single-product-details/single-product-details')
-        .then(m => m.SingleProductDetails),
+      import('./container-desiccants/container-desiccants').then(m => m.ContainerDesiccants),
   },
-
 ];
