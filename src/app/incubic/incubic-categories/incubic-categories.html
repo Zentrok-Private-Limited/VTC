@@ -11,44 +11,68 @@
   </div>
 </div>
 <!-- ===================heading end ======================= -->
-<div class="md:px-15">
-  <h1 class="text-3xl md:mt-5 font-bold">Incubic</h1>
-</div>
-<section class="py-5">
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+
+<section
+  class="py-5 bg-gradient-to-br from-blue-100 via-white to-sky-100 relative overflow-hidden">
+
+  <!-- subtle background accents -->
+  <div class="absolute -top-24 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 -right-24 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl"></div>
+
+  <div class="max-w-6xl mx-auto  relative z-10">
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-12 gap-14 items-center
+             p-8 md:p-12">
 
       <!-- Content -->
       <div class="md:col-span-7">
-        <hr class="border-gray-300 mb-6">
 
-        <p class="text-gray-700 leading-relaxed mb-4">
+        <!-- Heading -->
+        <h1 class="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
+          Incubic
+        </h1>
+        <div class="w-16 h-1 bg-blue-700 mb-6"></div>
+
+        <p class="text-gray-700 leading-relaxed mb-5">
           <strong>Calcium-Based Desiccants</strong> are high-performance moisture absorbers made primarily
-          from <strong>calcium chloride (CaCl₂)</strong>. They work by absorbing moisture from the air and converting it
-          into a
-          liquid or gel form, making them highly effective in high-humidity environments. Compared to
-          traditional silica gel, calcium-based desiccants offer much higher moisture absorption capacity.
-          They are commonly used in in-box packaging for electronics, pharmaceuticals, garments, food
-          packaging, and other moisture-sensitive products to protect them from humidity damage.
+          from <strong>calcium chloride (CaCl₂)</strong>. They absorb moisture from the air and convert it
+          into a liquid or gel form, making them highly effective in high-humidity environments. Compared
+          to traditional silica gel, calcium-based desiccants offer much higher moisture absorption
+          capacity.
         </p>
 
-        <p class="text-gray-700 leading-relaxed mb-4">
-          One of the key advantages of calcium-based desiccants is their ability to provide <strong>long-lasting
-            moisture control</strong>, even during sea freight, long-term storage, and humid climate conditions. These
-          desiccants are designed with leak-proof packaging to safely contain absorbed moisture. Because of
-          their strong and reliable performance, they are widely used in logistics, export packaging, and
-          industrial applications to prevent corrosion, mold growth, and product deterioration.
+        <p class="text-gray-700 leading-relaxed mb-5">
+          These desiccants are widely used in in-box packaging for electronics, pharmaceuticals,
+          garments, food packaging, and other moisture-sensitive products to protect them from
+          humidity-related damage.
         </p>
+
+        <p class="text-gray-700 leading-relaxed">
+          One of the key advantages is <strong>long-lasting moisture control</strong>, even during sea
+          freight, long-term storage, and humid climate conditions. Designed with leak-proof packaging,
+          Incubic desiccants safely contain absorbed moisture and help prevent corrosion, mold growth,
+          and product deterioration in logistics and industrial applications.
+        </p>
+
       </div>
 
       <!-- Image -->
       <div class="md:col-span-5 flex justify-center">
-        <img src="/banner2.png" alt="VIMS Techno Crafts In-Box Desiccants" class="w-full max-w-md ">
+        <div class="relative">
+          <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
+          <img
+            src="/banner2.png"
+            alt="Incubic In-Box Desiccants"
+            class="w-full max-w-md rounded-2xl shadow-md">
+        </div>
       </div>
 
     </div>
+
   </div>
 </section>
+
 
 <!-- <div class="max-w-7xl mx-auto px-5 mt-20">
   <div class="grid grid-cols-1 md:grid-cols-3 mb-20 gap-8">
@@ -76,55 +100,60 @@
   </div>
 </div> -->
 
-<section class="bg-white max-w-5xl mx-auto py-10 px-6 text-center relative">
+<section
+  class="relative py-5 bg-gradient-to-bl from-blue-100 via-white to-blue-100 overflow-hidden">
 
-  <!-- 🔘 Category Filters -->
-  <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
-  <button
-    *ngFor="let category of categorie"
-    (click)="filterCategory(category)"
-    [ngClass]="{
-      'bg-blue-900 text-white': selectedCategory === category.slug,
-      'bg-white text-gray-700 border-gray-300 hover:bg-gray-100':
-        selectedCategory !== category.slug
-    }"
-    class="px-4 py-2 rounded-full border transition-all text-xs sm:text-sm"
-  >
-    {{ category.name }}
-  </button>
-</div>
+  <!-- subtle background accents -->
+  <div class="absolute bottom-0 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl"></div>
 
+  <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
 
-  <!-- 🧩 Product Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div
-      *ngFor="let project of filteredProjects"
-      (click)="openProject(project)"
-      class="cursor-pointer group relative bg-white
-             border border-gray-200 rounded-2xl shadow-md
-             hover:shadow-xl hover:-translate-y-1
-             transition-all duration-300"
-    >
+    <!-- 🔘 Category Filters -->
+    <div class="flex flex-wrap justify-center gap-3 mb-14">
+      <button
+        *ngFor="let category of categorie"
+        (click)="filterCategory(category)"
+        [ngClass]="selectedCategory === category.slug
+          ? 'bg-blue-900 text-white shadow'
+          : 'bg-white text-gray-700 border border-gray-300 hover:bg-blue-50'"
+        class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300">
+        {{ category.name }}
+      </button>
+    </div>
 
-      <!-- Image -->
-      <div class="relative overflow-hidden rounded-t-2xl">
-        <img
-          [src]="project.image"
-          [alt]="project.title"
-          class="w-full h-56 object-cover
-                 transition-transform duration-500
-                 group-hover:scale-110"
-        />
-      </div>
+    <!-- 🧩 Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- Content -->
-      <div class="p-3 bg-[#05266e] text-left">
-        <p class="text-white text-bold text-center text-md">
-          Size: {{ project.gram }}
-        </p>
+      <div
+        *ngFor="let project of filteredProjects"
+        (click)="openProject(project)"
+        class="cursor-pointer group bg-white
+               border border-gray-200 rounded-2xl
+               shadow-sm hover:shadow-lg
+               hover:-translate-y-1
+               transition-all duration-300">
+
+        <!-- Image -->
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img
+            [src]="project.image"
+            [alt]="project.title"
+            class="w-full h-56 object-cover
+                   transition-transform duration-500
+                   group-hover:scale-110" />
+        </div>
+
+        <!-- Footer -->
+        <div class="p-4 bg-[#05266e] text-center rounded-b-2xl">
+          <p class="text-white font-semibold text-sm tracking-wide">
+            Size: {{ project.gram }}
+          </p>
+        </div>
+
       </div>
 
     </div>
-  </div>
 
+  </div>
 </section>
