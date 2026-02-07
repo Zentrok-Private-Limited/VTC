@@ -42,6 +42,10 @@ export const serverRoutes: ServerRoute[] = [
   {
     path: '**',
     renderMode: RenderMode.Prerender,
-  }
+  },
+  {
+    path: 'container-desiccants/:category/:product',
+    renderMode: RenderMode.Server
+  },
 
 ];
