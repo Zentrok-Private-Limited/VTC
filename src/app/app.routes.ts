@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { Desiccants } from './desiccants/desiccants';
 
 export const routes: Routes = [
 
@@ -75,9 +76,28 @@ export const routes: Routes = [
       import('./product/product-details/product-details')
         .then(m => m.ProductDetails),
   },
+  // ---------------Absorbent & Adsorbent Desiccants---------------------
   {
     path: 'desiccants',
     loadComponent: () =>
       import('./desiccants/desiccants').then(m => m.Desiccants),
+  },
+  // ---------------Moisture Damage Desiccants---------------------
+  {
+    path: 'moisture-damage',
+    loadComponent: () =>
+      import('./moisture-damage/moisture-damage').then(m => m.MoistureDamage),
+  },
+  // ---------------Moisture Damage Desiccants---------------------
+  {
+    path: 'moisture-damage-prevention',
+    loadComponent: () =>
+      import('./moisture-damage-prevention/moisture-damage-prevention').then(m => m.MoistureDamagePrevention),
+  },
+  // ---------------Industry solutions--------------------
+  {
+    path: 'industry-solutions',
+    loadComponent: () =>
+      import('./industry-solutions/industry-solutions').then(m => m.IndustrySolutions),
   },
 ];
