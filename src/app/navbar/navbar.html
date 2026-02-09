@@ -95,7 +95,43 @@
           </div>
         </li>
 
-        <li><a class="hover:text-[#05266e]">Knowledge Center</a></li>
+        <li class="relative group">
+          <span class="flex items-center gap-1 cursor-pointer hover:text-[#05266e]">
+            Knowledge Center
+            <svg class="w-4 h-4 mt-[2px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 top-full mt-[30px] w-[230px] bg-white border shadow-lg
+           opacity-0 invisible group-hover:opacity-100 group-hover:visible
+           transition-all duration-200">
+            <ul class="py-3 text-sm text-gray-700">
+              <li>
+                <a routerLink="/desiccants" class="block px-4 py-2 hover:text-blue-900">
+                  Desiccants
+                </a>
+              </li>
+              <li>
+                <a routerLink="/knowledge/articles" class="block px-4 py-2 hover:text-blue-900">
+                  Moisture Damage
+                </a>
+              </li>
+              <li>
+                <a routerLink="/knowledge/case-studies" class="block px-4 py-2 hover:text-blue-900">
+                  Moisture Damage Prevention
+                </a>
+              </li>
+              <li>
+                <a routerLink="/knowledge/faqs" class="block px-4 py-2 hover:text-blue-900">
+                  Industry Solutions
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
         <li><a class="hover:text-[#05266e]">CSR</a></li>
       </ul>
 
@@ -199,24 +235,54 @@
               class="block font-bold mb-2 text-blue-900 hover:text-blue-900">
               Container Desiccants
             </a>
-            <div class="mt-2 pl-3 space-y-2 border-l border-gray-200"> 
-            <a routerLink="/container-desiccants" fragment="ds" (click)="onNavClick()"
-              class="block py-1 text-gray-600 hover:text-blue-900">
-              DS
-            </a>
-            <a routerLink="/container-desiccants" fragment="dp" (click)="onNavClick()"
-              class="block py-1 text-gray-600 hover:text-blue-900">
-              SQ
-            </a>
-            <a routerLink="/container-desiccants" fragment="sq" (click)="onNavClick()"
-              class="block py-1 text-gray-600 hover:text-blue-900">
-              SQ / TP / DB
-            </a>
+            <div class="mt-2 pl-3 space-y-2 border-l border-gray-200">
+              <a routerLink="/container-desiccants" fragment="ds" (click)="onNavClick()"
+                class="block py-1 text-gray-600 hover:text-blue-900">
+                DS
+              </a>
+              <a routerLink="/container-desiccants" fragment="dp" (click)="onNavClick()"
+                class="block py-1 text-gray-600 hover:text-blue-900">
+                SQ
+              </a>
+              <a routerLink="/container-desiccants" fragment="sq" (click)="onNavClick()"
+                class="block py-1 text-gray-600 hover:text-blue-900">
+                SQ / TP / DB
+              </a>
             </div>
           </div>
         </div>
       </li>
-      <li><a class="hover:text-[#05266e]">Knowledge Center</a></li>
+      <li>
+        <a routerLink="/desiccants" class="w-full flex justify-between items-center"
+          (click)="isKnowledgeOpen = !isKnowledgeOpen">
+          Knowledge Center
+          <svg class="w-4 h-4 transition-transform" [class.rotate-180]="isKnowledgeOpen" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+
+        <!-- Dropdown -->
+        <div class="pl-4 mt-3 overflow-hidden transition-all duration-300" [class.max-h-0]="!isKnowledgeOpen"
+          [class.max-h-screen]="isKnowledgeOpen">
+          <a routerLink="/knowledge/blogs" (click)="onNavClick()"
+            class="block py-2 text-sm text-gray-600 hover:text-blue-900">
+            Desiccants
+          </a>
+          <a routerLink="/knowledge/articles" (click)="onNavClick()"
+            class="block py-2 text-sm text-gray-600 hover:text-blue-900">
+            Moisture Damage
+          </a>
+          <a routerLink="/knowledge/case-studies" (click)="onNavClick()"
+            class="block py-2 text-sm text-gray-600 hover:text-blue-900">
+          </a>
+          <a routerLink="/knowledge/faqs" (click)="onNavClick()"
+            class="block py-2 text-sm text-gray-600 hover:text-blue-900">
+            Industry Solutions
+          </a>
+        </div>
+      </li>
+
       <li><a class="hover:text-[#05266e]">CSR</a></li>
       <li><a routerLink="/contact" (click)="onNavClick()">Contact Us</a></li>
     </ul>

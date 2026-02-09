@@ -36,5 +36,6 @@ onNavClick() {
   this.isDesktopProductsOpen = false;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+isKnowledgeOpen = false;
 
 }

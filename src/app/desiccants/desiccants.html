@@ -1,0 +1,474 @@
+<!-- =================heading================ -->
+<div class="relative bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
+    <div class="absolute -top-15 -left-10 w-40 h-40 bg-blue-200/40 rounded-full blur-2xl"></div>
+    <div class="absolute -bottom-0 right-24 w-56 h-56 bg-blue-200/30 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 pt-40 relative z-10">
+        <h2 class="text-blue-900 text-2xl md:text-3xl font-semibold">
+            Knowledge Center
+        </h2>
+        <div class="my-3 w-16 h-1 bg-blue-700"></div>
+    </div>
+</div>
+<!-- ===================heading end ======================= -->
+<!-- =================About Desiccants====================== -->
+<section class="bg-gradient-to-br from-blue-50 via-white to-sky-100 relative overflow-hidden">
+
+    <!-- subtle background accents -->
+    <div class="absolute -top-24 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 -right-24 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-14 items-start
+             backdrop-blur py-7 md:p-12">
+
+            <!-- Content -->
+            <div class="md:col-span-7">
+
+                <!-- Heading -->
+                <h1 class="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
+                    Desiccants
+                </h1>
+                <div class="w-16 h-1 bg-blue-700 mb-6"></div>
+
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Desiccants</strong> are moisture-absorbing materials
+                    used to control humidity and maintain dryness in enclosed environments. They play a crucial role in
+                    protecting products from moisture-related damage such as corrosion, mold growth, caking, and
+                    degradation. Desiccants are widely used in packaging, storage, and transportation across industries
+                    including pharmaceuticals, electronics, food, textiles, and chemicals to ensure product quality and
+                    shelf life.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Based on their working mechanism, desiccants are broadly classified into absorbent and adsorbent
+                    types. Absorbent desiccants chemically bind moisture within their structure and typically offer high
+                    moisture-holding capacity, making them suitable for long-duration storage and shipping. Adsorbent
+                    desiccants, on the other hand, attract moisture onto their surface through physical adsorption and
+                    are known for faster response times, making them ideal for controlled environments where quick
+                    humidity regulation is required.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Moisture inside packaging can originate from multiple sources: natural moisture
+                    released by the products themselves, moisture present in packaging materials
+                    such as cardboard cartons or wooden crates, or humidity that diffuses through
+                    packaging during storage and transit.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    The selection of the right desiccant depends on factors such as ambient humidity, temperature
+                    conditions, exposure duration, and the sensitivity of the product being protected. When used
+                    correctly, desiccants provide an efficient, cost-effective, and reliable solution for moisture
+                    control, helping businesses reduce product loss, enhance safety, and maintain consistent performance
+                    throughout the supply chain.
+                </p>
+
+            </div>
+
+            <!-- Image -->
+            <div class="md:col-span-5 md:pt-10 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
+                    <img src="/banner2.png" alt="VIMS Techno Crafts In-Box Desiccants"
+                        class="w-full max-w-md rounded-2xl shadow-md">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- =====================About end=========================== -->
+<section class="bg-gradient-to-bl from-blue-50 via-white to-sky-100 relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl"></div>
+    <div class="max-w-5xl mx-auto px-5 relative z-10">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                Moisture Protection
+                <span class="text-blue-600"> Solutions</span>
+            </h2>
+            <div class="flex justify-center mb-16 mt-10">
+                <div class="flex gap-4 bg-white/70 backdrop-blur border border-blue-100 p-2 rounded-full shadow-sm">
+
+                    <button (click)="adsorbentabsorbent = 'box'" [ngClass]="adsorbentabsorbent === 'box'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                        class="px-8 py-3 text-sm font-semibold rounded-full transition-all">
+                        Absorbent desiccant
+                    </button>
+
+                    <button (click)="adsorbentabsorbent = 'container'" [ngClass]="adsorbentabsorbent === 'container'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                        class="px-8 py-3 text-sm font-semibold rounded-full transition-all">
+                        Adsorbent desiccants
+                    </button>
+
+                </div>
+            </div>
+            <div class="mt-10 max-w-2xl mx-auto bg-white/80 backdrop-blur
+               border border-blue-100 rounded-2xl p-6 md:p-8
+               shadow-md transition-all">
+                <div *ngIf="adsorbentabsorbent === 'box'">
+                    <p class="text-gray-700 leading-relaxed pb-4">
+                        <strong>Absorbent desiccants</strong> absorb moisture by chemically bonding water into the bulk
+                        of the desiccant material. They are slow acting but have high absorption
+                        capacity and remain active longer.
+                    </p>
+                    <a routerLink="/desiccants" fragment="absorbent"
+                        class="inline-flex items-center gap-2 font-semibold text-blue-900 hover:gap-3 transition-all">
+                        Learn More
+                        <span class="material-symbols-outlined leading-none">
+                            arrow_right_alt
+                        </span>
+                    </a>
+
+                </div>
+                <div *ngIf="adsorbentabsorbent === 'container'">
+                    <p class="text-gray-700 leading-relaxed pb-4">
+                        <strong>Adsorbent desiccants</strong> attract moisture onto their surface structure.
+                        They act faster but have lower total moisture holding capacity.
+                    </p>
+                    <a routerLink="/desiccants" fragment="adsorbent"
+                        class="inline-flex items-center gap-2 font-semibold text-blue-900 hover:gap-3 transition-all">
+                        Learn More
+                        <span class="material-symbols-outlined leading-none">
+                            arrow_right_alt
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =============About Absorbent Desiccant start==================== -->
+<section id="absorbent" class="relative py-20 bg-gradient-to-b from-blue-700 to-blue-900 overflow-hidden">
+    <!-- subtle background accents -->
+    <div class="absolute -top-20 -left-20 w-64 h-64 bg-blue-500/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 -right-20 w-72 h-72 bg-sky-400/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10">
+        <!-- Highlight Card -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8
+             bg-white/10 backdrop-blur border border-white/20
+             text-white p-6 md:p-10 rounded-2xl shadow-xl">
+
+            <!-- Left : Heading -->
+            <div class="md:col-span-4 flex items-start md:items-center">
+                <h1 class="text-3xl md:text-4xl font-bold">
+                    Absorbent<br class="hidden md:block">
+                    Desiccant
+                </h1>
+            </div>
+
+            <!-- Right : Content -->
+            <div class="md:col-span-8 space-y-4">
+                <p class="text-gray-100 leading-relaxed mb-4">
+                    <strong>Absorbent desiccants</strong> remove moisture by chemically binding water vapor within their
+                    structure, providing long-lasting humidity control.
+                </p>
+
+                <p class="text-gray-100 leading-relaxed mb-4">
+                    They are used to protect products from corrosion, mold growth, and moisture damage during storage
+                    and transportation.
+                </p>
+
+                <p class="text-gray-100 leading-relaxed mb-4">
+                    These desiccants offer higher moisture absorption capacity than silica gel and clay, even in
+                    high-humidity conditions.
+                </p>
+
+                <p class="text-gray-100 leading-relaxed">
+                    Absorbent desiccants help maintain product quality and ensure reliable moisture protection across
+                    the supply chain.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================ Calcium / Magnesium Tabs Section ============================ -->
+<section class="bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
+    <!-- background accents -->
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10 mb-10">
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-16 mt-10">
+            <div class="flex gap-4 bg-white/70 backdrop-blur border border-blue-100 p-2 rounded-full shadow-sm">
+
+                <button (click)="activeSolution = 'box'" [ngClass]="activeSolution === 'box'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                    class="px-8 py-3 text-sm font-semibold rounded-full transition-all">
+                    Calcium Chloride Desiccants
+                </button>
+
+                <button (click)="activeSolution = 'container'" [ngClass]="activeSolution === 'container'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                    class="px-8 py-3 text-sm font-semibold rounded-full transition-all">
+                    Magnesium Chloride Desiccants
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-14 items-start">
+
+            <!-- Image -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
+
+                    <!-- Calcium Image -->
+                    <img *ngIf="activeSolution === 'box'" src="/banner2.png" alt="Calcium Chloride Desiccants"
+                        class="w-full max-w-md rounded-2xl shadow-md">
+
+                    <!-- Magnesium Image -->
+                    <img *ngIf="activeSolution === 'container'" src="/banner1.png" alt="Magnesium Chloride Desiccants"
+                        class="w-full max-w-md rounded-2xl shadow-md">
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div class="md:col-span-7">
+
+                <h2 class="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
+                    {{ activeSolution === 'box'
+                    ? 'Calcium Chloride Desiccants'
+                    : 'Magnesium Chloride Desiccants' }}
+                </h2>
+
+                <div class="w-16 h-1 bg-blue-700 mb-6"></div>
+
+                <!-- Calcium Content -->
+                <div *ngIf="activeSolution === 'box'">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Calcium chloride desiccants</strong> are powerful moisture absorbers
+                        that chemically bind water vapor, delivering long-lasting moisture protection.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        They are widely used to prevent corrosion, mold growth, and product damage
+                        during storage and transportation across multiple industries.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Their high moisture-holding capacity makes them more effective than silica
+                        gel or clay in high-humidity conditions.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Calcium chloride desiccants are ideal for export packaging, long-term storage,
+                        and demanding logistics environments.
+                    </p>
+                </div>
+
+                <!-- Magnesium Content -->
+                <div *ngIf="activeSolution === 'container'">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Magnesium chloride desiccants</strong> provide effective and balanced
+                        moisture control for enclosed environments.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        They help protect goods from mold, corrosion, and packaging damage during
+                        storage and transportation.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Magnesium chloride desiccants perform consistently across varying temperature
+                        and humidity conditions.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed">
+                        Their controlled absorption rate makes them suitable for long-duration
+                        storage where stable humidity regulation is required.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================ About Absorbent Desiccant End ============================ -->
+
+<section id="adsorbent" class="relative py-20 bg-gradient-to-b from-blue-700 to-blue-900 overflow-hidden">
+    <!-- subtle background accents -->
+    <div class="absolute -top-20 -left-20 w-64 h-64 bg-blue-500/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 -right-20 w-72 h-72 bg-sky-400/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10">
+        <!-- Highlight Card -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8
+             bg-white/10 backdrop-blur border border-white/20
+             text-white p-6 md:p-10 rounded-2xl shadow-xl">
+
+            <!-- Left : Heading -->
+            <div class="md:col-span-4 flex items-start md:items-center">
+                <h1 class="text-3xl md:text-4xl font-bold">
+                    Adsorbent<br class="hidden md:block">
+                    Desiccant
+                </h1>
+            </div>
+
+            <!-- Right : Content -->
+            <div class="md:col-span-8 space-y-4">
+                <p class="text-gray-100 leading-relaxed mb-4">
+                    <strong>Adsorbent desiccants</strong> Adsorbent desiccants control moisture by attracting and
+                    holding water vapor on their surface through physical adsorption.
+                </p>
+
+                <p class="text-gray-100 leading-relaxed mb-4">
+                    They are commonly used to protect products from humidity-related issues such as corrosion, mold
+                    growth, and packaging damage.
+                </p>
+
+                <p class="text-gray-100 leading-relaxed mb-4">
+                    Adsorbent desiccants respond quickly to changes in humidity, making them ideal for controlled and
+                    stable environments.
+                </p>
+
+                <p class="text-gray-100 leading-relaxed">
+                    Using adsorbent desiccants helps maintain dryness, protect sensitive goods, and ensure consistent
+                    storage conditions.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
+    <!-- background accents -->
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 relative z-10 mb-10">
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-16 mt-10">
+            <div class="flex flex-wrap justify-center gap-3
+               bg-white/70 backdrop-blur border border-blue-100
+               p-2 rounded-full shadow-sm">
+
+                <!-- Silica Gel -->
+                <button (click)="adsorbent = 'silicaGel'" [ngClass]="adsorbent === 'silicaGel'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                    class="px-7 py-3 text-sm font-semibold rounded-full transition-all">
+                    Silica Gel
+                </button>
+
+                <!-- Dry Clay -->
+                <button (click)="adsorbent = 'dryClayDesiccant'" [ngClass]="adsorbent === 'dryClayDesiccant'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                    class="px-7 py-3 text-sm font-semibold rounded-full transition-all">
+                    Dry Clay Desiccant
+                </button>
+
+                <!-- Molecular Sieves -->
+                <button (click)="adsorbent = 'molecularSieves'" [ngClass]="adsorbent === 'molecularSieves'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                    class="px-7 py-3 text-sm font-semibold rounded-full transition-all">
+                    Molecular Sieves
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-14 items-start">
+
+            <!-- Image -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
+
+                    <img *ngIf="adsorbent === 'silicaGel'" src="/banner1.png" alt="Silica Gel Desiccant"
+                        class="w-full max-w-md rounded-2xl shadow-md">
+
+                    <img *ngIf="adsorbent === 'dryClayDesiccant'" src="/banner2.png" alt="Dry Clay Desiccant"
+                        class="w-full max-w-md rounded-2xl shadow-md">
+
+                    <img *ngIf="adsorbent === 'molecularSieves'" src="/banner3.png" alt="Molecular Sieves Desiccant"
+                        class="w-full max-w-md rounded-2xl shadow-md">
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div class="md:col-span-7">
+
+                <h2 class="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
+                    {{
+                    adsorbent === 'silicaGel'
+                    ? 'Silica Gel Desiccants'
+                    : adsorbent === 'dryClayDesiccant'
+                    ? 'Dry Clay Desiccants'
+                    : 'Molecular Sieves'
+                    }}
+                </h2>
+
+                <div class="w-16 h-1 bg-blue-700 mb-6"></div>
+
+                <!-- Silica -->
+                <div *ngIf="adsorbent === 'silicaGel'">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Silica gel desiccants</strong> adsorb moisture by trapping water
+                        molecules on their surface, providing fast and reliable humidity control.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        They are widely used in electronics, pharmaceuticals, and packaging
+                        applications.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Silica gel performs best in controlled environments with moderate humidity.
+                    </p>
+                </div>
+
+                <!-- Dry Clay -->
+                <div *ngIf="adsorbent === 'dryClayDesiccant'">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Dry clay desiccants</strong> are natural, cost-effective solutions
+                        for general moisture protection.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        They are commonly used in shipping, storage, and industrial packaging.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Dry clay desiccants work efficiently in stable temperature conditions.
+                    </p>
+                </div>
+
+                <!-- Molecular Sieves -->
+                <div *ngIf="adsorbent === 'molecularSieves'">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        <strong>Molecular sieves</strong> offer precise and selective moisture
+                        adsorption at very low humidity levels.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        They are ideal for sensitive applications such as pharmaceuticals and
+                        specialty chemicals.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Molecular sieves deliver consistent performance even under extreme
+                        conditions.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
