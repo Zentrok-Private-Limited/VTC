@@ -48,84 +48,96 @@ export const INCUBIC_CATEGORIES = [
 
 export const INCUBIC_DATA = [
   {
-    slug: 'clay-desiccants',
-    name: 'Clay Desiccants',
+  slug: 'clay-desiccants',
+  name: 'Clay Desiccants',
 
-    /* CATEGORY IMAGES */
-    images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+  /* CATEGORY IMAGES */
+  images: [
+    '/banner1.png',
+    '/banner2.png',
+    '/banner3.png'
+  ],
+
+  /* OVERVIEW */
+  description1:
+    'VTC® Clay Desiccant is an environmentally responsible moisture control solution made from high-quality natural clay minerals. Designed with sustainability in mind, it is packed in durable, biodegradable packaging material that ensures effective protection while reducing environmental impact.',
+
+  description2:
+    'This clay desiccant demonstrates excellent moisture adsorption properties and responds efficiently to changes in ambient humidity. It is widely used across industries such as food packaging, pharmaceuticals, medical devices, electronics, and general industrial storage.',
+
+  /* KEY FEATURES */
+  features: [
+    'Environment friendly natural clay',
+    'High moisture adsorption capacity',
+    'Biodegradable packaging material',
+    'Cost-effective moisture control solution',
+    'Chemically inert and non-toxic'
+  ],
+
+  /* APPLICATIONS */
+  applications: [
+    'Food packaging',
+    'Pharmaceuticals',
+    'Medical devices',
+    'Electronics',
+    'Industrial storage',
+    'Logistics & shipping'
+  ],
+
+  /* TECHNICAL SPECIFICATIONS */
+  specifications: {
+    material: 'Activated Natural Clay',
+    adsorptionCapacity: 'Up to 30% @ 90% RH',
+    packaging: 'Tyvek / Non-woven / Paper',
+    compliance: [
+      'DIN 55473',
+      'MIL-D-3464E',
+      'REACH compliant',
+      'RoHS compliant'
     ],
-
-    /* OVERVIEW */
-    description1:
-      'VTC® Clay Desiccant is an environmentally responsible moisture control solution made from high-quality natural clay minerals. Designed with sustainability in mind, it is packed in durable, biodegradable packaging material that ensures effective protection while reducing environmental impact.',
-
-    description2:
-      'This clay desiccant demonstrates excellent moisture adsorption properties and responds efficiently to changes in ambient humidity. It is widely used across industries such as food packaging, pharmaceuticals, medical devices, electronics, and general industrial storage.',
-
-    /* KEY FEATURES */
-    features: [
-      'Environment friendly natural clay',
-      'High moisture adsorption capacity',
-      'Biodegradable packaging material',
-      'Cost-effective moisture control solution',
-      'Chemically inert and non-toxic'
-    ],
-
-    /* APPLICATIONS */
-    applications: [
-      'Food packaging',
-      'Pharmaceuticals',
-      'Medical devices',
-      'Electronics',
-      'Industrial storage',
-      'Logistics & shipping'
-    ],
-
-    /* TECHNICAL SPECIFICATIONS (TABLE) */
-    specifications: {
-      material: 'Activated Natural Clay',
-      adsorptionCapacity: 'Up to 30% @ 90% RH',
-      packaging: 'Tyvek / Non-woven / Paper',
-      compliance: [
-        'DIN 55473',
-        'MIL-D-3464E',
-        'REACH compliant',
-        'RoHS compliant'
-      ],
-      shelfLife: '2 years (sealed condition)'
-    },
-
-    /* PRODUCT VARIANTS */
-    products: [
-      {
-        slug: '1g-clay',
-        name: '1g Clay Desiccant',
-        gram: '1g',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ],
-        packaging: 'Tyvek / Paper',
-        usage: 'Small cartons, electronics'
-      },
-      {
-        slug: '2g-clay',
-        name: '2g Clay Desiccant',
-        gram: '2g',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ],
-        packaging: 'Tyvek / Paper',
-        usage: 'Medium cartons, pharma packs'
-      }
-    ]
+    shelfLife: '2 years (sealed condition)'
   },
+
+  /* PRODUCT VARIANTS */
+  products: [
+    {
+      slug: '2g-clay',
+      name: '2g Clay Desiccant',
+      gram: 'cl2g',
+      images: ['/cl2g.png'],
+    },
+    {
+      slug: '6g-clay',
+      name: '6g Clay Desiccant',
+      gram: '6g',
+      images: ['/cl6g.png'],
+    },
+    {
+      slug: '9g-clay',
+      name: '9g Clay Desiccant',
+      gram: '9g',
+      images: ['/cl9g.png'],
+    },
+    {
+      slug: '17g-clay',
+      name: '17g Clay Desiccant',
+      gram: '17g',
+      images: ['/cl17g.png'],
+    },
+    {
+      slug: '33g-clay',
+      name: '33g Clay Desiccant',
+      gram: '33g',
+      images: ['/cl33g.png'],
+    },
+    {
+      slug: '66g-clay',
+      name: '66g Clay Desiccant',
+      gram: '66g',
+      images: ['/cl66g.png'],
+    }
+  ]
+},
   /* ---------------- SILICA GEL ROUND BEADS ---------------- */
   {
     slug: 'silica-gel-round-beads',
@@ -162,23 +174,11 @@ export const INCUBIC_DATA = [
 
     products: [
       {
-        slug: '1g-silica-round',
-        name: '1g Silica Gel Round Beads',
-        gram: '1g SG',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ]
-      },
-      {
         slug: '2g-silica-round',
         name: '2g Silica Gel Round Beads',
         gram: '2g SG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/SG.png'
         ]
       },
       {
@@ -186,9 +186,7 @@ export const INCUBIC_DATA = [
         name: '5g Silica Gel Round Beads',
         gram: '5g SG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/SG.png'
         ]
       },
       {
@@ -196,9 +194,7 @@ export const INCUBIC_DATA = [
         name: '10g Silica Gel Round Beads',
         gram: '10g SG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/SG.png'
         ]
       }
     ]

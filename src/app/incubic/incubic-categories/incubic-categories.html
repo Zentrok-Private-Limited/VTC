@@ -139,7 +139,7 @@
           <img
             [src]="project.image"
             [alt]="project.title"
-            class="w-full h-56 object-cover
+            class="w-full h-56 object-contain
                    transition-transform duration-500
                    group-hover:scale-110" />
         </div>
@@ -147,7 +147,7 @@
         <!-- Footer -->
         <div class="p-4 bg-[#05266e] text-center rounded-b-2xl">
           <p class="text-white font-semibold text-sm tracking-wide">
-            Size: {{ project.gram }}
+            {{ project.gram }}
           </p>
         </div>
 

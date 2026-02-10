@@ -40,19 +40,48 @@ export class IncubicCategories {
 
   selectedCategory = 'clay-desiccants';
   projects: Product[] = [
-    {
-      title: '1g Clay Desiccant',
-      slug: '1g-clay',
-      categorySlug: 'clay-desiccants',
-      image: '/banner1.png',
-      gram: '1g'
-    },
+    
     {
       title: '2g Clay Desiccant',
       slug: '2g-clay',
       categorySlug: 'clay-desiccants',
-      image: '/banner2.png',
-      gram: '2g'
+      image: '/cl2g.png',
+      gram: 'CL 2G'
+    },
+    {
+      title: '6g Clay Desiccant',
+      slug: '6g-clay',
+      categorySlug: 'clay-desiccants',
+      image: '/cl6g.png',
+      gram: 'CL 6G'
+    },
+    {
+      title: '9g Clay Desiccant',
+      slug: '9g-clay',
+      categorySlug: 'clay-desiccants',
+      image: '/cl9g.png',
+      gram: 'CL 9G'
+    },
+    {
+      title: '17g Clay Desiccant',
+      slug: '17g-clay',
+      categorySlug: 'clay-desiccants',
+      image: '/cl17g.png',
+      gram: 'CL 17G'
+    },
+    {
+      title: '33g Clay Desiccant',
+      slug: '33g-clay',
+      categorySlug: 'clay-desiccants',
+      image: '/cl33g.png',
+      gram: 'CL 33G'
+    },
+    {
+      title: '66g Clay Desiccant',
+      slug: '66g-clay',
+      categorySlug: 'clay-desiccants',
+      image: '/cl66g.png',
+      gram: 'CL 66G'
     },
 
     // 🔹 SILICA GEL ROUND BEADS
@@ -60,15 +89,22 @@ export class IncubicCategories {
       title: '2g Silica Gel Round Beads',
       slug: '2g-silica-round',
       categorySlug: 'silica-gel-round-beads',
-      image: '/banner1.png',
+      image: '/SG.png',
       gram: '2g SG'
     },
     {
       title: '5g Silica Gel Round Beads',
       slug: '5g-silica-round',
       categorySlug: 'silica-gel-round-beads',
-      image: '/banner2.png',
+      image: '/SG.png',
       gram: '5g SG'
+    },
+    {
+      title: '10g Silica Gel Round Beads',
+      slug: '10g-silica-round',
+      categorySlug: 'silica-gel-round-beads',
+      image: '/SG.png',
+      gram: '10g SG'
     },
 
     // 🔹 SILICA GEL GRANULES
