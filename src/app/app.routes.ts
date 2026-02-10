@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Desiccants } from './desiccants/desiccants';
+import { SocialResponsibilities } from './social-responsibilities/social-responsibilities';
 
 export const routes: Routes = [
 
@@ -99,5 +100,11 @@ export const routes: Routes = [
     path: 'industry-solutions',
     loadComponent: () =>
       import('./industry-solutions/industry-solutions').then(m => m.IndustrySolutions),
+  },
+  // ---------------Industry solutions--------------------
+  {
+    path: 'social-responsibilities',
+    loadComponent: () =>
+      import('./social-responsibilities/social-responsibilities').then(m => m.SocialResponsibilities),
   },
 ];

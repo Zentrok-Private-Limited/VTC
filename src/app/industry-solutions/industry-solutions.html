@@ -1,22 +1,16 @@
 <!-- =================heading================ -->
-<div class="relative bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
-    <div class="absolute -top-15 -left-10 w-40 h-40 bg-blue-200/40 rounded-full blur-2xl"></div>
-    <div class="absolute -bottom-0 right-24 w-56 h-56 bg-blue-200/30 rounded-full blur-3xl"></div>
+<div class="relative bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative">
 
     <div class="max-w-6xl mx-auto px-5 pt-40 relative z-10">
         <h2 class="text-blue-900 text-2xl md:text-3xl font-semibold">
             Knowledge Center
         </h2>
-        <div class="my-3 w-16 h-1 bg-blue-700"></div>
+        <div class="mt-3 w-16 h-1 bg-blue-700"></div>
     </div>
 </div>
 <!-- ===================heading end ======================= -->
 
-<section class="py-5 md:py-5 bg-gradient-to-br from-blue-100 via-white to-blue-100 relative overflow-hidden">
-
-    <!-- background accents -->
-    <div class="absolute -top-24 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 -right-24 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl"></div>
+<section class="relative py-5 md:py-5 bg-gradient-to-br from-blue-100 via-white to-blue-100">
 
     <div class="max-w-6xl mx-auto px-4 md:px-5 relative z-10">
         <h1 class="text-2xl md:text-4xl font-semibold text-blue-900 mb-4">
@@ -28,7 +22,7 @@
 
             <!-- CONTENT -->
             <div class="md:col-span-4">
-                <div class="md:p-5">
+                <div class="md:p-5 md:sticky md:top-28">
                     <div class="flex justify-center md:justify-start">
                         <div class="flex flex-col gap-3 w-full max-w-sm">
 
@@ -92,27 +86,72 @@
                     </div>
                 </div>
             </div>
+
             <!-- IMAGE BLOCK -->
             <!-- IMAGE / CONTENT BLOCK -->
-            <div class="md:col-span-8 flex items-start py-5">
-                <div class="bg-white/80 backdrop-blur border border-blue-100
-              rounded-2xl p-6 md:p-10 shadow-md w-full">
+            <div class="md:col-span-8 flex items-start">
+                <div class="p-2 md:p-5 w-full">
 
                     <!-- Garments & Textiles -->
                     <div *ngIf="adsorbentabsorbent === 'garments'">
+                        <img src="/banner1.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
+
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Garments & Textiles
                         </h3>
-                        <p class="text-gray-700 leading-relaxed">
+
+                        <p class="text-gray-700 leading-relaxed mb-8">
                             Garments and textiles are highly sensitive to moisture, which can cause mold
                             growth, odor, discoloration, and fabric degradation during storage and transit.
                             Effective moisture control helps preserve fabric quality, appearance, and
                             usability throughout the supply chain.
                         </p>
+
+                        <!-- 7 Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 2g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 5g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 10g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 25g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 50g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+
+                            <div class="p-4 sm:col-span-2 lg:col-span-1">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1700g</h4>
+                            </div>
+
+                        </div>
                     </div>
+
 
                     <!-- Leather Articles -->
                     <div *ngIf="adsorbentabsorbent === 'leather'">
+                        <img src="/banner1.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Leather Articles
                         </h3>
@@ -121,10 +160,43 @@
                             stiffness, cracking, and surface deterioration. Controlled moisture protection
                             ensures durability, finish quality, and long-term value of leather goods.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 2g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 5g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 10g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 25g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 50g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Footwear -->
                     <div *ngIf="adsorbentabsorbent === 'footwear'">
+                        <img src="/banner3.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Footwear
                         </h3>
@@ -133,10 +205,51 @@
                             deformation, and material damage. Moisture control solutions help maintain
                             hygiene, structure, and product performance during transportation.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 2g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 2g sticky</h4>
+                            </div>
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 5g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 10g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 5g sticky</h4>
+                            </div>
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 25g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 50g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Furniture -->
                     <div *ngIf="adsorbentabsorbent === 'furniture'">
+                        <img src="/banner3.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Furniture
                         </h3>
@@ -145,10 +258,41 @@
                             and mold when exposed to humidity. Proper moisture management protects
                             structural integrity and surface finishes.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 5g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 10g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 25g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 50g</h4>
+                            </div>
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 100g</h4>
+                            </div>
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Handicrafts & Kitchen -->
                     <div *ngIf="adsorbentabsorbent === 'HandicraftsAndKitchen'">
+                        <img src="/banner3.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Handicrafts & Kitchen Utensils
                         </h3>
@@ -157,9 +301,36 @@
                             are susceptible to corrosion, discoloration, and mold. Moisture control
                             preserves craftsmanship, appearance, and functionality.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 2g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 5g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 10g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 25g</h4>
+                            </div>
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+                        </div>
                     </div>
                     <!-- Machinery & Electronics -->
                     <div *ngIf="adsorbentabsorbent === 'machinery'">
+                        <img src="/banner3.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Machinery, Electrical & Electronic Goods
                         </h3>
@@ -168,9 +339,42 @@
                             can cause corrosion, short circuits, and malfunction. Reliable moisture
                             protection ensures operational safety and performance integrity.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 100g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 250g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 500g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1400g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1500g BK-SS</h4>
+                            </div>
+                        </div>
                     </div>
                     <!-- Metal Products -->
                     <div *ngIf="adsorbentabsorbent === 'metalProducts'">
+                        <img src="/banner3.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Metal Products
                         </h3>
@@ -179,9 +383,46 @@
                             Moisture control solutions reduce corrosion risks and help maintain surface
                             quality during storage and transportation.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 50g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 100g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 250g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 500g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1400g</h4>
+                            </div>
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1500g BK-SS</h4>
+                            </div>
+                        </div>
                     </div>
                     <!-- Agricultural Products -->
                     <div *ngIf="adsorbentabsorbent === 'agricultural'">
+                        <img src="/banner3.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Agricultural Products
                         </h3>
@@ -190,6 +431,28 @@
                             and quality loss. Effective moisture management helps extend shelf life
                             and maintain freshness during transit and storage.
                         </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4">
+                                <img src="/banner2.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 500g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DS 1000g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">DB 1000g</h4>
+                            </div>
+
+                            <div class="p-4">
+                                <img src="/banner3.png" alt="">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">SQ 1000g</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
