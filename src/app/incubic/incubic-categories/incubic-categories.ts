@@ -109,107 +109,101 @@ export class IncubicCategories {
 
     // 🔹 SILICA GEL GRANULES
     {
-      title: '1g Silica Gel Granules',
-      slug: '1g-silica-granules',
-      categorySlug: 'silica-gel-granules',
-      image: 'banner1.png',
-      gram: '1g SGG'
-    },
-    {
       title: '2g Silica Gel Granules',
       slug: '2g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'banner2.png',
+      image: 'sgg.png',
       gram: '2g SGG'
     },
     {
       title: '5g Silica Gel Granules',
       slug: '5g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'banner3.png',
+      image: 'sgg.png',
       gram: '5g SGG'
     },
     {
       title: '10g Silica Gel Granules',
       slug: '10g-silica-granules',
       categorySlug: 'silica-gel-granules',
-      image: 'banner1.png',
+      image: 'sgg.png',
       gram: '10g SGG'
     },
 
     // 🔹 MOLECULAR SIEVE (LISTING / GRID)
-    {
-      title: '1g Molecular Sieve',
-      slug: '1g-molecular-sieve',
-      categorySlug: 'molecular-sieve-desiccants', 
-      image: '/banner1.png',
-      gram: '1g MS'
-    },
+    
     {
       title: '2g Molecular Sieve',
       slug: '2g-molecular-sieve',
       categorySlug: 'molecular-sieve-desiccants', 
-      image: '/banner2.png',
+      image: '/ms2g.png',
       gram: '2g MS'
     },
     {
-      title: '5g Molecular Sieve',
-      slug: '5g-molecular-sieve',
+      title: '6g Molecular Sieve',
+      slug: '6g-molecular-sieve',
       categorySlug: 'molecular-sieve-desiccants', 
-      image: '/banner3.png',
-      gram: '5g MS'
+      image: '/ms6g.png',
+      gram: '6g MS'
+    },
+    {
+      title: '10g Molecular Sieve',
+      slug: '10g-molecular-sieve',
+      categorySlug: 'molecular-sieve-desiccants', 
+      image: '/ms10g.png',
+      gram: '10g MS'
     },
     // 🔹 INDICATING & SPECIALTY (LISTING)
-    {
-      title: '1g Indicating Desiccant',
-      slug: '1g-indicating-desiccant',
-      categorySlug: 'indicating-specialty-desiccants',
-      image: '/banner1.png',
-      gram: '1g IS'
-    },
     {
       title: '2g Indicating Desiccant',
       slug: '2g-indicating-desiccant',
       categorySlug: 'indicating-specialty-desiccants',
-      image: '/banner2.png',
+      image: '/is.png',
       gram: '2g IS'
     },
     // 🔹 FOOD GRADE DESICCANTS
     {
+      title: '0.5g Food Grade Desiccant',
+      slug: '0.5g-food-grade-desiccant',
+      categorySlug: 'food-grade-desiccants',
+      image: '/fg05g.png',
+      gram: '0.5g FG'
+    },
+    {
       title: '1g Food Grade Desiccant',
       slug: '1g-food-grade-desiccant',
       categorySlug: 'food-grade-desiccants',
-      image: '/banner1.png',
+      image: '/fg1g.png',
       gram: '1g FG'
     },
     {
       title: '2g Food Grade Desiccant',
       slug: '2g-food-grade-desiccant',
       categorySlug: 'food-grade-desiccants',
-      image: '/banner2.png',
+      image: '/fg2g.png',
       gram: '2g FG'
-    },
-    {
-      title: '5g Food Grade Desiccant',
-      slug: '5g-food-grade-desiccant',
-      categorySlug: 'food-grade-desiccants',
-      image: '/banner3.png',
-      gram: '5g FG'
     },
 
     // 🔹 ACTIVATED CARBON
     {
-      title: '5g Activated Carbon',
-      slug: '5g-activated-carbon',
+      title: '2g Activated Carbon',
+      slug: '2g-activated-carbon',
       categorySlug: 'activated-carbon',
-      image: '/banner2.png',
-      gram: '5g AC'
+      image: '/ac2g.png',
+      gram: '2g AC'
+    },
+    {
+      title: '6g Activated Carbon',
+      slug: '6g-activated-carbon',
+      categorySlug: 'activated-carbon',
+      image: '/ac6g.png',
+      gram: '6g AC'
     },
     {
       title: '10g Activated Carbon',
       slug: '10g-activated-carbon',
       categorySlug: 'activated-carbon',
-      image: '/banner3.png',
+      image: '/ac10g.png',
       gram: '10g AC'
     },
     // 🔹 OXYGEN ABSORBERS
@@ -217,14 +211,14 @@ export class IncubicCategories {
       title: '50cc Oxygen Absorber',
       slug: '50cc-oxygen-absorber',
       categorySlug: 'oxygen-absorbers',
-      image: '/banner1.png',
+      image: '/50cc.png',
       gram: '50cc OA'
     },
     {
       title: '100cc Oxygen Absorber',
       slug: '100cc-oxygen-absorber',
       categorySlug: 'oxygen-absorbers',
-      image: '/banner2.png',
+      image: '/100cc.png',
       gram: '100cc OA'
     }
   ];

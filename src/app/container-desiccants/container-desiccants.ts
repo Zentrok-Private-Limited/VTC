@@ -39,21 +39,21 @@ export class ContainerDesiccants {
       title: 'DS 250G',
       slug: 'ds-250g',
       categorySlug: 'ds',
-      image: '/banner1.png',
+      image: '/DS250g.png',
       gram: 'DS 250G'
     },
     {
       title: 'DS 250g Sticker',
       slug: 'ds-250g-sticker',
       categorySlug: 'ds',
-      image: '/banner2.png',
+      image: '/DS250gsticker.png',
       gram: 'DS 250G Sticker'
     },
     {
       title: 'DS 500G',
       slug: 'ds-500g',
       categorySlug: 'ds',
-      image: '/banner1.png',
+      image: '/DS500g.png',
       gram: 'DS 500G'
     },
 
@@ -61,7 +61,7 @@ export class ContainerDesiccants {
       title: 'DP 1000G',
       slug: 'dp-1000g',
       categorySlug: 'dp',
-      image: '/banner2.png',
+      image: '/DP1000g.png',
       gram: 'DP 1000G'
     },
 
@@ -69,22 +69,22 @@ export class ContainerDesiccants {
       title: 'DB 1000G',
       slug: 'db-1000g',
       categorySlug: 'sq-tp-dp',
-      image: '/banner1.png',
+      image: '/db1000g.png',
       gram: 'DB 1000G'
     },
     {
       title: 'SQ 1000G',
       slug: 'sq-1000g',
       categorySlug: 'sq-tp-dp',
-      image: '/banner2.png',
+      image: '/sq1000g.png',
       gram: 'SQ 1000G'
     },
     {
-      title: 'TP 1000G',
-      slug: 'tp-1000g',
+      title: 'TP 1200G',
+      slug: 'tp-1200g',
       categorySlug: 'sq-tp-dp',
-      image: '/banner1.png',
-      gram: 'TP 1000G'
+      image: '/tp1200g.png',
+      gram: 'TP 1200G'
     }
   ];
 

@@ -8,7 +8,7 @@ export const CONTAINER_DATA = [
   {
     slug: 'ds',
     name: 'DS',
-    images: ['/banner1.png', '/banner2.png', '/banner3.png'],
+    images: ['/DS250g', '/DS250gsticker.png', '/DS500g.png'],
 
     description1:
       'VTC desiccants are manufactured using high-purity calcium chloride combined with a specially developed natural organic gelling agent. Calcium chloride is a highly hygroscopic material capable of attracting and binding large amounts of moisture.',
@@ -37,19 +37,19 @@ export const CONTAINER_DATA = [
         slug: 'ds-250g',
         name: 'DS 250G',
         gram: 'DS 250G',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        images: ['/DS250g.png', '/DS250g.png', '/DS250g.png']
       },
       {
         slug: 'ds-250g-sticker',
         name: 'DS 250G Sticker',
         gram: 'DS 250G Sticker',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        images: ['/DS250gsticker.png', '/DS250gsticker.png', '/DS250gsticker.png']
       },
       {
         slug: 'ds-500g',
         name: 'DS 500G',
         gram: 'DS 500G',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        images: ['/DS500g.png', '/DS500g.png', '/DS500g.png']
       }
     ]
   },
@@ -57,7 +57,7 @@ export const CONTAINER_DATA = [
   {
     slug: 'dp',
     name: 'DP',
-    images: ['/banner1.png', '/banner2.png', '/banner3.png'],
+    images: ['/DP1000g.png', '/DP1000g.png', '/DP1000g.png'],
 
     description1:
       'DP Series container desiccants are heavy-duty moisture control solutions designed for extreme humidity and long sea routes.',
@@ -82,7 +82,7 @@ export const CONTAINER_DATA = [
         slug: 'dp-1000g',
         name: 'DP 1000G',
         gram: 'DP 1000G',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        images: ['/DP1000g.png', '/DP1000g.png', '/DP1000g.png']
       }
     ]
   },
@@ -90,7 +90,7 @@ export const CONTAINER_DATA = [
   {
     slug: 'sq-tp-dp',
     name: 'SQ / TP / DP',
-    images: ['/banner1.png', '/banner2.png', '/banner3.png'],
+    images: ['/sq1000g.png', '/tp1200g.png', '/db1000g.png'],
 
     description1:
       'SQ / TP / DB Series are space-optimized container desiccants designed for flexible placement.',
@@ -115,19 +115,19 @@ export const CONTAINER_DATA = [
         slug: 'db-1000g',
         name: 'DB 1000G',
         gram: 'DB 1000G',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        images: ['/db1000g.png', '/db1000g.png', '/db1000g.png']
       },
       {
         slug: 'sq-1000g',
         name: 'SQ 1000G',
         gram: 'SQ 1000G',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        images: ['/sq1000g.png', '/sq1000g.png', '/sq1000g.png']
       },
       {
-        slug: 'tp-1000g',
-        name: 'TP 1000G',
-        gram: 'TP 1000G',
-        images: ['/banner1.png', '/banner2.png', '/banner3.png']
+        slug: 'tp-1200g',
+        name: 'TP 1200G',
+        gram: 'TP 1200G',
+        images: ['/tp1200g.png', '/tp1200g.png', '/tp1200g.png']
       }
     ]
   }

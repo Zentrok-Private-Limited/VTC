@@ -237,23 +237,13 @@ export const INCUBIC_DATA = [
 
     products: [
       {
-        slug: '1g-silica-granules',
-        name: '1g Silica Gel Granules',
-        gram: '1g SGG',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ]
-      },
-      {
         slug: '2g-silica-granules',
         name: '2g Silica Gel Granules',
         gram: '2g SGG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/sgg.png',
+          '/sgg.png',
+          '/sgg.png'
         ]
       },
       {
@@ -261,9 +251,9 @@ export const INCUBIC_DATA = [
         name: '5g Silica Gel Granules',
         gram: '5g SGG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/sgg.png',
+          '/sgg.png',
+          '/sgg.png'
         ]
       },
       {
@@ -271,9 +261,9 @@ export const INCUBIC_DATA = [
         name: '10g Silica Gel Granules',
         gram: '10g SGG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/sgg.png',
+          '/sgg.png',
+          '/sgg.png'
         ]
       }
     ]
@@ -285,9 +275,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/ms1.png',
+      '/ms2.png',
+      '/ms2g.png'
     ],
 
     description1:
@@ -316,33 +306,33 @@ export const INCUBIC_DATA = [
 
     products: [
       {
-        slug: '1g-molecular-sieve',
-        name: '1g Molecular Sieve Desiccant',
-        gram: '1g MS',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ]
-      },
-      {
         slug: '2g-molecular-sieve',
         name: '2g Molecular Sieve Desiccant',
         gram: '2g MS',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/ms2g.png',
+          '/ms2g.png',
+          '/ms2g.png'
         ]
       },
       {
-        slug: '5g-molecular-sieve',
-        name: '5g Molecular Sieve Desiccant',
-        gram: '5g MS',
+        slug: '6g-molecular-sieve',
+        name: '6g Molecular Sieve Desiccant',
+        gram: '6g MS',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/ms6g.png',
+          '/ms6g.png',
+          '/ms6g.png'
+        ]
+      },
+      {
+        slug: '10g-molecular-sieve',
+        name: '10g Molecular Sieve Desiccant',
+        gram: '10g MS',
+        images: [
+          '/ms10g.png',
+          '/ms10g.png',
+          '/ms10g.png'
         ]
       }
     ]
@@ -354,9 +344,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/is.png',
+      '/is.png',
+      '/is.png'
     ],
 
     description1:
@@ -385,23 +375,13 @@ export const INCUBIC_DATA = [
 
     products: [
       {
-        slug: '1g-indicating-desiccant',
-        name: '1g Indicating Desiccant',
-        gram: '1g IS',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ]
-      },
-      {
         slug: '2g-indicating-desiccant',
         name: '2g Indicating Desiccant',
         gram: '2g IS',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/is.png',
+          '/is.png',
+          '/is.png'
         ]
       }
     ]
@@ -448,9 +428,9 @@ export const INCUBIC_DATA = [
         name: '1g Food Grade Desiccant',
         gram: '1g FG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/fg1g.png',
+          '/fg1g.png',
+          '/fg1g.png'
         ]
       },
       {
@@ -458,19 +438,19 @@ export const INCUBIC_DATA = [
         name: '2g Food Grade Desiccant',
         gram: '2g FG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/fg2g.png',
+          '/fg2g.png',
+          '/fg2g.png'
         ]
       },
       {
-        slug: '5g-food-grade-desiccant',
-        name: '5g Food Grade Desiccant',
-        gram: '5g FG',
+        slug: '0.5g-food-grade-desiccant',
+        name: '0.5g Food Grade Desiccant',
+        gram: '0.5g FG',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/fg05g.png',
+          '/fg05g.png',
+          '/fg05g.png'
         ]
       }
     ]
@@ -482,9 +462,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/ac1.png',
+      '/ac2.png',
+      '/ac2g.png'
     ],
 
     description1:
@@ -541,9 +521,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/oa2g.png',
+      '/oa5g.png',
+      '/oa10g.png'
     ],
 
     description1:
@@ -576,9 +556,9 @@ export const INCUBIC_DATA = [
         name: '50cc Oxygen Absorber',
         gram: '50cc OA',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/50cc.png',
+          '/50cc.png',
+          '/50cc.png'
         ]
       },
       {
@@ -586,9 +566,9 @@ export const INCUBIC_DATA = [
         name: '100cc Oxygen Absorber',
         gram: '100cc OA',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/100cc.png',
+          '/100cc.png',
+          '/100cc.png'
         ]
       }
     ]
