@@ -12,8 +12,7 @@
 </div>
 <!-- ===================heading end ======================= -->
 
-<section
-  class="bg-gradient-to-br from-blue-100 via-white to-sky-100 relative overflow-hidden">
+<section class="bg-gradient-to-br from-blue-100 via-white to-sky-100 relative overflow-hidden">
 
   <!-- subtle background accents -->
   <div class="absolute -top-24 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -21,8 +20,7 @@
 
   <div class="max-w-6xl mx-auto p-5 relative z-10">
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-12 gap-14 items-center
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-14 items-center
              md:p-12">
 
       <!-- Content -->
@@ -30,29 +28,27 @@
 
         <!-- Heading -->
         <h1 class="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
-          Incubic
+          Descriptive
         </h1>
         <div class="w-16 h-1 bg-blue-700 mb-6"></div>
 
         <p class="text-gray-700 leading-relaxed mb-5">
-          <strong>Calcium-Based Desiccants</strong> are high-performance moisture absorbers made primarily
-          from <strong>calcium chloride (CaCl₂)</strong>. They absorb moisture from the air and convert it
-          into a liquid or gel form, making them highly effective in high-humidity environments. Compared
-          to traditional silica gel, calcium-based desiccants offer much higher moisture absorption
-          capacity.
+          Descriptive Desiccants are specially designed moisture-absorbing packets used in packaging to protect products
+          from humidity-related damage during storage and transportation. These desiccants help prevent corrosion, mold
+          growth, packaging deterioration, and loss of product quality by maintaining a dry and stable environment
+          around the packed goods.
         </p>
 
         <p class="text-gray-700 leading-relaxed mb-5">
-          These desiccants are widely used in in-box packaging for electronics, pharmaceuticals,
-          garments, food packaging, and other moisture-sensitive products to protect them from
-          humidity-related damage.
+          VTC Descriptive Desiccants are distinguished by clearly printed product information, usage instructions, and
+          safety details directly on the pouch. This makes them ideal for professional, industrial, and export packaging
+          where clear identification, compliance, and proper handling information are essential.
         </p>
 
         <p class="text-gray-700 leading-relaxed">
-          One of the key advantages is <strong>long-lasting moisture control</strong>, even during sea
-          freight, long-term storage, and humid climate conditions. Designed with leak-proof packaging,
-          Incubic desiccants safely contain absorbed moisture and help prevent corrosion, mold growth,
-          and product deterioration in logistics and industrial applications.
+          Manufactured using high-quality moisture-absorbing materials such as silica gel, clay, and calcium-based
+          compounds, VTC Descriptive Desiccants are suitable for a wide range of applications including pharmaceuticals,
+          electronics, automotive components, FMCG products, garments, machinery, and export consignments.
         </p>
 
       </div>
@@ -61,10 +57,8 @@
       <div class="md:col-span-5 flex justify-center">
         <div class="relative">
           <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
-          <img
-            src="/banner2.png"
-            alt="Incubic In-Box Desiccants"
-            class="w-full max-w-md rounded-2xl shadow-md">
+          <img src="/inbox1.png" alt="Incubic In-Box Desiccants"
+            class="w-full h-[450px] max-w-md rounded-2xl shadow-md">
         </div>
       </div>
 
@@ -100,8 +94,7 @@
   </div>
 </div> -->
 
-<section
-  class="relative py-5 bg-gradient-to-bl from-blue-100 via-white to-blue-100 overflow-hidden">
+<section class="relative py-5 bg-gradient-to-bl from-blue-100 via-white to-blue-100 overflow-hidden">
 
   <!-- subtle background accents -->
   <div class="absolute bottom-0 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -111,10 +104,7 @@
 
     <!-- 🔘 Category Filters -->
     <div class="flex flex-wrap justify-center gap-3 mb-14">
-      <button
-        *ngFor="let category of categorie"
-        (click)="filterCategory(category)"
-        [ngClass]="selectedCategory === category.slug
+      <button *ngFor="let category of categorie" (click)="filterCategory(category)" [ngClass]="selectedCategory === category.slug
           ? 'bg-blue-900 text-white shadow'
           : 'bg-white text-gray-700 border border-gray-300 hover:bg-blue-50'"
         class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300">
@@ -125,10 +115,7 @@
     <!-- 🧩 Product Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <div
-        *ngFor="let project of filteredProjects"
-        (click)="openProject(project)"
-        class="cursor-pointer group bg-white
+      <div *ngFor="let project of filteredProjects" (click)="openProject(project)" class="cursor-pointer group bg-white
                border border-gray-200 rounded-2xl
                shadow-sm hover:shadow-lg
                hover:-translate-y-1
@@ -136,10 +123,7 @@
 
         <!-- Image -->
         <div class="relative overflow-hidden rounded-t-2xl">
-          <img
-            [src]="project.image"
-            [alt]="project.title"
-            class="w-full h-56 object-contain
+          <img [src]="project.image" [alt]="project.title" class="w-full h-56 object-contain
                    transition-transform duration-500
                    group-hover:scale-110" />
         </div>

@@ -24,28 +24,28 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
   {
-    path: 'in-box-desiccants/incubic',
+    path: 'in-box-desiccants/descriptive',
     renderMode: RenderMode.Prerender,
   },
 
-  /* -------- DYNAMIC ROUTES (CLIENT ONLY) -------- */
+  /* -------- DYNAMIC ROUTES -------- */
   {
-    path: 'in-box-desiccants/incubic/:category',
+    path: 'in-box-desiccants/descriptive/:category',
     renderMode: RenderMode.Client,
   },
   {
-    path: 'in-box-desiccants/incubic/:category/:product',
+    path: 'in-box-desiccants/descriptive/:category/:product',
     renderMode: RenderMode.Client,
-  },
-
-  /* -------- FALLBACK -------- */
-  {
-    path: '**',
-    renderMode: RenderMode.Prerender,
   },
   {
     path: 'container-desiccants/:category/:product',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Server,
   },
+
+  /* -------- FALLBACK (ALWAYS LAST) -------- */
+  {
+    path: '**',
+    renderMode: RenderMode.Prerender,
+  }
 
 ];

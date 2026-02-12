@@ -32,6 +32,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./calcium-based/calcium-based').then(m => m.CalciumBased),
   },
+  {
+    path: 'calcium-based/:category/:product',
+    loadComponent: () =>
+      import('./product/product-details/product-details')
+        .then(m => m.ProductDetails),
+  },
 
   /* ---------------- IN-BOX DESICCANTS ---------------- */
   {
@@ -41,28 +47,28 @@ export const routes: Routes = [
         .then(m => m.InBoxDesiccants),
   },
 
-  /* ---------------- INCUBIC LEVEL 1 : CATEGORIES ---------------- */
+  /* ---------------- descriptive LEVEL 1 : CATEGORIES ---------------- */
   {
-    path: 'in-box-desiccants/incubic',
+    path: 'in-box-desiccants/descriptive',
     loadComponent: () =>
-      import('./incubic/incubic-categories/incubic-categories')
-        .then(m => m.IncubicCategories),
+      import('./descriptive/descriptive-categories/descriptive-categories')
+        .then(m => m.DescriptiveCategories),
   },
 
-  /* ---------------- INCUBIC LEVEL 2 : CATEGORY PRODUCTS ---------------- */
+  /* ---------------- descriptive LEVEL 2 : CATEGORY PRODUCTS ---------------- */
   {
-    path: 'in-box-desiccants/incubic/:category',
+    path: 'in-box-desiccants/descriptive/:category',
     loadComponent: () =>
-      import('./incubic/incubic-category-products/incubic-category-products')
-        .then(m => m.IncubicCategoryProducts),
+      import('./descriptive/descriptive-category-products/descriptive-category-products')
+        .then(m => m.DescriptiveCategoryProducts),
   },
 
-  /* ---------------- INCUBIC LEVEL 3 : FINAL PRODUCT ---------------- */
+  /* ---------------- descriptive LEVEL 3 : FINAL PRODUCT ---------------- */
   {
-    path: 'in-box-desiccants/incubic/:category/:product',
+    path: 'in-box-desiccants/descriptive/:category/:product',
     loadComponent: () =>
-      import('./incubic/incubic-product-details/incubic-product-details')
-        .then(m => m.IncubicProductDetails),
+      import('./descriptive/descriptive-product-details/descriptive-product-details')
+        .then(m => m.DescriptiveProductDetails),
   },
 
   /* ---------------- Container Desiccants ---------------- */

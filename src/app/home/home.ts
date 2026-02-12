@@ -62,9 +62,9 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   heroIndex = 0;
 
   heroSlides = [
-    { bg: '/banner1.png', left: 'banner2.png', right: 'banner3.png', title: 'Advanced Moisture Protection' },
-    { bg: 'banner2.png', left: 'banner3.png', right: 'banner1.png', title: 'Engineered for Global Shipping' },
-    { bg: 'banner3.png', left: 'banner2.png', right: 'banner3.png', title: 'Complete Moisture Protection Solutions' }
+    { bg: '/banner1.png', left: 'inbox.png', right: 'banner3.png', title: 'Advanced Moisture Protection' },
+    { bg: 'banner2.png', left: 'inbox3.png', right: 'container.png', title: 'Engineered for Global Shipping' },
+    { bg: 'banner3.png', left: 'inbox1.png', right: 'incubic.png', title: 'Complete Moisture Protection Solutions' }
   ];
 
   prevHero() {

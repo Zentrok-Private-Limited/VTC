@@ -1,14 +1,16 @@
 export const CONTAINER_DESICCANTS_DATA = [
-  { slug: 'ds', name: 'DS' },
-  { slug: 'dp', name: 'DP' },
-  { slug: 'sq-tp-dp', name: 'SQ/TP/DP' },
+  { slug: 'standard', name: 'Standard' },
+  { slug: 'heavy', name: 'Heavy' },
+  { slug: 'special', name: 'Special' },
 ];
 
 export const CONTAINER_DATA = [
+
+  /* ================= STANDARD ================= */
   {
-    slug: 'ds',
-    name: 'DS',
-    images: ['/DS250g', '/DS250gsticker.png', '/DS500g.png'],
+    slug: 'standard', // ✅ lowercase (IMPORTANT)
+    name: 'Standard',
+    images: ['/vtc250g.png', '/vtc250gsticker.png', '/vtc500g.png'],
 
     description1:
       'VTC desiccants are manufactured using high-purity calcium chloride combined with a specially developed natural organic gelling agent. Calcium chloride is a highly hygroscopic material capable of attracting and binding large amounts of moisture.',
@@ -34,36 +36,37 @@ export const CONTAINER_DATA = [
 
     products: [
       {
-        slug: 'ds-250g',
-        name: 'DS 250G',
-        gram: 'DS 250G',
-        images: ['/DS250g.png', '/DS250g.png', '/DS250g.png']
+        slug: 'vtc-250g',
+        name: 'VTC 250G',
+        gram: 'VTC 250G',
+        images: ['/vtc250g.png']
       },
       {
-        slug: 'ds-250g-sticker',
-        name: 'DS 250G Sticker',
-        gram: 'DS 250G Sticker',
-        images: ['/DS250gsticker.png', '/DS250gsticker.png', '/DS250gsticker.png']
+        slug: 'vtc-250g-sticker',
+        name: 'VTC 250G Sticker',
+        gram: 'VTC 250G Sticker',
+        images: ['/vtc250g.png']
       },
       {
-        slug: 'ds-500g',
-        name: 'DS 500G',
-        gram: 'DS 500G',
-        images: ['/DS500g.png', '/DS500g.png', '/DS500g.png']
+        slug: 'vtc-500g',
+        name: 'VTC 500G',
+        gram: 'VTC 500G',
+        images: ['/vtc500g.png']
       }
     ]
   },
 
+  /* ================= HEAVY ================= */
   {
-    slug: 'dp',
-    name: 'DP',
-    images: ['/DP1000g.png', '/DP1000g.png', '/DP1000g.png'],
+    slug: 'heavy',
+    name: 'Heavy',
+    images: ['/vtc1000g.png'],
 
     description1:
-      'DP Series container desiccants are heavy-duty moisture control solutions designed for extreme humidity and long sea routes.',
+      'VTC heavy-duty container desiccants are designed for extreme humidity conditions and long sea routes where moisture protection is critical.',
 
     description2:
-      'They convert absorbed moisture into a stable gel, ensuring zero leakage during transit.',
+      'They convert absorbed moisture into a stable gel, ensuring zero leakage and maximum cargo safety during transit.',
 
     features: [
       'Ultra-high moisture absorption',
@@ -79,24 +82,25 @@ export const CONTAINER_DATA = [
 
     products: [
       {
-        slug: 'dp-1000g',
-        name: 'DP 1000G',
-        gram: 'DP 1000G',
-        images: ['/DP1000g.png', '/DP1000g.png', '/DP1000g.png']
+        slug: 'vtc-1000g',
+        name: 'VTC 1000G',
+        gram: 'VTC 1000G',
+        images: ['/vtc1000g.png']
       }
     ]
   },
 
+  /* ================= SPECIAL ================= */
   {
-    slug: 'sq-tp-dp',
-    name: 'SQ / TP / DP',
+    slug: 'special',
+    name: 'Special',
     images: ['/sq1000g.png', '/tp1200g.png', '/db1000g.png'],
 
     description1:
-      'SQ / TP / DB Series are space-optimized container desiccants designed for flexible placement.',
+      'VTC special container desiccants are space-optimized solutions designed for flexible placement inside containers.',
 
     description2:
-      'They are ideal for narrow gaps, overhead roofs, and flat cargo surfaces.',
+      'They are ideal for narrow gaps, overhead container roofs, and flat cargo surfaces where standard desiccants cannot be installed easily.',
 
     features: [
       'Slim and flexible designs',
@@ -112,22 +116,16 @@ export const CONTAINER_DATA = [
 
     products: [
       {
-        slug: 'db-1000g',
-        name: 'DB 1000G',
-        gram: 'DB 1000G',
-        images: ['/db1000g.png', '/db1000g.png', '/db1000g.png']
+        slug: 'vtc-1000g-special',
+        name: 'VTC 1000G',
+        gram: 'VTC 1000G',
+        images: ['/vtc1000g.png']
       },
       {
-        slug: 'sq-1000g',
-        name: 'SQ 1000G',
-        gram: 'SQ 1000G',
-        images: ['/sq1000g.png', '/sq1000g.png', '/sq1000g.png']
-      },
-      {
-        slug: 'tp-1200g',
-        name: 'TP 1200G',
-        gram: 'TP 1200G',
-        images: ['/tp1200g.png', '/tp1200g.png', '/tp1200g.png']
+        slug: 'vtc-1200g',
+        name: 'VTC 1200G',
+        gram: 'VTC 1200G',
+        images: ['/vtc1200g.png']
       }
     ]
   }

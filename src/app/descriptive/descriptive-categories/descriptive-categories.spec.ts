@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IncubicCategoryProducts } from './incubic-category-products';
+import { DescriptiveCategories } from './descriptive-categories'; 
 
-describe('IncubicCategoryProducts', () => {
-  let component: IncubicCategoryProducts;
-  let fixture: ComponentFixture<IncubicCategoryProducts>;
+describe('DescriptiveCategories', () => {
+  let component: DescriptiveCategories;
+  let fixture: ComponentFixture<DescriptiveCategories>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IncubicCategoryProducts]
+      imports: [DescriptiveCategories]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IncubicCategoryProducts);
+    fixture = TestBed.createComponent(DescriptiveCategories);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

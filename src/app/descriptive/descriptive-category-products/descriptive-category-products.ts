@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { INCUBIC_DATA } from '../incubic.data';
+import { DESCRIPTIVE_DATA } from '../descriptive.data'; 
 
 @Component({
-  selector: 'app-incubic-category-products',
+  selector: 'app-descriptive-category-products',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './incubic-category-products.html',
-  styleUrl: './incubic-category-products.css',
+  templateUrl: './descriptive-category-products.html',
+  styleUrl: './descriptive-category-products.css',
 })
-export class IncubicCategoryProducts implements OnInit {
+export class DescriptiveCategoryProducts implements OnInit {
 
   category: any = null;
   product: any = null;
@@ -25,7 +25,7 @@ export class IncubicCategoryProducts implements OnInit {
       const productSlug = params.get('product');
 
       // 🔹 Find category
-      this.category = INCUBIC_DATA.find(
+      this.category = DESCRIPTIVE_DATA.find(
         c => c.slug === categorySlug
       );
 

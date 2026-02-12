@@ -20,7 +20,7 @@
 
     <div class="max-w-6xl mx-auto px-5 relative z-10">
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-14 items-start
+        <div class="items-start
              backdrop-blur py-7 md:p-12">
 
             <!-- Content -->
@@ -65,15 +65,6 @@
                     throughout the supply chain.
                 </p>
 
-            </div>
-
-            <!-- Image -->
-            <div class="md:col-span-5 md:pt-10 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
-                    <img src="/banner2.png" alt="VIMS Techno Crafts In-Box Desiccants"
-                        class="w-full max-w-md rounded-2xl shadow-md">
-                </div>
             </div>
 
         </div>
@@ -230,11 +221,11 @@
                     <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
 
                     <!-- Calcium Image -->
-                    <img *ngIf="activeSolution === 'box'" src="/banner2.png" alt="Calcium Chloride Desiccants"
+                    <img *ngIf="activeSolution === 'box'" src="/inbox.png" alt="Calcium Chloride Desiccants"
                         class="w-full max-w-md rounded-2xl shadow-md">
 
                     <!-- Magnesium Image -->
-                    <img *ngIf="activeSolution === 'container'" src="/banner1.png" alt="Magnesium Chloride Desiccants"
+                    <img *ngIf="activeSolution === 'container'" src="/container.png" alt="Magnesium Chloride Desiccants"
                         class="w-full max-w-md rounded-2xl shadow-md">
                 </div>
             </div>
@@ -397,13 +388,13 @@
                 <div class="relative">
                     <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
 
-                    <img *ngIf="adsorbent === 'silicaGel'" src="/banner1.png" alt="Silica Gel Desiccant"
+                    <img *ngIf="adsorbent === 'silicaGel'" src="/inbox3.png" alt="Silica Gel Desiccant"
                         class="w-full max-w-md rounded-2xl shadow-md">
 
-                    <img *ngIf="adsorbent === 'dryClayDesiccant'" src="/banner2.png" alt="Dry Clay Desiccant"
+                    <img *ngIf="adsorbent === 'dryClayDesiccant'" src="/inbox.png" alt="Dry Clay Desiccant"
                         class="w-full max-w-md rounded-2xl shadow-md">
 
-                    <img *ngIf="adsorbent === 'molecularSieves'" src="/banner3.png" alt="Molecular Sieves Desiccant"
+                    <img *ngIf="adsorbent === 'molecularSieves'" src="/Molecular.png" alt="Molecular Sieves Desiccant"
                         class="w-full max-w-md rounded-2xl shadow-md">
                 </div>
             </div>

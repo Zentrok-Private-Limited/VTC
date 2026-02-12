@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { INCUBIC_DATA } from '../incubic.data';
+import { DESCRIPTIVE_DATA } from '../descriptive.data';
 
 @Component({
-  selector: 'app-incubic-product-details',
+  selector: 'app-descriptive-product-details',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './incubic-product-details.html',
+  templateUrl: './descriptive-product-details.html',
 })
-export class IncubicProductDetails {
+export class DescriptiveProductDetails {
   product: any;
   category: any;
   selectedImage: string | null = null;
@@ -18,7 +18,7 @@ export class IncubicProductDetails {
     const categorySlug = this.route.snapshot.paramMap.get('category');
     const productSlug = this.route.snapshot.paramMap.get('product');
 
-    this.category = INCUBIC_DATA.find(c => c.slug === categorySlug);
+    this.category = DESCRIPTIVE_DATA.find(c => c.slug === categorySlug);
 
     this.product = this.category?.products.find(
       (p: any) => p.slug === productSlug

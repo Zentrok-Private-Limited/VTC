@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CONTAINER_DESICCANTS_DATA } from '../product/container-desiccants';
 
@@ -18,90 +18,88 @@ interface Product {
 
 @Component({
   selector: 'app-container-desiccants',
+  standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './container-desiccants.html',
   styleUrl: './container-desiccants.css',
 })
-export class ContainerDesiccants {
-  categoriesData = CONTAINER_DESICCANTS_DATA;
+export class ContainerDesiccants implements OnInit {
 
-   categorie: Category[] = [
-    { name: 'DS', slug: 'ds' },
-    { name: 'DP', slug: 'dp' },
-    { name: 'SQ/TP/DP', slug: 'sq-tp-dp' }
-  ];
+  /* ---------- CATEGORIES ---------- */
+  categories: Category[] = CONTAINER_DESICCANTS_DATA;
 
-  selectedCategory = 'ds';
+  selectedCategory = 'standard';
   filteredProjects: Product[] = [];
 
+  /* ---------- PRODUCTS ---------- */
   projects: Product[] = [
+
+    /* STANDARD */
     {
-      title: 'DS 250G',
-      slug: 'ds-250g',
-      categorySlug: 'ds',
-      image: '/DS250g.png',
-      gram: 'DS 250G'
+      title: 'VTC 250G',
+      slug: 'vtc-250g',
+      categorySlug: 'standard',
+      image: '/vtc250g.png',
+      gram: 'VTC 250G'
     },
     {
-      title: 'DS 250g Sticker',
-      slug: 'ds-250g-sticker',
-      categorySlug: 'ds',
-      image: '/DS250gsticker.png',
-      gram: 'DS 250G Sticker'
+      title: 'VTC 250G Sticker',
+      slug: 'vtc-250g-sticker',
+      categorySlug: 'standard',
+      image: '/vtc250g.png',
+      gram: 'VTC 250G Sticker'
     },
     {
-      title: 'DS 500G',
-      slug: 'ds-500g',
-      categorySlug: 'ds',
-      image: '/DS500g.png',
-      gram: 'DS 500G'
+      title: 'VTC 500G',
+      slug: 'vtc-500g',
+      categorySlug: 'standard',
+      image: '/vtc500g.png',
+      gram: 'VTC 500G'
     },
 
+    /* HEAVY */
     {
-      title: 'DP 1000G',
-      slug: 'dp-1000g',
-      categorySlug: 'dp',
-      image: '/DP1000g.png',
-      gram: 'DP 1000G'
+      title: 'VTC 1000G',
+      slug: 'vtc-1000g',
+      categorySlug: 'heavy',
+      image: '/vtc1000g.png',
+      gram: 'VTC 1000G'
     },
 
+    /* SPECIAL */
     {
-      title: 'DB 1000G',
-      slug: 'db-1000g',
-      categorySlug: 'sq-tp-dp',
-      image: '/db1000g.png',
-      gram: 'DB 1000G'
+      title: 'VTC 1000G',
+      slug: 'vtc-1000g-special',
+      categorySlug: 'special',
+      image: '/vtc1000g.png',
+      gram: 'VTC 1000G'
     },
     {
-      title: 'SQ 1000G',
-      slug: 'sq-1000g',
-      categorySlug: 'sq-tp-dp',
-      image: '/sq1000g.png',
-      gram: 'SQ 1000G'
-    },
-    {
-      title: 'TP 1200G',
-      slug: 'tp-1200g',
-      categorySlug: 'sq-tp-dp',
-      image: '/tp1200g.png',
-      gram: 'TP 1200G'
+      title: 'VTC 1200G',
+      slug: 'vtc-1200g',
+      categorySlug: 'special',
+      image: '/vtc1200g.png',
+      gram: 'VTC 1200G'
     }
   ];
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
-    this.filterCategory(this.categorie[0]);
+  /* ---------- INIT ---------- */
+  ngOnInit(): void {
+    this.filterCategory(this.categories[0]);
   }
 
-  filterCategory(category: Category) {
+  /* ---------- FILTER ---------- */
+  filterCategory(category: Category): void {
     this.selectedCategory = category.slug;
     this.filteredProjects = this.projects.filter(
       p => p.categorySlug === category.slug
     );
   }
 
-  openProject(product: Product) {
+  /* ---------- NAVIGATION ---------- */
+  openProject(product: Product): void {
     this.router.navigate([
       '/container-desiccants',
       product.categorySlug,

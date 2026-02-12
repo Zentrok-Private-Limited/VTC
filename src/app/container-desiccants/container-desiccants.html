@@ -20,7 +20,7 @@
         <h1 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-6 text-center">
           Container Desiccants
         </h1>
-        <img src="/banner2.png" alt="Container Desiccants" class="w-full max-w-md drop-shadow-md">
+        <img src="/container.png" alt="Container Desiccants" class="w-full max-w-md drop-shadow-md">
       </div>
       <div class="md:col-span-8 md:pl-10">
 
@@ -171,7 +171,7 @@
       <!-- Card -->
       <div id="ds" class="bg-white border border-blue-100 rounded-xl p-6
                shadow-sm hover:shadow-md transition">
-        <h3 class="text-xl font-semibold text-blue-800">DS Series</h3>
+        <h3 class="text-xl font-semibold text-blue-800">Standard Container Desiccant</h3>
         <span class="inline-block mt-2 text-xs px-3 py-1 bg-blue-50 text-blue-700 rounded-full">
           General Purpose
         </span>
@@ -189,7 +189,7 @@
       <!-- Card -->
       <div id="dp" class="bg-white border border-blue-100 rounded-xl p-6
                shadow-sm hover:shadow-md transition">
-        <h3 class="text-xl font-semibold text-blue-800">DP Series</h3>
+        <h3 class="text-xl font-semibold text-blue-800">Heavy Duty Container Desiccant</h3>
         <span class="inline-block mt-2 text-xs px-3 py-1 bg-sky-50 text-sky-700 rounded-full">
           Heavy Cargo
         </span>
@@ -207,7 +207,7 @@
       <!-- Card -->
       <div id="sq" class="bg-white border border-blue-100 rounded-xl p-6
                shadow-sm hover:shadow-md transition">
-        <h3 class="text-xl font-semibold text-blue-800">SQ / TP / DB Series</h3>
+        <h3 class="text-xl font-semibold text-blue-800">Special Application Container Desiccants</h3>
         <span class="inline-block mt-2 text-xs px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full">
           Space Optimized
         </span>
@@ -218,7 +218,7 @@
 
         <ul class="mt-4 space-y-2 text-sm text-gray-600">
           <li>• Slim & narrow gap placement</li>
-          <li>• Flat top cargo installation (DB)</li>
+          <li>• Flat top cargo installation</li>
         </ul>
       </div>
 
@@ -246,7 +246,7 @@
     <!-- 🔘 Category Filters -->
     <div class="flex flex-wrap justify-center gap-3 mb-14">
       <button
-        *ngFor="let category of categorie"
+        *ngFor="let category of categories"
         (click)="filterCategory(category)"
         [ngClass]="selectedCategory === category.slug
           ? 'bg-blue-900 text-white shadow'

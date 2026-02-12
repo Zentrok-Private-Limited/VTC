@@ -33,43 +33,43 @@
 
               <!-- In-Box -->
               <div>
-                <a routerLink="/in-box-desiccants" class="block font-bold mb-2 hover:text-blue-900">
+                <!-- <a routerLink="/in-box-desiccants" class="block font-bold mb-2 hover:text-blue-900">
                   In-Box Desiccants
                 </a>
 
                 <a routerLink="/calcium-based" class="block py-1 hover:text-blue-900">
                   Calcium-Based Desiccants
-                </a>
+                </a> -->
 
-                <a routerLink="/in-box-desiccants/incubic" class="block py-1 font-semibold hover:text-blue-900">
-                  Incubic
+                <a routerLink="/in-box-desiccants/descriptive" class="block py-1 font-bold hover:text-blue-900">
+                  Descriptive
                 </a>
 
                 <div class="pl-3 mt-2 space-y-1">
-                  <a routerLink="/in-box-desiccants/incubic/clay-desiccants" class="block hover:text-blue-900">
+                  <a routerLink="/in-box-desiccants/descriptive/clay-desiccants" class="block hover:text-blue-900">
                     Clay Desiccants
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/silica-gel-round-beads" class="block hover:text-blue-900">
+                  <a routerLink="/in-box-desiccants/descriptive/silica-gel-round-beads" class="block hover:text-blue-900">
                     Silica Gel Round Beads
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/silica-gel-granules" class="block hover:text-blue-900">
+                  <a routerLink="/in-box-desiccants/descriptive/silica-gel-granules" class="block hover:text-blue-900">
                     Silica Gel Granules
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/molecular-sieve-desiccants"
+                  <a routerLink="/in-box-desiccants/descriptive/molecular-sieve-desiccants"
                     class="block hover:text-blue-900">
                     Molecular Sieve
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/indicating-specialty-desiccants"
+                  <a routerLink="/in-box-desiccants/descriptive/indicating-specialty-desiccants"
                     class="block hover:text-blue-900">
                     Indicating & Specialty
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/food-grade-desiccants" class="block hover:text-blue-900">
+                  <a routerLink="/in-box-desiccants/descriptive/food-grade-desiccants" class="block hover:text-blue-900">
                     Food Grade
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/activated-carbon" class="block hover:text-blue-900">
+                  <a routerLink="/in-box-desiccants/descriptive/activated-carbon" class="block hover:text-blue-900">
                     Activated Carbon
                   </a>
-                  <a routerLink="/in-box-desiccants/incubic/oxygen-absorbers" class="block hover:text-blue-900">
+                  <a routerLink="/in-box-desiccants/descriptive/oxygen-absorbers" class="block hover:text-blue-900">
                     Oxygen Absorbers
                   </a>
                 </div>
@@ -81,13 +81,13 @@
                   Container Desiccants
                 </a>
                 <a routerLink="/container-desiccants" fragment="ds" class="block py-1 hover:text-blue-900">
-                  DS
+                  Standard Container Desiccant
                 </a>
                 <a routerLink="/container-desiccants" fragment="ds" class="block py-1 hover:text-blue-900">
-                  SQ
+                  Heavy Duty Container Desiccant
                 </a>
                 <a routerLink="/container-desiccants" fragment="ds" class="block py-1 hover:text-blue-900">
-                  SQ / TP / DB
+                  Special Application Container Desiccants
                 </a>
               </div>
 
@@ -175,57 +175,57 @@
         <div class="pl-4 mt-3 overflow-hidden transition-all duration-300" [class.max-h-0]="!isProductsOpen"
           [class.max-h-screen]="isProductsOpen">
           <!-- Main links -->
-          <a routerLink="/in-box-desiccants" (click)="onNavClick()"
+          <!-- <a routerLink="/in-box-desiccants" (click)="onNavClick()"
             class="block py-2 text-sm font-medium text-gray-800">
             In-Box Desiccants
           </a>
           <a routerLink="/calcium-based" (click)="onNavClick()" class="block py-1 hover:text-blue-900">
             Calcium-Based Desiccants
-          </a>
+          </a> -->
 
-          <a routerLink="/in-box-desiccants/incubic" (click)="onNavClick()"
-            class="block py-2 text-sm font-semibold text-blue-900">
-            Incubic
+          <a routerLink="/in-box-desiccants/descriptive" (click)="onNavClick()"
+            class="block py-2 text-sm font-bold text-blue-900">
+            Descriptive
           </a>
 
           <!-- Sub links -->
           <div class="mt-2 pl-3 space-y-2 border-l border-gray-200">
-            <a routerLink="/in-box-desiccants/incubic/clay-desiccants" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/clay-desiccants" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Clay Desiccants
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/silica-gel-round-beads" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/silica-gel-round-beads" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Silica Gel Round Beads
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/silica-gel-granules" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/silica-gel-granules" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Silica Gel Granules
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/molecular-sieve-desiccants" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/molecular-sieve-desiccants" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Molecular Sieve Desiccants
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/indicating-specialty-desiccants" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/indicating-specialty-desiccants" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Indicating Specialty Desiccants
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/food-grade-desiccants" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/food-grade-desiccants" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Food Grade Desiccants
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/activated-carbon" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/activated-carbon" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Activated Carbon
             </a>
 
-            <a routerLink="/in-box-desiccants/incubic/oxygen-absorbers" (click)="onNavClick()"
+            <a routerLink="/in-box-desiccants/descriptive/oxygen-absorbers" (click)="onNavClick()"
               class="block py-1 text-sm text-gray-600">
               Oxygen Absorbers
             </a>
@@ -238,15 +238,15 @@
             <div class="mt-2 pl-3 space-y-2 border-l border-gray-200">
               <a routerLink="/container-desiccants" fragment="ds" (click)="onNavClick()"
                 class="block py-1 text-gray-600 hover:text-blue-900">
-                DS
+                Standard Container Desiccant
               </a>
               <a routerLink="/container-desiccants" fragment="dp" (click)="onNavClick()"
                 class="block py-1 text-gray-600 hover:text-blue-900">
-                SQ
+                Heavy Duty Container Desiccant
               </a>
               <a routerLink="/container-desiccants" fragment="sq" (click)="onNavClick()"
                 class="block py-1 text-gray-600 hover:text-blue-900">
-                SQ / TP / DB
+                Special Application Container Desiccants
               </a>
             </div>
           </div>

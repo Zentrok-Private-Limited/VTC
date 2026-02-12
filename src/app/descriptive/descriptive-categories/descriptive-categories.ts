@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { INCUBIC_CATEGORIES } from '../incubic.data';
+import { DESCRIPTIVE_CATEGORIES } from '../descriptive.data';
 
 interface Category {
   name: string;
@@ -17,14 +17,14 @@ interface Product {
 }
 
 @Component({
-  selector: 'app-incubic-categories',
+  selector: 'app-descriptive-categories',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './incubic-categories.html',
-  styleUrl: './incubic-categories.css',
+  templateUrl: './descriptive-categories.html',
+  styleUrl: './descriptive-categories.css',
 })
-export class IncubicCategories {
-  categoriesData = INCUBIC_CATEGORIES;
+export class DescriptiveCategories {
+  categoriesData = DESCRIPTIVE_CATEGORIES;
 
   categorie: Category[] = [
     { name: 'Clay Desiccants', slug: 'clay-desiccants' },
@@ -246,7 +246,7 @@ export class IncubicCategories {
   openProject(product: Product) {
     this.router.navigate([
       '/in-box-desiccants',
-      'incubic',
+      'descriptive',
       product.categorySlug, // :category
       product.slug          // :product
     ]);

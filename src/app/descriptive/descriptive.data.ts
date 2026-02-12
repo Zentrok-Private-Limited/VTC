@@ -1,4 +1,4 @@
-export const INCUBIC_CATEGORIES = [
+export const DESCRIPTIVE_CATEGORIES = [
   {
     slug: 'clay-desiccants',
     name: 'Clay Desiccants',
@@ -32,30 +32,30 @@ export const INCUBIC_CATEGORIES = [
     name: 'Oxygen Absorbers',
   },
   {
-    slug: 'dp',
-    name: 'DP',
+    slug: 'heavy',
+    name: 'Heavy',
   },
   {
-    slug: 'ds',
-    name: 'DS',
+    slug: 'standard',
+    name: 'Standard',
   },
   {
-    slug: 'sq-tp-dp',
-    name: 'SQ/TP/DP',
+    slug: 'special',
+    name: 'Special',
   },
 ];
 
 
-export const INCUBIC_DATA = [
+export const DESCRIPTIVE_DATA = [
   {
   slug: 'clay-desiccants',
   name: 'Clay Desiccants',
 
   /* CATEGORY IMAGES */
   images: [
-    '/banner1.png',
-    '/banner2.png',
-    '/banner3.png'
+    '/cl2g.png',
+    '/cl6g.png',
+    '/cl9g.png'
   ],
 
   /* OVERVIEW */
@@ -145,9 +145,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/SG.png',
+      '/SG.png',
+      '/SG.png'
     ],
 
     description1:
@@ -206,9 +206,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/sgg.png',
+      '/sgg.png',
+      '/sgg.png'
     ],
 
     description1:
@@ -393,9 +393,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/fg1g.png',
+      '/fg2g.png',
+      '/fg5g.png'
     ],
 
     description1:
@@ -493,13 +493,23 @@ export const INCUBIC_DATA = [
 
     products: [
       {
-        slug: '5g-activated-carbon',
-        name: '5g Activated Carbon',
-        gram: '5g AC',
+        slug: '2g-activated-carbon',
+        name: '2g Activated Carbon',
+        gram: '2g AC',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/ac2g.png',
+          '/ac2g.png',
+          '/ac2g.png'
+        ]
+      },
+      {
+        slug: '6g-activated-carbon',
+        name: '6g Activated Carbon',
+        gram: '6g AC',
+        images: [
+          '/ac6g.png',
+          '/ac6g.png',
+          '/ac6g.png'
         ]
       },
       {
@@ -507,9 +517,9 @@ export const INCUBIC_DATA = [
         name: '10g Activated Carbon',
         gram: '10g AC',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/ac10g.png',
+          '/ac10g.png',
+          '/ac10g.png'
         ]
       }
     ]
@@ -521,9 +531,9 @@ export const INCUBIC_DATA = [
 
     /* CATEGORY IMAGES */
     images: [
-      '/oa2g.png',
-      '/oa5g.png',
-      '/oa10g.png'
+      '/oa.png',
+      '/50cc.png',
+      '/100cc.png'
     ],
 
     description1:
@@ -576,14 +586,14 @@ export const INCUBIC_DATA = [
   //======================= this is data of DS, DP, SQ/TP/DP ================================  
   // ===================== DS ==============
   {
-    slug: 'ds',
-    name: 'DS',
+    slug: 'standard',
+    name: 'Standard',
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/vtc5g.png',
+      '/vtc2g.png',
+      '/vtc5g.png'
     ],
 
     description1:
@@ -611,47 +621,47 @@ export const INCUBIC_DATA = [
     ],
     products: [
       {
-        slug: 'ds-250g',
-        name: 'DS 250g',
-        gram: 'DS 250g',
+        slug: 'vtc-250g',
+        name: 'VTC 250g',
+        gram: 'VTC 250g',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/vtc250g.png',
+          '/vtc250g.png',
+          '/vtc250g.png'
         ]
       },
       {
-        slug: 'ds-250g-sticker',
-        name: 'DS 250g sticker',
+        slug: 'vtc-250g-sticker',
+        name: 'VTC 250g sticker',
         gram: 'DS 250g Sticker',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/vtc250g.png',
+          '/vtc250g.png',
+          '/vtc250g.png'
         ]
       },
       {
-        slug: 'ds-500g',
-        name: 'DS 500g',
+        slug: 'vtc-500g',
+        name: 'VTC 500g',
         gram: 'DS 500g',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/vtc500g.png',
+          '/vtc500g.png',
+          '/vtc500g.png'
         ]
       },
     ]
   },
   // ===================== DP ==============
   {
-    slug: 'dp',
-    name: 'DP',
+    slug: 'heavy',
+    name: 'Heavy',
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
+      '/vtc1000g.png',
+      '/vtc1000g.png',
+      '/vtc1000g.png'
     ],
 
     description1:
@@ -679,79 +689,45 @@ export const INCUBIC_DATA = [
     ],
     products: [
       {
-        slug: 'dp-1000g',
-        name: 'DP 1000g',
-        gram: 'DP 1000g',
+        slug: 'vtc-1000g',
+        name: 'VTC 1000g',
+        gram: 'VTC 1000g',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/vtc1000g.png',
+          '/vtc1000g.png',
+          '/vtc1000g.png'
         ]
       }
     ]
   },
   // ===================== DP ==============
-  {
-    slug: 'dp',
-    name: 'DP',
-
-    /* CATEGORY IMAGES */
-    images: [
-      '/banner1.png',
-      '/banner2.png',
-      '/banner3.png'
-    ],
-
-    description1:
-      'DP Series container desiccants are heavy-duty moisture control solutions designed for extreme humidity conditions and long-duration sea shipments. Engineered using high-absorption calcium chloride–based technology, DP desiccants provide superior protection against container rain, cargo sweat, and condensation in high-risk logistics environments.',
-
-    description2:
-      'These desiccants are specifically developed for heavy cargo, long transit routes, and high-moisture climates, where standard desiccants may be insufficient. The absorbed moisture is converted into a stable gel through a leak-proof system, ensuring safe and reliable performance throughout the shipping cycle.',
-
-    /* OPTIONAL – CATEGORY LEVEL DETAILS (Superdryers style) */
-    features: [
-      'Ultra-high moisture absorption capacity',
-      'Designed for extreme humidity and long sea routes',
-      'Prevents container rain and cargo sweat effectively',
-      'Heavy-duty, leak-proof multi-layer packaging',
-      'Stable gel formation with zero leakage risk',
-      'Suitable for high-weight and high-value cargo'
-    ],
-    applications: [
-      'Ocean freight containers',
-      'Steel coils and metal products',
-      'Machinery and heavy equipment',
-      'Automotive components',
-      'Export cargo on long transit routes',
-      'High-humidity and tropical shipping lanes'
-    ],
-    products: [
-      {
-        slug: 'dp-1000g',
-        name: 'DP 1000g',
-        gram: 'DP 1000g',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ]
-      }
-    ]
-  },
+  
+  // {
+  //   slug: 'heavy',
+  //   name: 'Heavy',
+  // },
+  // {
+  //   slug: 'standard',
+  //   name: 'Standard',
+  // },
+  // {
+  //   slug: 'special',
+  //   name: 'Special',
+  // },
   // ===================== DP ==============
   {
-    slug: 'sq-tp-dp',
-    name: 'SQ/TP/DP',
+    slug: 'special',
+    name: 'special',
 
     /* CATEGORY IMAGES */
     images: [
-      '/banner1.png',
+      '/VTC1000G.png',
       '/banner2.png',
       '/banner3.png'
     ],
 
     description1:
-      'SQ / TP / DB Series container desiccants are specially engineered for applications where space optimization, flexible placement, and targeted moisture control are required inside shipping containers. These desiccants are designed using high-performance calcium chloride–based absorption technology, delivering effective moisture protection even in confined or difficult-to-access areas.',
+      'Special Series container desiccants are specially engineered for applications where space optimization, flexible placement, and targeted moisture control are required inside shipping containers. These desiccants are designed using high-performance calcium chloride–based absorption technology, delivering effective moisture protection even in confined or difficult-to-access areas.',
 
     description2:
       'The series includes SQ (Slim Quality), TP (Top Placement), and DB (Double Block / Flat Placement) formats, allowing installation in narrow gaps, overhead container roofs, and flat cargo surfaces. Moisture absorbed during transit is converted into a stable, leak-free gel, ensuring safe and reliable performance throughout long-distance and high-humidity shipments.',
@@ -775,33 +751,23 @@ export const INCUBIC_DATA = [
     ],
     products: [
       {
-        slug: 'db-1000g',
-        name: 'DB 1000G',
-        gram: 'DB 1000G',
+        slug: 'vtc-1000g',
+        name: 'VTC 1000G',
+        gram: 'VTC 1000G',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/vtc1000g.png',
+          '/vtc1000g.png',
+          '/vtc1000g.png'
         ]
       },
       {
-        slug: 'db-1000g',
-        name: 'SQ 1000G',
-        gram: 'SQ 1000G',
+        slug: 'vtc-1200g',
+        name: 'VTC 1200G',
+        gram: 'VTC 1200G',
         images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
-        ]
-      },
-      {
-        slug: 'tp-1000g',
-        name: 'TP 1000G',
-        gram: 'TP 1000G',
-        images: [
-          '/banner1.png',
-          '/banner2.png',
-          '/banner3.png'
+          '/vtc1200g.png',
+          '/vtc1200g.png',
+          '/vtc1200g.png'
         ]
       },
     ]
