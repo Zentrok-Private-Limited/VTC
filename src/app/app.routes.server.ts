@@ -19,6 +19,8 @@ export const serverRoutes: ServerRoute[] = [
     path: 'contact',
     renderMode: RenderMode.Prerender,
   },
+
+  /* -------- IN-BOX DESICCANTS -------- */
   {
     path: 'in-box-desiccants',
     renderMode: RenderMode.Prerender,
@@ -28,18 +30,24 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
 
-  /* -------- DYNAMIC ROUTES -------- */
+  /* -------- DYNAMIC (NEVER PRERENDER) -------- */
   {
     path: 'in-box-desiccants/descriptive/:category',
-    renderMode: RenderMode.Client,
+    renderMode: RenderMode.Client,   // ✅ dynamic
   },
   {
     path: 'in-box-desiccants/descriptive/:category/:product',
-    renderMode: RenderMode.Client,
+    renderMode: RenderMode.Client,   // ✅ dynamic
+  },
+
+  /* -------- CONTAINER DESICCANTS (SEO IMPORTANT) -------- */
+  {
+    path: 'container-desiccants',
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'container-desiccants/:category/:product',
-    renderMode: RenderMode.Server,
+    renderMode: RenderMode.Server,   // ✅ dynamic + SEO
   },
 
   /* -------- FALLBACK (ALWAYS LAST) -------- */
