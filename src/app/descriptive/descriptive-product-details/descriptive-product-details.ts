@@ -1,33 +1,44 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { DESCRIPTIVE_DATA } from '../descriptive.data';
 
 @Component({
   selector: 'app-descriptive-product-details',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './descriptive-product-details.html',
 })
 export class DescriptiveProductDetails {
-  product: any;
+
   category: any;
+  product: any;
   selectedImage: string | null = null;
 
   constructor(private route: ActivatedRoute) {
 
-    const categorySlug = this.route.snapshot.paramMap.get('category');
-    const productSlug = this.route.snapshot.paramMap.get('product');
+    // ✅ THIS IS THE FIX
+    this.route.paramMap.subscribe(params => {
 
-    this.category = DESCRIPTIVE_DATA.find(c => c.slug === categorySlug);
+      const categorySlug = params.get('category');
+      const productSlug = params.get('product');
 
-    this.product = this.category?.products.find(
-      (p: any) => p.slug === productSlug
-    );
+      this.category = DESCRIPTIVE_DATA.find(
+        c => c.slug === categorySlug
+      );
 
-    // default image
-    if (this.product?.images?.length) {
-      this.selectedImage = this.product.images[0];
-    }
+      if (!this.category) {
+        this.product = null;
+        return;
+      }
+
+      this.product = this.category.products.find(
+        (p: any) => p.slug === productSlug
+      );
+
+      // reset image when product changes
+      this.selectedImage = this.product?.images?.[0] || null;
+    });
   }
 
   selectImage(img: string) {

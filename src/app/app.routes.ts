@@ -47,29 +47,27 @@ export const routes: Routes = [
         .then(m => m.InBoxDesiccants),
   },
 
-  /* ---------------- descriptive LEVEL 1 : CATEGORIES ---------------- */
-  {
-    path: 'in-box-desiccants/descriptive',
-    loadComponent: () =>
-      import('./descriptive/descriptive-categories/descriptive-categories')
-        .then(m => m.DescriptiveCategories),
-  },
+  /* ---------------- DESCRIPTIVE ---------------- */
 
-  /* ---------------- descriptive LEVEL 2 : CATEGORY PRODUCTS ---------------- */
-  {
-    path: 'in-box-desiccants/descriptive/:category',
-    loadComponent: () =>
-      import('./descriptive/descriptive-category-products/descriptive-category-products')
-        .then(m => m.DescriptiveCategoryProducts),
-  },
+{
+  path: 'descriptive',
+  loadComponent: () =>
+    import('./descriptive/descriptive-categories/descriptive-categories')
+      .then(m => m.DescriptiveCategories),
+},
+{
+  path: 'descriptive/:category',
+  loadComponent: () =>
+    import('./descriptive/descriptive-category-products/descriptive-category-products')
+      .then(m => m.DescriptiveCategoryProducts),
+},
+{
+  path: 'descriptive/:category/:product',
+  loadComponent: () =>
+    import('./descriptive/descriptive-product-details/descriptive-product-details')
+      .then(m => m.DescriptiveProductDetails),
+},
 
-  /* ---------------- descriptive LEVEL 3 : FINAL PRODUCT ---------------- */
-  {
-    path: 'in-box-desiccants/descriptive/:category/:product',
-    loadComponent: () =>
-      import('./descriptive/descriptive-product-details/descriptive-product-details')
-        .then(m => m.DescriptiveProductDetails),
-  },
 
   /* ---------------- Container Desiccants ---------------- */
   {

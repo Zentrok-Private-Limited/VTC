@@ -19,35 +19,29 @@ export class DescriptiveCategoryProducts implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+  this.route.paramMap.subscribe(params => {
 
-      const categorySlug = params.get('category');
-      const productSlug = params.get('product');
+    const categorySlug = params.get('category');
+    const productSlug = params.get('product');
 
-      // 🔹 Find category
-      this.category = DESCRIPTIVE_DATA.find(
-        c => c.slug === categorySlug
+    this.category = DESCRIPTIVE_DATA.find(
+      c => c.slug === categorySlug
+    );
+
+    if (this.category && productSlug) {
+      this.product = this.category.products?.find(
+        (p: any) => p.slug === productSlug
       );
+    } else {
+      this.product = null;
+    }
 
-      // 🔹 Find product inside category
-      if (this.category && productSlug) {
-        this.product = this.category.products?.find(
-          (p: any) => p.slug === productSlug
-        );
-      } else {
-        this.product = null;
-      }
+    if (this.product?.images?.length) {
+      this.selectedImage = this.product.images[0];
+    }
+  });
+}
 
-      // 🔹 Default image priority
-      if (this.product?.images?.length) {
-        this.selectedImage = this.product.images[0];
-      } else if (this.category?.images?.length) {
-        this.selectedImage = this.category.images[0];
-      } else {
-        this.selectedImage = '';
-      }
-    });
-  }
 
   // 🔹 Thumbnail click
   selectImage(img: string) {

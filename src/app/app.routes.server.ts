@@ -20,32 +20,14 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
 
-  /* -------- IN-BOX DESICCANTS -------- */
-  {
-    path: 'in-box-desiccants',
-    renderMode: RenderMode.Prerender,
-  },
-  {
-    path: 'in-box-desiccants/descriptive',
-    renderMode: RenderMode.Prerender,
-  },
-  {
-    path: 'in-box-desiccants/descriptive/:category',
-    renderMode: RenderMode.Client,
-  },
-  {
-    path: 'in-box-desiccants/descriptive/:category/:product',
-    renderMode: RenderMode.Client,
-  },
-
-  /* -------- CALCIUM BASED (⚠️ FIX HERE) -------- */
+  /* -------- CALCIUM BASED -------- */
   {
     path: 'calcium-based',
-    renderMode: RenderMode.Prerender,   // listing page
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'calcium-based/:category/:product',
-    renderMode: RenderMode.Server,      // ✅ MUST be Server
+    renderMode: RenderMode.Server,   // ✅ dynamic
   },
 
   /* -------- CONTAINER DESICCANTS -------- */
@@ -55,14 +37,13 @@ export const serverRoutes: ServerRoute[] = [
   },
   {
     path: 'container-desiccants/:category/:product',
-    renderMode: RenderMode.Server,
+    renderMode: RenderMode.Server,   // ✅ dynamic
   },
 
-  /* -------- FALLBACK (ALWAYS LAST) -------- */
+  /* -------- FALLBACK -------- */
   {
     path: '**',
     renderMode: RenderMode.Prerender,
   }
 
 ];
-
