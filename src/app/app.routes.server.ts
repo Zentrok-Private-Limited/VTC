@@ -2,7 +2,7 @@ import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
 
-  /* -------- STATIC ROUTES (PRERENDER) -------- */
+  /* -------- STATIC ROUTES -------- */
   {
     path: '',
     renderMode: RenderMode.Prerender,
@@ -29,25 +29,33 @@ export const serverRoutes: ServerRoute[] = [
     path: 'in-box-desiccants/descriptive',
     renderMode: RenderMode.Prerender,
   },
-
-  /* -------- DYNAMIC (NEVER PRERENDER) -------- */
   {
     path: 'in-box-desiccants/descriptive/:category',
-    renderMode: RenderMode.Client,   // ✅ dynamic
+    renderMode: RenderMode.Client,
   },
   {
     path: 'in-box-desiccants/descriptive/:category/:product',
-    renderMode: RenderMode.Client,   // ✅ dynamic
+    renderMode: RenderMode.Client,
   },
 
-  /* -------- CONTAINER DESICCANTS (SEO IMPORTANT) -------- */
+  /* -------- CALCIUM BASED (⚠️ FIX HERE) -------- */
+  {
+    path: 'calcium-based',
+    renderMode: RenderMode.Prerender,   // listing page
+  },
+  {
+    path: 'calcium-based/:category/:product',
+    renderMode: RenderMode.Server,      // ✅ MUST be Server
+  },
+
+  /* -------- CONTAINER DESICCANTS -------- */
   {
     path: 'container-desiccants',
     renderMode: RenderMode.Prerender,
   },
   {
     path: 'container-desiccants/:category/:product',
-    renderMode: RenderMode.Server,   // ✅ dynamic + SEO
+    renderMode: RenderMode.Server,
   },
 
   /* -------- FALLBACK (ALWAYS LAST) -------- */
@@ -57,3 +65,4 @@ export const serverRoutes: ServerRoute[] = [
   }
 
 ];
+
