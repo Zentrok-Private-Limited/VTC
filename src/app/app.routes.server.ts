@@ -2,7 +2,7 @@ import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
 
-  /* -------- STATIC ROUTES -------- */
+  /* ---------------- STATIC PAGES ---------------- */
   {
     path: '',
     renderMode: RenderMode.Prerender,
@@ -20,27 +20,33 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
 
-  /* -------- CALCIUM BASED -------- */
+  /* ---------------- DESCRIPTIVE (STATIC ENTRY) ---------------- */
   {
-    path: 'calcium-based',
+    path: 'descriptive',
     renderMode: RenderMode.Prerender,
   },
+
+  /* ---------------- DESCRIPTIVE (DYNAMIC → NO PRERENDER) ---------------- */
   {
-    path: 'calcium-based/:category/:product',
-    renderMode: RenderMode.Server,   // ✅ dynamic
+    path: 'descriptive/:category',
+    renderMode: RenderMode.Client,   // ✅ FIX
+  },
+  {
+    path: 'descriptive/:category/:product',
+    renderMode: RenderMode.Client,   // ✅ FIX
   },
 
-  /* -------- CONTAINER DESICCANTS -------- */
+  /* ---------------- CONTAINER DESICCANTS ---------------- */
   {
     path: 'container-desiccants',
     renderMode: RenderMode.Prerender,
   },
   {
     path: 'container-desiccants/:category/:product',
-    renderMode: RenderMode.Server,   // ✅ dynamic
+    renderMode: RenderMode.Server,   // ✅ SEO + dynamic
   },
 
-  /* -------- FALLBACK -------- */
+  /* ---------------- FALLBACK ---------------- */
   {
     path: '**',
     renderMode: RenderMode.Prerender,
