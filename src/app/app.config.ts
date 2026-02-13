@@ -13,13 +13,15 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
+
     provideRouter(
       routes,
       withInMemoryScrolling({
-        scrollPositionRestoration: 'top', 
-        anchorScrolling: 'enabled'        
+        scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'enabled'
       })
     ),
+
     provideClientHydration(withEventReplay())
   ]
 };

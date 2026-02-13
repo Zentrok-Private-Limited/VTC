@@ -14,34 +14,43 @@ export class DescriptiveCategoryProducts implements OnInit {
 
   category: any = null;
   product: any = null;
-  selectedImage = '';
+  selectedImage!: string; // ✅ important
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-  this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe(params => {
 
-    const categorySlug = params.get('category');
-    const productSlug = params.get('product');
+      const categorySlug = params.get('category');
+      const productSlug = params.get('product');
 
-    this.category = DESCRIPTIVE_DATA.find(
-      c => c.slug === categorySlug
-    );
-
-    if (this.category && productSlug) {
-      this.product = this.category.products?.find(
-        (p: any) => p.slug === productSlug
+      this.category = DESCRIPTIVE_DATA.find(
+        c => c.slug === categorySlug
       );
-    } else {
+
       this.product = null;
-    }
 
-    if (this.product?.images?.length) {
-      this.selectedImage = this.product.images[0];
-    }
-  });
-}
+      if (this.category && productSlug) {
+        this.product = this.category.products?.find(
+          (p: any) => p.slug === productSlug
+        );
+      }
 
+      // ✅ SAFE DEFAULT IMAGE SET
+      setTimeout(() => {
+        if (this.product?.images?.length) {
+          this.selectedImage = this.product.images[0];
+        } 
+        else if (this.category?.images?.length) {
+          this.selectedImage = this.category.images[0];
+        } 
+        else {
+          this.selectedImage = '';
+        }
+      });
+
+    });
+  }
 
   // 🔹 Thumbnail click
   selectImage(img: string) {

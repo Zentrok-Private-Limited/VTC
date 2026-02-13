@@ -244,11 +244,11 @@ export class DescriptiveCategories {
   }
 
   openProject(product: Product) {
-    this.router.navigate([
-      '/in-box-desiccants',
-      'descriptive',
-      product.categorySlug, // :category
-      product.slug          // :product
-    ]);
-  }
+  this.router.navigate([
+    '/descriptive',
+    product.categorySlug, // :category
+    product.slug          // :product
+  ]);
+}
+
 }
