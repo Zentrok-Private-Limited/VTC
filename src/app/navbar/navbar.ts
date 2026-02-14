@@ -37,5 +37,7 @@ onNavClick() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 isKnowledgeOpen = false;
+isCsrOpen = false;
+
 
 }

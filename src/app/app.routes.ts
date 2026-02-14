@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { Desiccants } from './desiccants/desiccants';
-import { SocialResponsibilities } from './social-responsibilities/social-responsibilities';
 
 export const routes: Routes = [
 
@@ -49,24 +48,24 @@ export const routes: Routes = [
 
   /* ---------------- DESCRIPTIVE ---------------- */
 
-{
-  path: 'descriptive',
-  loadComponent: () =>
-    import('./descriptive/descriptive-categories/descriptive-categories')
-      .then(m => m.DescriptiveCategories),
-},
-{
-  path: 'descriptive/:category',
-  loadComponent: () =>
-    import('./descriptive/descriptive-category-products/descriptive-category-products')
-      .then(m => m.DescriptiveCategoryProducts),
-},
-{
-  path: 'descriptive/:category/:product',
-  loadComponent: () =>
-    import('./descriptive/descriptive-product-details/descriptive-product-details')
-      .then(m => m.DescriptiveProductDetails),
-},
+  {
+    path: 'descriptive',
+    loadComponent: () =>
+      import('./descriptive/descriptive-categories/descriptive-categories')
+        .then(m => m.DescriptiveCategories),
+  },
+  {
+    path: 'descriptive/:category',
+    loadComponent: () =>
+      import('./descriptive/descriptive-category-products/descriptive-category-products')
+        .then(m => m.DescriptiveCategoryProducts),
+  },
+  {
+    path: 'descriptive/:category/:product',
+    loadComponent: () =>
+      import('./descriptive/descriptive-product-details/descriptive-product-details')
+        .then(m => m.DescriptiveProductDetails),
+  },
 
 
   /* ---------------- Container Desiccants ---------------- */
@@ -105,10 +104,29 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./industry-solutions/industry-solutions').then(m => m.IndustrySolutions),
   },
-  // ---------------Industry solutions--------------------
+  // ---------------CRS--------------------
   {
     path: 'social-responsibilities',
     loadComponent: () =>
-      import('./social-responsibilities/social-responsibilities').then(m => m.SocialResponsibilities),
+      import('./csr/social-responsibilities/social-responsibilities')
+        .then(m => m.SocialResponsibilities)
   },
+  {
+    path: 'environment',
+    loadComponent: () =>
+      import('./csr/environment/environment')
+        .then(m => m.Environment)
+  },
+  {
+    path: 'compliance',
+    loadComponent: () =>
+      import('./csr/compliance/compliance')
+        .then(m => m.Compliance)
+  },
+  {
+    path: 'certification',
+    loadComponent: () =>
+      import('./csr/certification/certification')
+        .then(m => m.Certification)
+  }
 ];

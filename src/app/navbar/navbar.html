@@ -55,12 +55,10 @@
                   <a routerLink="/descriptive/silica-gel-granules" class="block hover:text-blue-900">
                     Silica Gel Granules
                   </a>
-                  <a routerLink="/descriptive/molecular-sieve-desiccants"
-                    class="block hover:text-blue-900">
+                  <a routerLink="/descriptive/molecular-sieve-desiccants" class="block hover:text-blue-900">
                     Molecular Sieve
                   </a>
-                  <a routerLink="/descriptive/indicating-specialty-desiccants"
-                    class="block hover:text-blue-900">
+                  <a routerLink="/descriptive/indicating-specialty-desiccants" class="block hover:text-blue-900">
                     Indicating & Specialty
                   </a>
                   <a routerLink="/descriptive/food-grade-desiccants" class="block hover:text-blue-900">
@@ -132,7 +130,43 @@
           </div>
         </li>
 
-        <li><a routerLink="/social-responsibilities" class="hover:text-[#05266e]">CSR</a></li>
+        <li class="relative group">
+          <span class="flex items-center gap-1 cursor-pointer hover:text-[#05266e]">
+            CSR
+            <svg class="w-4 h-4 mt-[2px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+
+          <!-- CSR Dropdown -->
+          <div class="absolute left-0 top-full mt-[30px] w-[260px] bg-white border shadow-lg
+              opacity-0 invisible group-hover:opacity-100 group-hover:visible
+              transition-all duration-200">
+            <ul class="py-3 text-sm text-gray-700">
+              <li>
+                <a routerLink="/social-responsibilities" class="block px-4 py-2 hover:text-blue-900">
+                  Social Responsibilities
+                </a>
+              </li>
+              <li>
+                <a routerLink="/environment" class="block px-4 py-2 hover:text-blue-900">
+                  Environment
+                </a>
+              </li>
+              <li>
+                <a routerLink="/compliance" class="block px-4 py-2 hover:text-blue-900">
+                  Compliance
+                </a>
+              </li>
+              <li>
+                <a routerLink="/certification" class="block px-4 py-2 hover:text-blue-900">
+                  Certification
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
       </ul>
 
       <!-- Desktop CTA -->
@@ -183,8 +217,7 @@
             Calcium-Based Desiccants
           </a> -->
 
-          <a routerLink="/descriptive" (click)="onNavClick()"
-            class="block py-2 text-sm font-bold text-blue-900">
+          <a routerLink="/descriptive" (click)="onNavClick()" class="block py-2 text-sm font-bold text-blue-900">
             Descriptive
           </a>
 

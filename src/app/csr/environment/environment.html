@@ -1,0 +1,118 @@
+<!-- =================heading================ -->
+<div class="relative bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
+    <div class="absolute -top-15 -left-10 w-40 h-40 bg-blue-200/40 rounded-full blur-2xl"></div>
+    <div class="absolute -bottom-0 right-24 w-56 h-56 bg-blue-200/30 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 pt-40 relative z-10">
+        <h2 class="text-blue-900 text-2xl md:text-3xl font-semibold">
+            Corporate Social Responsibility
+        </h2>
+        <div class="my-3 w-16 h-1 bg-blue-700"></div>
+    </div>
+</div>
+<!-- ===================heading end ======================= -->
+<section class=" bg-gradient-to-br from-blue-100 via-white to-blue-100 relative overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 -right-24 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 items-start">
+
+            <!-- IMAGE COLUMN -->
+            
+            <!-- CONTENT COLUMN -->
+            <div class="md:col-span-7 md:pl-12 mt-8 md:mt-0">
+                <h1 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-6">
+                    Environment
+                </h1>
+                <p class="text-gray-700 leading-relaxed mb-5">
+                    VTC is dedicated to protecting the environment by adopting sustainable manufacturing practices and
+                    reducing environmental impact wherever possible. We focus on responsible resource usage, waste
+                    reduction, and energy efficiency across our operations.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Through continuous improvement and environmental initiatives, VTC strives to support ecological
+                    balance, minimize carbon footprint, and contribute toward a cleaner, healthier future for our
+                    communities and the planet.
+                </p>
+            </div>
+            <div class="md:col-span-5 overflow-hidden">
+                <!-- Image wrapper -->
+                <div class="relative md:-ml-5 lg:-ml-10">
+                    <img src="/environment2.avif" alt="Environment" class="w-full max-w-none drop-shadow-xl">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="relative md:pt-12 md:pb-30 py-10 bg-gradient-to-bl from-blue-100 via-white to-blue-100 overflow-hidden">
+    <div class="mx-auto relative px-4">
+
+        <!-- GREEN BACK PANEL -->
+        <div class="hidden lg:block absolute top-24 right-0 w-[58%] h-[420px] bg-blue-200/70 rounded-lg z-0"></div>
+
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-10 items-start z-10">
+
+            <!-- LEFT : SLIDER (ON TOP) -->
+            <div class="lg:col-span-6 relative w-full md:h-[420px] h-[200px] overflow-hidden rounded-lg shadow-xl z-20">
+
+                <div class="flex transition-transform duration-700 ease-in-out h-full"
+                    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+
+                    <div *ngFor="let banner of banners; trackBy: trackByIndex" class="min-w-full h-full relative">
+
+                        <img [src]="banner.image" loading="lazy" class="w-full h-full object-cover" />
+
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center px-6">
+                            <p class="text-white text-xl md:text-2xl font-semibold text-center max-w-3xl">
+                                {{ banner.title }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREV -->
+                <button (click)="prev()" class="absolute left-4 bottom-4
+                 bg-white/90 hover:bg-white
+                 w-10 h-10 rounded-full shadow flex items-center justify-center">
+                    ❮
+                </button>
+
+                <!-- NEXT -->
+                <button (click)="next()" class="absolute left-16 bottom-4
+                 bg-white/90 hover:bg-white
+                 w-10 h-10 rounded-full shadow flex items-center justify-center">
+                    ❯
+                </button>
+            </div>
+
+            <!-- RIGHT : CONTENT (INSIDE GREEN PANEL) -->
+            <div class="lg:col-span-6 relative lg:pt-12 z-10">
+                <div class="md:pt-30">
+
+                    <h3 class="text-lg font-bold tracking-wide uppercase mb-4">
+                        Reforestation Program
+                    </h3>
+
+                    <p class="font-semibold mb-6">
+                        We Act for Environmental Protection
+                    </p>
+
+                    <p class="leading-relaxed mb-4">
+                        VTC is committed to environmental protection through responsible and sustainable practices. As
+                        part of our reforestation program, we work with local communities to restore degraded land and
+                        transform wasteland into green, thriving ecosystems.
+                    </p>
+
+                    <p class="leading-relaxed">
+                        By expanding these efforts in planned stages, we help offset unavoidable carbon emissions from
+                        our manufacturing processes and contribute to a healthier, more sustainable future.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
