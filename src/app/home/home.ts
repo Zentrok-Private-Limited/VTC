@@ -7,56 +7,24 @@ import {
   Inject,
   PLATFORM_ID,
   CUSTOM_ELEMENTS_SCHEMA,
-  OnInit
+  OnInit,
+  OnDestroy
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { RouterLink } from "@angular/router";
-import { OnDestroy } from '@angular/core';
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Home implements AfterViewInit, OnInit, OnDestroy {
+export class Home implements OnInit, AfterViewInit, OnDestroy {
 
   /* ================= COUNTER ================= */
   @ViewChildren('counter') counters!: QueryList<ElementRef<HTMLElement>>;
-
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
-
-  ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) return;
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target as HTMLElement;
-          const target = Number(el.getAttribute('data-target'));
-          this.animateCounter(el, target);
-          observer.unobserve(el);
-        }
-      });
-    }, { threshold: 0.6 });
-
-    this.counters.forEach(c => observer.observe(c.nativeElement));
-  }
-
-  private animateCounter(el: HTMLElement, target: number) {
-    const start = performance.now();
-    const duration = 1200;
-
-    const update = (time: number) => {
-      const progress = Math.min((time - start) / duration, 1);
-      el.innerText = Math.floor(progress * target).toLocaleString();
-      if (progress < 1) requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
-  }
 
   /* ================= HERO SLIDER ================= */
   heroIndex = 0;
@@ -66,19 +34,6 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
     { bg: 'banner2.png', left: 'banner3.png', right: 'container.png', title: 'Engineered for Global Shipping' },
     { bg: 'banner3.png', left: 'banner1.png', right: 'incubic.png', title: 'Complete Moisture Protection Solutions' }
   ];
-
-  prevHero() {
-    this.heroIndex =
-      this.heroIndex === 0 ? this.heroSlides.length - 1 : this.heroIndex - 1;
-  }
-
-  nextHero() {
-    this.heroIndex = (this.heroIndex + 1) % this.heroSlides.length;
-  }
-
-  goToHero(index: number) {
-    this.heroIndex = index;
-  }
 
   /* ================= MOBILE PROCESS SLIDER ================= */
   mobileIndex = 0;
@@ -90,22 +45,8 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
     { image: '/process4.png', caption: 'Retail', description: 'Dry & damage-free delivery.' }
   ];
 
-  prevMobile() {
-    this.mobileIndex =
-      this.mobileIndex === 0 ? this.slides.length - 1 : this.mobileIndex - 1;
-  }
-
-  nextMobile() {
-    this.mobileIndex = (this.mobileIndex + 1) % this.slides.length;
-  }
-
-  goToMobile(index: number) {
-    this.mobileIndex = index;
-  }
-
   /* ================= SOLUTION TOGGLE ================= */
   activeSolution: 'box' | 'container' = 'box';
-
 
   /* ================= TESTIMONIALS ================= */
   testimonials = [
@@ -135,37 +76,107 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   visibleCards = 3;
   cardWidth = 320;
 
-  ngOnInit() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  /* ================= INIT ================= */
+  async ngOnInit(): Promise<void> {
     if (!isPlatformBrowser(this.platformId)) return;
 
+    // ✅ AOS – browser only
+    const AOS = (await import('aos')).default;
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 120,
+    });
+
+    // Responsive testimonial setup
     this.updateVisibleCards();
     window.addEventListener('resize', this.onResize);
   }
 
+  /* ================= AFTER VIEW ================= */
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    // Counter animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const target = Number(el.getAttribute('data-target'));
+          this.animateCounter(el, target);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    this.counters.forEach(c => observer.observe(c.nativeElement));
+  }
+
+  /* ================= COUNTER ================= */
+  private animateCounter(el: HTMLElement, target: number) {
+    const start = performance.now();
+    const duration = 1200;
+
+    const update = (time: number) => {
+      const progress = Math.min((time - start) / duration, 1);
+      el.innerText = Math.floor(progress * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+
+  /* ================= HERO NAV ================= */
+  prevHero() {
+    this.heroIndex =
+      this.heroIndex === 0 ? this.heroSlides.length - 1 : this.heroIndex - 1;
+  }
+
+  nextHero() {
+    this.heroIndex = (this.heroIndex + 1) % this.heroSlides.length;
+  }
+
+  goToHero(index: number) {
+    this.heroIndex = index;
+  }
+
+  /* ================= MOBILE SLIDER ================= */
+  prevMobile() {
+    this.mobileIndex =
+      this.mobileIndex === 0 ? this.slides.length - 1 : this.mobileIndex - 1;
+  }
+
+  nextMobile() {
+    this.mobileIndex = (this.mobileIndex + 1) % this.slides.length;
+  }
+
+  goToMobile(index: number) {
+    this.mobileIndex = index;
+  }
+
+  /* ================= TESTIMONIALS ================= */
   onResize = () => {
     this.updateVisibleCards();
   };
 
- updateVisibleCards() {
-  if (!isPlatformBrowser(this.platformId)) return;
+  updateVisibleCards() {
+    if (!isPlatformBrowser(this.platformId)) return;
 
-  const w = window.innerWidth;
+    const w = window.innerWidth;
 
-  if (w < 640) {
-    // Mobile
-    this.visibleCards = 1;
-    this.cardWidth = 320;
-  } else if (w < 1024) {
-    // Tablet
-    this.visibleCards = 2;
-    this.cardWidth = 320;
-  } else {
-    // Desktop
-    this.visibleCards = 3;
-    this.cardWidth = 360;
+    if (w < 640) {
+      this.visibleCards = 1;
+      this.cardWidth = 320;
+    } else if (w < 1024) {
+      this.visibleCards = 2;
+      this.cardWidth = 320;
+    } else {
+      this.visibleCards = 3;
+      this.cardWidth = 360;
+    }
   }
-}
-
 
   nextTestimonial() {
     if (this.testimonialIndex < this.testimonials.length - 1) {
@@ -179,6 +190,7 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
     }
   }
 
+  /* ================= DESTROY ================= */
   ngOnDestroy(): void {
     if (!isPlatformBrowser(this.platformId)) return;
     window.removeEventListener('resize', this.onResize);

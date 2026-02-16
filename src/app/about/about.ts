@@ -1,5 +1,12 @@
-import { Component, OnInit, OnDestroy, NgZone } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  NgZone,
+  Inject,
+  PLATFORM_ID
+} from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-about',
@@ -14,14 +21,39 @@ export class About implements OnInit, OnDestroy {
   intervalId: any;
 
   banners = [
-    { image: '/banner1.png', title: 'Delivering innovative moisture protection solutions backed by expertise, reliability, and trust.' },
-    { image: '/banner2.png', title: 'Committed to protecting product value through advanced technology and industry-focused solutions.' },
-    { image: '/banner3.png', title: 'Combining innovation, experience, and service to prevent moisture damage across the supply chain.' }
+    {
+      image: '/banner1.png',
+      title: 'Delivering innovative moisture protection solutions backed by expertise, reliability, and trust.'
+    },
+    {
+      image: '/banner2.png',
+      title: 'Committed to protecting product value through advanced technology and industry-focused solutions.'
+    },
+    {
+      image: '/banner3.png',
+      title: 'Combining innovation, experience, and service to prevent moisture damage across the supply chain.'
+    }
   ];
 
-  constructor(private zone: NgZone) {}
+  // ✅ SINGLE CONSTRUCTOR
+  constructor(
+    private zone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
-  ngOnInit() {
+  async ngOnInit(): Promise<void> {
+
+    // 🔹 AOS only in browser
+    if (isPlatformBrowser(this.platformId)) {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    }
+
+    // 🔹 Start banner slider
     this.startAutoSlide();
   }
 
@@ -31,7 +63,7 @@ export class About implements OnInit, OnDestroy {
     }
   }
 
-  /* ---------- AUTO SLIDE (SAFE) ---------- */
+  /* ---------- AUTO SLIDE ---------- */
   startAutoSlide() {
     this.zone.runOutsideAngular(() => {
       this.intervalId = setInterval(() => {
@@ -56,7 +88,6 @@ export class About implements OnInit, OnDestroy {
     this.currentIndex = index;
   }
 
-  /* ---------- PERFORMANCE ---------- */
   trackByIndex(index: number) {
     return index;
   }

@@ -1,3 +1,17 @@
-<app-navbar></app-navbar>
-<router-outlet />
-<app-footer></app-footer>
+<!-- PRELOADER -->
+<div class="preloader" [class.hide]="!loading">
+  <div class="logo-box">
+    <img src="/logo.png" alt="VTC Logo" />
+  </div>
+</div>
+
+<!-- NAVBAR -->
+@if (!loading) {
+  <app-navbar></app-navbar>
+}
+
+<!-- PAGE CONTENT -->
+<div class="app-content" [class.show]="!loading">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

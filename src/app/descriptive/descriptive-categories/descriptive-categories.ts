@@ -40,7 +40,7 @@ export class DescriptiveCategories {
 
   selectedCategory = 'clay-desiccants';
   projects: Product[] = [
-    
+
     {
       title: '2g Clay Desiccant',
       slug: '2g-clay',
@@ -131,25 +131,25 @@ export class DescriptiveCategories {
     },
 
     // 🔹 MOLECULAR SIEVE (LISTING / GRID)
-    
+
     {
       title: '2g Molecular Sieve',
       slug: '2g-molecular-sieve',
-      categorySlug: 'molecular-sieve-desiccants', 
+      categorySlug: 'molecular-sieve-desiccants',
       image: '/ms2g.png',
       gram: '2g MS'
     },
     {
       title: '6g Molecular Sieve',
       slug: '6g-molecular-sieve',
-      categorySlug: 'molecular-sieve-desiccants', 
+      categorySlug: 'molecular-sieve-desiccants',
       image: '/ms6g.png',
       gram: '6g MS'
     },
     {
       title: '10g Molecular Sieve',
       slug: '10g-molecular-sieve',
-      categorySlug: 'molecular-sieve-desiccants', 
+      categorySlug: 'molecular-sieve-desiccants',
       image: '/ms10g.png',
       gram: '10g MS'
     },
@@ -244,11 +244,11 @@ export class DescriptiveCategories {
   }
 
   openProject(product: Product) {
-  this.router.navigate([
-    '/descriptive',
-    product.categorySlug, // :category
-    product.slug          // :product
-  ]);
-}
+    this.router.navigate([
+      '/descriptive',
+      product.categorySlug, // :category
+      product.slug          // :product
+    ]);
+  }
 
 }

@@ -1,3 +1,49 @@
-/* app-root {
-  overflow: hidden !important;
-} */
+/* PRELOADER */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #fffefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* LOGO ANIMATION */
+.logo-box {
+  text-align: center;
+  animation: fadeZoom 2.5s ease-in-out infinite;
+}
+
+.logo-box img {
+  width: 640px;
+}
+
+/* LOGO ANIMATION */
+@keyframes fadeZoom {
+  0% { opacity: 0; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
+
+/* MAIN CONTENT FADE IN */
+.app-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease, transform 0.8s ease;
+}
+
+.app-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
