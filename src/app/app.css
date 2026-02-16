@@ -22,7 +22,7 @@
 /* LOGO ANIMATION */
 .logo-box {
   text-align: center;
-  animation: fadeZoom 2.5s ease-in-out infinite;
+  animation: fadeZoom 3.0s ease-in-out infinite;
 }
 
 .logo-box img {
