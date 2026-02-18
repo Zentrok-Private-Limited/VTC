@@ -75,11 +75,17 @@
                                 Metal Products
                             </button>
 
-                            <button (click)="adsorbentabsorbent = 'agricultural'" [ngClass]="adsorbentabsorbent === 'agricultural'
+                            <button (click)="adsorbentabsorbent = 'food'" [ngClass]="adsorbentabsorbent === 'food'
             ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
             : 'bg-white text-gray-700 hover:bg-blue-50'"
                                 class="px-6 py-3 text-sm font-semibold rounded-full transition-all text-left">
-                                Agricultural Products
+                                Food Products
+                            </button>
+                            <button (click)="adsorbentabsorbent = 'pharma'" [ngClass]="adsorbentabsorbent === 'pharma'
+            ? 'bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow'
+            : 'bg-white text-gray-700 hover:bg-blue-50'"
+                                class="px-6 py-3 text-sm font-semibold rounded-full transition-all text-left">
+                                Pharma Products
                             </button>
 
                         </div>
@@ -250,7 +256,7 @@
 
                     <!-- Furniture -->
                     <div *ngIf="adsorbentabsorbent === 'furniture'">
-                        <img src="/Furniture.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
+                        <img src="/furniture.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
                             Furniture
                         </h3>
@@ -421,36 +427,81 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Agricultural Products -->
-                    <div *ngIf="adsorbentabsorbent === 'agricultural'">
+                    <!-- Food Products -->
+                    <div *ngIf="adsorbentabsorbent === 'food'">
                         <img src="/food.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
                         <h3 class="text-2xl font-semibold text-blue-900 mb-4">
-                            Agricultural Products
+                            Food Products
                         </h3>
                         <p class="text-gray-700 leading-relaxed">
-                            Agricultural goods require controlled humidity to prevent spoilage, mold,
+                            Food goods require controlled humidity to prevent spoilage, mold,
                             and quality loss. Effective moisture management helps extend shelf life
                             and maintain freshness during transit and storage.
                         </p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-
                             <div class="p-4 text-center">
-                                <img src="/vtc500g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <img src="/food5g.png" alt="" class="w-full h-64 object-contain mx-auto">
                                 <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 500g</h4>
                             </div>
 
                             <div class="p-4 text-center">
-                                <img src="/vtc1000g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <img src="/food50g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 500g</h4>
+                            </div>
+
+                            <div class="p-4 text-center">
+                                <img src="/food100g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 1000g</h4>
+                            </div>
+
+                            <div class="p-4 text-center">
+                                <img src="/food500g.png" alt="" class="w-full h-64 object-contain mx-auto">
                                 <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 1000g</h4>
                             </div>
 
                             <div class="p-4 text-center">
                                 <img src="/vtc1000g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">vtc 1000g</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pharma Products -->
+                    <div *ngIf="adsorbentabsorbent === 'pharma'">
+                        <img src="/medicin.png" alt="" class="md:h-90 w-full rounded-xl mb-6">
+                        <h3 class="text-2xl font-semibold text-blue-900 mb-4">
+                            pharma Products
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Pharmaceutical products require strict humidity control to ensure drug stability, safety,
+                            and effectiveness. Excess moisture can lead to chemical degradation, reduced potency,
+                            microbial growth, and compromised packaging integrity.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Silica gel–based desiccants play a critical role in pharmaceutical packaging by absorbing
+                            excess moisture inside bottles, blister packs, and containers. Effective moisture management
+                            helps extend shelf life, maintain product efficacy, and comply with regulatory quality
+                            standards during storage and transportation.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+                            <div class="p-4 text-center">
+                                <img src="/food5g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 500g</h4>
+                            </div>
+
+                            <div class="p-4 text-center">
+                                <img src="/food10g.png" alt="" class="w-full h-64 object-contain mx-auto">
                                 <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 1000g</h4>
                             </div>
 
                             <div class="p-4 text-center">
-                                <img src="/vtc1000g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <img src="/food100g.png" alt="" class="w-full h-64 object-contain mx-auto">
+                                <h4 class="font-semibold text-center text-blue-900 mb-2">VTC 1000g</h4>
+                            </div>
+
+                            <div class="p-4 text-center">
+                                <img src="/food500g.png" alt="" class="w-full h-64 object-contain mx-auto">
                                 <h4 class="font-semibold text-center text-blue-900 mb-2">vtc 1000g</h4>
                             </div>
                         </div>

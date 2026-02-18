@@ -17,7 +17,8 @@ adsorbentabsorbent:
   | 'HandicraftsAndKitchen'
   | 'machinery'
   | 'metalProducts'
-  | 'agricultural'
+  | 'food'
+  | 'pharma'
   = 'garments';
 
 }
