@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component, OnInit, NgZone,
+  Inject,
+  PLATFORM_ID
+} from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { DESCRIPTIVE_DATA } from '../descriptive.data'; 
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { DESCRIPTIVE_DATA } from '../descriptive.data';
 
 @Component({
   selector: 'app-descriptive-category-products',
@@ -16,9 +20,22 @@ export class DescriptiveCategoryProducts implements OnInit {
   product: any = null;
   selectedImage!: string; // ✅ important
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,
+    private zone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+
+    // 🔹 AOS only in browser
+    if (isPlatformBrowser(this.platformId)) {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    }
     this.route.paramMap.subscribe(params => {
 
       const categorySlug = params.get('category');
@@ -40,10 +57,10 @@ export class DescriptiveCategoryProducts implements OnInit {
       setTimeout(() => {
         if (this.product?.images?.length) {
           this.selectedImage = this.product.images[0];
-        } 
+        }
         else if (this.category?.images?.length) {
           this.selectedImage = this.category.images[0];
-        } 
+        }
         else {
           this.selectedImage = '';
         }

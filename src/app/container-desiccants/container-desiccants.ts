@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, Inject, NgZone, PLATFORM_ID } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { CONTAINER_DESICCANTS_DATA } from '../product/container-desiccants';
 
@@ -83,10 +83,22 @@ export class ContainerDesiccants implements OnInit {
     }
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private zone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   /* ---------- INIT ---------- */
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void>{
+    // 🔹 AOS only in browser
+    if (isPlatformBrowser(this.platformId)) {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    }
     this.filterCategory(this.categories[0]);
   }
 

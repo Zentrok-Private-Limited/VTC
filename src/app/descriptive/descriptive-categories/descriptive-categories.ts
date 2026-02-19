@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgZone, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DESCRIPTIVE_CATEGORIES } from '../descriptive.data';
 
 interface Category {
@@ -223,7 +223,15 @@ export class DescriptiveCategories {
     }
   ];
 
-  ngOnInit() {
+  async ngOnInit(): Promise<void> {
+    if (isPlatformBrowser(this.platformId)) {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    }
     this.filteredProjects = this.projects.filter(
       p => p.categorySlug === 'clay-desiccants'
     );
@@ -231,7 +239,10 @@ export class DescriptiveCategories {
 
   filteredProjects: Product[] = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+    private zone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.filteredProjects = this.projects;
   }
 
