@@ -39,32 +39,32 @@ export const routes: Routes = [
   },
 
   /* ---------------- IN-BOX DESICCANTS ---------------- */
-  {
-    path: 'in-box-desiccants',
-    loadComponent: () =>
-      import('./in-box-desiccants/in-box-desiccants')
-        .then(m => m.InBoxDesiccants),
-  },
+  // {
+  //   path: 'in-box-desiccants',
+  //   loadComponent: () =>
+  //     import('./in-box-desiccants/in-box-desiccants')
+  //       .then(m => m.InBoxDesiccants),
+  // },
 
   /* ---------------- DESCRIPTIVE ---------------- */
 
   {
-    path: 'descriptive',
+    path: 'in-box-desiccants',
     loadComponent: () =>
-      import('./descriptive/descriptive-categories/descriptive-categories')
-        .then(m => m.DescriptiveCategories),
+      import('./in-box-desiccants/in-box-desiccants-categories/in-box-desiccants-categories')
+        .then(m => m.InBoxDesiccantsCategories),
   },
   {
-    path: 'descriptive/:category',
+    path: 'in-box-desiccants/:category',
     loadComponent: () =>
-      import('./descriptive/descriptive-category-products/descriptive-category-products')
-        .then(m => m.DescriptiveCategoryProducts),
+      import('./in-box-desiccants/in-box-desiccants-category-products/in-box-desiccants-category-products')
+        .then(m => m.InBoxDesiccantsCategoryProducts),
   },
   {
-    path: 'descriptive/:category/:product',
+    path: 'in-box-desiccants/:category/:product',
     loadComponent: () =>
-      import('./descriptive/descriptive-product-details/descriptive-product-details')
-        .then(m => m.DescriptiveProductDetails),
+      import('./in-box-desiccants/in-box-desiccants-product-details/in-box-desiccants-product-details')
+        .then(m => m.InBoxDesiccantsProductDetails),
   },
 
 

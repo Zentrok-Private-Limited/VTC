@@ -32,15 +32,15 @@ export const serverRoutes: ServerRoute[] = [
 
   /* ================= DESCRIPTIVE ================= */
   {
-    path: 'descriptive',
+    path: 'in-box-desiccants',
     renderMode: RenderMode.Prerender,
   },
   {
-    path: 'descriptive/:category',
+    path: 'in-box-desiccants/:category',
     renderMode: RenderMode.Client,   // ✅ FIX
   },
   {
-    path: 'descriptive/:category/:product',
+    path: 'in-box-desiccants/:category/:product',
     renderMode: RenderMode.Client,   // ✅ FIX
   },
 

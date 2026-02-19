@@ -20,7 +20,8 @@
         <h1 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-6 text-center">
           Container Desiccants
         </h1>
-        <img src="/container.png" alt="Container Desiccants" class="w-full max-w-md drop-shadow-md" data-aos="zoom-in-left">
+        <img src="/container.png" alt="Container Desiccants" class="w-full max-w-md drop-shadow-md"
+          data-aos="zoom-in-left">
       </div>
       <div class="md:col-span-8 md:pl-10">
 
@@ -121,7 +122,7 @@
     </div>
   </div>
 </section>
-<section  class="py-20 bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
+<section class="py-20 bg-gradient-to-bl from-blue-100 via-white to-blue-100 relative overflow-hidden">
 
   <!-- subtle background blobs -->
   <div class="absolute bottom-0 left-1 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl"></div>
@@ -146,38 +147,48 @@
       <!-- Card -->
       <div id="ds" class="bg-white border border-blue-100 rounded-xl p-6 
                shadow-sm hover:shadow-md transition" data-aos="fade-up">
-        <h3 class="text-xl font-semibold text-blue-800">Standard Container Desiccant</h3>
+        <h3 class="text-xl font-semibold text-blue-800">
+          Silica Gel Container Desiccant
+        </h3>
+
         <span class="inline-block mt-2 text-xs px-3 py-1 bg-blue-50 text-blue-700 rounded-full">
           General Purpose
         </span>
 
         <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-          Ideal for standard shipping containers requiring compact and efficient moisture control.
+          Silica gel–based container desiccants designed for reliable moisture
+          control in standard shipping containers.
         </p>
 
         <ul class="mt-4 space-y-2 text-sm text-gray-600">
-          <li>• Hung on container walls or lashing rings</li>
-          <li>• Compact, standard format</li>
+          <li>• Ideal for general cargo and dry goods</li>
+          <li>• Compact and easy to hang inside containers</li>
         </ul>
       </div>
+
 
       <!-- Card -->
       <div id="dp" class="bg-white border border-blue-100 rounded-xl p-6
                shadow-sm hover:shadow-md transition" data-aos="flip-up">
-        <h3 class="text-xl font-semibold text-blue-800">Heavy Duty Container Desiccant</h3>
+        <h3 class="text-xl font-semibold text-blue-800">
+          Calcium-Based Container Desiccant
+        </h3>
+
         <span class="inline-block mt-2 text-xs px-3 py-1 bg-sky-50 text-sky-700 rounded-full">
           Heavy Cargo
         </span>
 
         <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-          Designed for long-distance transport and heavy cargo in extreme humidity conditions.
+          Calcium-based container desiccants designed to protect heavy cargo from
+          moisture and container rain during transit.
         </p>
 
         <ul class="mt-4 space-y-2 text-sm text-gray-600">
-          <li>• Wall-mounted for harsh environments</li>
-          <li>• Anti-leak outer shell protection</li>
+          <li>• High moisture absorption capacity</li>
+          <li>• Leak-proof and safe for containers</li>
         </ul>
       </div>
+
 
       <!-- Card -->
       <div id="sq" class="bg-white border border-blue-100 rounded-xl p-6
@@ -209,8 +220,7 @@
 
   </div>
 </section>
-<section
-  class="relative py-5 bg-gradient-to-bl from-blue-100 via-white to-blue-100 overflow-hidden">
+<section class="relative py-5 bg-gradient-to-bl from-blue-100 via-white to-blue-100 overflow-hidden">
 
   <!-- subtle background accents -->
   <div class="absolute bottom-0 -left-24 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -220,10 +230,7 @@
 
     <!-- 🔘 Category Filters -->
     <div class="flex flex-wrap justify-center gap-3 mb-14">
-      <button
-        *ngFor="let category of categories"
-        (click)="filterCategory(category)"
-        [ngClass]="selectedCategory === category.slug
+      <button *ngFor="let category of categories" (click)="filterCategory(category)" [ngClass]="selectedCategory === category.slug
           ? 'bg-blue-900 text-white shadow'
           : 'bg-white text-gray-700 border border-gray-300 hover:bg-blue-50'"
         class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300">
@@ -234,10 +241,7 @@
     <!-- 🧩 Product Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <div
-        *ngFor="let project of filteredProjects"
-        (click)="openProject(project)"
-        class="cursor-pointer group bg-white
+      <div *ngFor="let project of filteredProjects" (click)="openProject(project)" class="cursor-pointer group bg-white
                border border-gray-200 rounded-2xl
                shadow-sm hover:shadow-lg
                hover:-translate-y-1
@@ -245,10 +249,7 @@
 
         <!-- Image -->
         <div class="relative overflow-hidden rounded-t-2xl">
-          <img
-            [src]="project.image"
-            [alt]="project.title"
-            class="w-full h-56 object-contain
+          <img [src]="project.image" [alt]="project.title" class="w-full h-56 object-contain
                    transition-transform duration-500
                    group-hover:scale-110" />
         </div>

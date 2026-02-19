@@ -6,6 +6,7 @@ import {
 
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import { routes } from './app.routes';
 
@@ -21,6 +22,9 @@ export const appConfig: ApplicationConfig = {
         anchorScrolling: 'enabled'
       })
     ),
+
+    // ✅ HttpClient for standalone components
+    provideHttpClient(withFetch()),
 
     provideClientHydration(withEventReplay())
   ]

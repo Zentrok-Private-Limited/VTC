@@ -8,13 +8,13 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DESCRIPTIVE_DATA } from '../descriptive.data';
 
 @Component({
-  selector: 'app-descriptive-category-products',
+  selector: 'app-in-box-desiccants-category-products',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './descriptive-category-products.html',
-  styleUrl: './descriptive-category-products.css',
+  templateUrl: './in-box-desiccants-category-products.html',
+  styleUrl: './in-box-desiccants-category-products.css',
 })
-export class DescriptiveCategoryProducts implements OnInit {
+export class InBoxDesiccantsCategoryProducts implements OnInit {
 
   category: any = null;
   product: any = null;

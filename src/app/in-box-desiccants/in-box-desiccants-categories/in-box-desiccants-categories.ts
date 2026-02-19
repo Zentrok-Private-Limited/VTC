@@ -17,13 +17,13 @@ interface Product {
 }
 
 @Component({
-  selector: 'app-descriptive-categories',
+  selector: 'app-in-box-desiccants-categories',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './descriptive-categories.html',
-  styleUrl: './descriptive-categories.css',
+  templateUrl: './in-box-desiccants-categories.html',
+  styleUrl: './in-box-desiccants-categories.css',
 })
-export class DescriptiveCategories {
+export class InBoxDesiccantsCategories {
   categoriesData = DESCRIPTIVE_CATEGORIES;
 
   categorie: Category[] = [

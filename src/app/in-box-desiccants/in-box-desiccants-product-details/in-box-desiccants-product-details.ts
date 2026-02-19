@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { DESCRIPTIVE_DATA } from '../descriptive.data';
 
 @Component({
-  selector: 'app-descriptive-product-details',
+  selector: 'app-in-box-desiccants-product-details',
   standalone: true,
   imports: [RouterModule, CommonModule],
-  templateUrl: './descriptive-product-details.html',
+  templateUrl: './in-box-desiccants-product-details.html',
 })
-export class DescriptiveProductDetails {
+export class InBoxDesiccantsProductDetails {
 
   category: any;
   product: any;
