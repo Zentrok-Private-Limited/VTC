@@ -256,7 +256,7 @@ export class InBoxDesiccantsCategories {
 
   openProject(product: Product) {
     this.router.navigate([
-      '/descriptive',
+      '/in-box-desiccants',
       product.categorySlug, // :category
       product.slug          // :product
     ]);

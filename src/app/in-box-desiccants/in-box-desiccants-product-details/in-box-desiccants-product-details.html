@@ -59,7 +59,7 @@
         <div class="grid grid-cols-3 gap-4">
 
           @for (p of category.products; track p.slug) {
-          <a [routerLink]="['/descriptive', category.slug, p.slug]" class="block rounded-lg border
+          <a [routerLink]="['/in-box-desiccants', category.slug, p.slug]" class="block rounded-lg border
              transition-all duration-200 h-35 text-center
              hover:border-blue-700" [class.border-blue-700]="p.slug === product.slug"
             [class.opacity-60]="p.slug !== product.slug">
@@ -113,50 +113,55 @@
     <div class="lg:col-span-7">
       <div class="md:p-5">
 
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-          <input type="text" placeholder="Your Full Name" class="px-4 py-3 rounded-lg border border-gray-300
-                   text-gray-700 focus:outline-none
-                   focus:border-blue-700 transition" />
+          <input type="text" placeholder="Your Full Name" formControlName="fullName" class="px-4 py-3 rounded-lg border border-gray-300 text-gray-700
+           focus:outline-none focus:border-blue-700 transition" />
 
-          <input type="text" placeholder="Country / Location" class="px-4 py-3 rounded-lg border border-gray-300
-                   text-gray-700 focus:outline-none
-                   focus:border-blue-700 transition" />
+          <input type="text" placeholder="Country / Location" formControlName="country" class="px-4 py-3 rounded-lg border border-gray-300 text-gray-700
+           focus:outline-none focus:border-blue-700 transition" />
 
-          <input type="email" placeholder="Email Address" class="px-4 py-3 rounded-lg border border-gray-300
-                   text-gray-700 focus:outline-none
-                   focus:border-blue-700 transition" />
+          <input type="email" placeholder="Email Address" formControlName="email" class="px-4 py-3 rounded-lg border border-gray-300 text-gray-700
+           focus:outline-none focus:border-blue-700 transition" />
 
-          <input type="text" placeholder="Contact Number" class="px-4 py-3 rounded-lg border border-gray-300
-                   text-gray-700 focus:outline-none
-                   focus:border-blue-700 transition" />
+          <input type="text" placeholder="Contact Number" formControlName="phone" class="px-4 py-3 rounded-lg border border-gray-300 text-gray-700
+           focus:outline-none focus:border-blue-700 transition" />
 
-          <input type="text" placeholder="Company Name" class="md:col-span-2 px-4 py-3 rounded-lg
-                   border border-gray-300 text-gray-700
-                   focus:outline-none focus:border-blue-700 transition" />
+          <input type="text" placeholder="Company Name" formControlName="company" class="md:col-span-2 px-4 py-3 rounded-lg border border-gray-300
+           text-gray-700 focus:outline-none focus:border-blue-700 transition" />
 
-          <input type="text" placeholder="Subject" class="md:col-span-2 px-4 py-3 rounded-lg
-                   border border-gray-300 text-gray-700
-                   focus:outline-none focus:border-blue-700 transition" />
+          <input type="text" placeholder="Subject" formControlName="subject" class="md:col-span-2 px-4 py-3 rounded-lg border border-gray-300
+           text-gray-700 focus:outline-none focus:border-blue-700 transition" />
 
-          <textarea rows="4" placeholder="Message" class="md:col-span-2 px-4 py-3 rounded-lg
-                   border border-gray-300 text-gray-700
-                   resize-none focus:outline-none
-                   focus:border-blue-700 transition"></textarea>
+          <textarea rows="4" placeholder="Message" formControlName="message" class="md:col-span-2 px-4 py-3 rounded-lg border border-gray-300
+           text-gray-700 resize-none focus:outline-none
+           focus:border-blue-700 transition"></textarea>
 
           <!-- BUTTON -->
-          <button type="submit" class="md:col-span-2 inline-flex items-center justify-center gap-3
-                   bg-gradient-to-r from-blue-700 to-blue-900
-                   text-white font-semibold py-3 rounded-full
-                   hover:shadow-lg hover:-translate-y-0.5
-                   transition-all duration-300">
-            Send Message
+          <button type="submit" [disabled]="loading" class="md:col-span-2 inline-flex items-center justify-center gap-3
+           bg-gradient-to-r from-blue-700 to-blue-900
+           text-white font-semibold py-3 rounded-full
+           hover:shadow-lg hover:-translate-y-0.5
+           transition-all duration-300 disabled:opacity-60">
+            {{ loading ? 'Sending...' : 'Send Message' }}
             <span class="material-symbols-outlined">
               arrow_right_alt
             </span>
           </button>
 
         </form>
+
+        <!-- Messages -->
+        @if (successMsg) {
+        <p class="text-green-600 mt-3">
+          {{ successMsg }}
+        </p>
+        }
+        @if (errorMsg) {
+        <p class="text-red-600 mt-3">
+          {{ errorMsg }}
+        </p>
+        }
       </div>
     </div>
 

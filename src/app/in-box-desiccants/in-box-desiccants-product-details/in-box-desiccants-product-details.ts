@@ -1,31 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 import { DESCRIPTIVE_DATA } from '../descriptive.data';
 
 @Component({
   selector: 'app-in-box-desiccants-product-details',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   templateUrl: './in-box-desiccants-product-details.html',
 })
-export class InBoxDesiccantsProductDetails {
+export class InBoxDesiccantsProductDetails implements OnInit {
 
   category: any;
   product: any;
   selectedImage: string | null = null;
 
-  constructor(private route: ActivatedRoute) {
+  contactForm!: FormGroup;
+  loading = false;
+  successMsg = '';
+  errorMsg = '';
 
-    // ✅ THIS IS THE FIX
+  constructor(
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+    private http: HttpClient
+  ) {
     this.route.paramMap.subscribe(params => {
-
       const categorySlug = params.get('category');
       const productSlug = params.get('product');
 
-      this.category = DESCRIPTIVE_DATA.find(
-        c => c.slug === categorySlug
-      );
+      this.category = DESCRIPTIVE_DATA.find(c => c.slug === categorySlug);
 
       if (!this.category) {
         this.product = null;
@@ -36,12 +43,49 @@ export class InBoxDesiccantsProductDetails {
         (p: any) => p.slug === productSlug
       );
 
-      // reset image when product changes
       this.selectedImage = this.product?.images?.[0] || null;
+    });
+  }
+
+  ngOnInit(): void {
+    this.contactForm = this.fb.group({
+      fullName: ['', Validators.required],
+      country: [''],
+      email: ['', [Validators.required, Validators.email]],
+      phone: [''],
+      company: [''],
+      subject: [''],
+      message: ['']
     });
   }
 
   selectImage(img: string) {
     this.selectedImage = img;
+  }
+
+  submitForm() {
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
+      return;
+    }
+
+    this.loading = true;
+
+    this.http.post(
+      'https://vtc-database.vercel.app/api/contact',
+      this.contactForm.value
+    ).subscribe({
+      next: () => {
+        this.successMsg = 'Message sent successfully ✅';
+        this.errorMsg = '';
+        this.contactForm.reset();
+        this.loading = false;
+      },
+      error: () => {
+        this.errorMsg = 'Something went wrong ❌';
+        this.successMsg = '';
+        this.loading = false;
+      }
+    });
   }
 }
