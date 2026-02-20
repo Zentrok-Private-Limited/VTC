@@ -41,7 +41,7 @@ export class Contact implements OnInit {
 
     this.loading = true;
 
-    this.http.post('http://localhost:5000/api/contact', this.contactForm.value)
+    this.http.post('https://vtc-database.vercel.app/api/contact', this.contactForm.value)
       .subscribe({
         next: () => {
           this.successMsg = 'Message sent successfully ✅';
