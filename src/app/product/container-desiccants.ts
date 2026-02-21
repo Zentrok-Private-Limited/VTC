@@ -10,7 +10,7 @@ export const CONTAINER_DATA = [
   {
     slug: 'standard', // ✅ lowercase (IMPORTANT)
     name: 'Standard',
-    images: ['/vtc250g.png', '/vtc250gsticker.png', '/vtc500g.png'],
+    images: ['/silica250g.png', '/silica1.png', '/silica500.png'],
 
     description1:
       'VTC desiccants are manufactured using high-purity calcium chloride combined with a specially developed natural organic gelling agent. Calcium chloride is a highly hygroscopic material capable of attracting and binding large amounts of moisture.',
@@ -39,19 +39,19 @@ export const CONTAINER_DATA = [
         slug: 'vtc-250g',
         name: 'VTC 250G',
         gram: 'VTC 250G',
-        images: ['/vtc250g.png']
+        images: ['/silica250g.png']
       },
       {
         slug: 'vtc-250g-sticker',
         name: 'VTC 250G Sticker',
         gram: 'VTC 250G Sticker',
-        images: ['/vtc250g.png']
+        images: ['/silica1.png']
       },
       {
         slug: 'vtc-500g',
         name: 'VTC 500G',
         gram: 'VTC 500G',
-        images: ['/vtc500g.png']
+        images: ['/silica500.png']
       }
     ]
   },

@@ -39,21 +39,21 @@ export class ContainerDesiccants implements OnInit {
       title: 'VTC 250G',
       slug: 'vtc-250g',
       categorySlug: 'standard',
-      image: '/vtc250g.png',
+      image: '/silica250g.png',
       gram: 'VTC 250G'
     },
     {
       title: 'VTC 250G Sticker',
       slug: 'vtc-250g-sticker',
       categorySlug: 'standard',
-      image: '/vtc250g.png',
+      image: '/silica1.png',
       gram: 'VTC 250G Sticker'
     },
     {
       title: 'VTC 500G',
       slug: 'vtc-500g',
       categorySlug: 'standard',
-      image: '/vtc500g.png',
+      image: '/silica500.png',
       gram: 'VTC 500G'
     },
 
