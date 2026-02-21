@@ -47,14 +47,14 @@ export class ContainerDesiccants implements OnInit {
       slug: 'vtc-250g-sticker',
       categorySlug: 'standard',
       image: '/silica1.png',
-      gram: 'VTC 250G Sticker'
+      gram: '250G Sticker'
     },
     {
       title: 'VTC 500G',
       slug: 'vtc-500g',
       categorySlug: 'standard',
       image: '/silica500.png',
-      gram: 'VTC 500G'
+      gram: '500G'
     },
 
     /* HEAVY */
@@ -62,8 +62,8 @@ export class ContainerDesiccants implements OnInit {
       title: 'VTC 1000G',
       slug: 'vtc-1000g',
       categorySlug: 'heavy',
-      image: '/vtc1000g.png',
-      gram: 'VTC 1000G'
+      image: '/cb.png',
+      gram: '1000G'
     },
 
     /* SPECIAL */
@@ -72,14 +72,14 @@ export class ContainerDesiccants implements OnInit {
       slug: 'vtc-1000g-special',
       categorySlug: 'special',
       image: '/vtc1000g.png',
-      gram: 'VTC 1000G'
+      gram: '1000G'
     },
     {
       title: 'VTC 1200G',
       slug: 'vtc-1200g',
       categorySlug: 'special',
       image: '/vtc1200g.png',
-      gram: 'VTC 1200G'
+      gram: '1200G'
     }
   ];
 

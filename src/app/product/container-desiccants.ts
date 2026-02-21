@@ -60,7 +60,7 @@ export const CONTAINER_DATA = [
   {
     slug: 'heavy',
     name: 'Heavy',
-    images: ['/vtc1000g.png'],
+    images: ['/cb.png'],
 
     description1:
       'VTC heavy-duty container desiccants are designed for extreme humidity conditions and long sea routes where moisture protection is critical.',
@@ -85,7 +85,7 @@ export const CONTAINER_DATA = [
         slug: 'vtc-1000g',
         name: 'VTC 1000G',
         gram: 'VTC 1000G',
-        images: ['/vtc1000g.png']
+        images: ['/cb.png']
       }
     ]
   },
