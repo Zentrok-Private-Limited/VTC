@@ -32,7 +32,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   heroSlides = [
     { bg: '/banner1.png', left: 'cd.png', right: 'food.png', title: 'Advanced Moisture Protection' },
     { bg: 'banner2.png', left: 'vtc1.png', right: 'container.png', title: 'Engineered for Global Shipping' },
-    { bg: 'banner3.png', left: 'incubic.png', right: ' is.png', title: 'Complete Moisture Protection Solutions' }
+    { bg: 'banner3.png', left: 'incubic.png', right: ' iss.png', title: 'Complete Moisture Protection Solutions' }
   ];
 
   /* ================= MOBILE PROCESS SLIDER ================= */
