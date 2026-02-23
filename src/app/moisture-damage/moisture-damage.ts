@@ -1,37 +1,71 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy, NgZone } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  NgZone,
+  PLATFORM_ID,
+  Inject
+} from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-moisture-damage',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './moisture-damage.html',
-  styleUrl: './moisture-damage.css',
+  styleUrls: ['./moisture-damage.css'],
 })
-export class MoistureDamage implements OnInit, OnDestroy{
-currentIndex = 0;
-  intervalId: any;
+export class MoistureDamage implements OnInit, OnDestroy {
+
+  currentIndex = 0;
+  intervalId: any = null;
 
   banners = [
-    { image: '/banner1.png', title: 'Mechanisms of Moisture Ingress and Condensation' },
-    { image: '/banner2.png', title: 'Effects of Humidity on Material Integrity and Performance' },
-    { image: '/banner3.png', title: 'Moisture Mitigation and Environmental Control Strategies' }
+    {
+      image: '/banner1.png',
+      title: 'Mechanisms of Moisture Ingress and Condensation'
+    },
+    {
+      image: '/banner2.png',
+      title: 'Effects of Humidity on Material Integrity and Performance'
+    },
+    {
+      image: '/banner3.png',
+      title: 'Moisture Mitigation and Environmental Control Strategies'
+    }
   ];
 
-  constructor(private zone: NgZone) {}
+  constructor(
+    private zone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
-  ngOnInit() {
+  /* ---------- INIT ---------- */
+  async ngOnInit(): Promise<void> {
+    // ✅ Run only in browser (SSR safe)
+    if (isPlatformBrowser(this.platformId)) {
+      const AOS = (await import('aos')).default;
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    }
+
     this.startAutoSlide();
   }
 
-  ngOnDestroy() {
+  /* ---------- DESTROY ---------- */
+  ngOnDestroy(): void {
     if (this.intervalId) {
       clearInterval(this.intervalId);
+      this.intervalId = null;
     }
   }
 
-  /* ---------- AUTO SLIDE (SAFE) ---------- */
-  startAutoSlide() {
+  /* ---------- AUTO SLIDE ---------- */
+  startAutoSlide(): void {
     this.zone.runOutsideAngular(() => {
       this.intervalId = setInterval(() => {
         this.zone.run(() => {
@@ -42,21 +76,23 @@ currentIndex = 0;
   }
 
   /* ---------- NAVIGATION ---------- */
-  next() {
-    this.currentIndex = (this.currentIndex + 1) % this.banners.length;
-  }
-
-  prev() {
+  next(): void {
     this.currentIndex =
-      (this.currentIndex - 1 + this.banners.length) % this.banners.length;
+      (this.currentIndex + 1) % this.banners.length;
   }
 
-  goToSlide(index: number) {
+  prev(): void {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.banners.length) %
+      this.banners.length;
+  }
+
+  goToSlide(index: number): void {
     this.currentIndex = index;
   }
 
   /* ---------- PERFORMANCE ---------- */
-  trackByIndex(index: number) {
+  trackByIndex(index: number): number {
     return index;
   }
 }
