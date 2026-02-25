@@ -22,34 +22,75 @@
 
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-          <input type="text" formControlName="fullName" placeholder="Your Full Name"
-            class="col-span-2 md:col-span-1 px-4 py-2 bg-transparent border border-white/30" />
+          <!-- Full Name -->
+          <div>
+            <input type="text" formControlName="fullName" placeholder="Your Full Name"
+              class="w-full px-4 py-2 bg-transparent border border-white/30" />
+            @if (f('fullName')?.touched && f('fullName')?.invalid) {
+            <p class="text-red-400 text-sm">Full name (min 3 chars) required</p>
+            }
+          </div>
 
-          <input type="text" formControlName="country" placeholder="Country / Location"
-            class="col-span-2 md:col-span-1 px-4 py-2 bg-transparent border border-white/30" />
+          <!-- Country -->
+          <div>
+            <input type="text" formControlName="country" placeholder="Country / Location"
+              class="w-full px-4 py-2 bg-transparent border border-white/30" />
+            @if (f('country')?.touched && f('country')?.invalid) {
+            <p class="text-red-400 text-sm">Country is required</p>
+            }
+          </div>
 
-          <input type="email" formControlName="email" placeholder="Email"
-            class="col-span-2 md:col-span-1 px-4 py-2 bg-transparent border border-white/30" />
+          <!-- Email -->
+          <div>
+            <input type="email" formControlName="email" placeholder="Email"
+              class="w-full px-4 py-2 bg-transparent border border-white/30" />
+            @if (f('email')?.touched && f('email')?.errors?.['required']) {
+            <p class="text-red-400 text-sm">Email is required</p>
+            }
+            @if (f('email')?.touched && f('email')?.errors?.['email']) {
+            <p class="text-red-400 text-sm">Enter valid email</p>
+            }
+          </div>
 
-          <input type="text" formControlName="phone" placeholder="Contact Number"
-            class="col-span-2 md:col-span-1 px-4 py-2 bg-transparent border border-white/30" />
+          <!-- Phone -->
+          <div>
+            <input type="text" formControlName="phone" placeholder="Contact Number"
+              class="w-full px-4 py-2 bg-transparent border border-white/30" />
+            @if (f('phone')?.touched && f('phone')?.invalid) {
+            <p class="text-red-400 text-sm">Enter valid phone number</p>
+            }
+          </div>
 
+          <!-- Company -->
           <input type="text" formControlName="company" placeholder="Company Name"
             class="col-span-2 px-4 py-2 bg-transparent border border-white/30" />
 
-          <input type="text" formControlName="subject" placeholder="Subject"
-            class="col-span-2 px-4 py-2 bg-transparent border border-white/30" />
+          <!-- Subject -->
+          <div class="col-span-2">
+            <input type="text" formControlName="subject" placeholder="Subject"
+              class="w-full px-4 py-2 bg-transparent border border-white/30" />
+            @if (f('subject')?.touched && f('subject')?.invalid) {
+            <p class="text-red-400 text-sm">Subject is required</p>
+            }
+          </div>
 
-          <textarea formControlName="message" placeholder="Message"
-            class="col-span-2 px-4 py-2 h-28 bg-transparent border border-white/30 resize-none"></textarea>
+          <!-- Message -->
+          <div class="col-span-2">
+            <textarea formControlName="message" placeholder="Message"
+              class="w-full px-4 py-2 h-28 bg-transparent border border-white/30 resize-none"></textarea>
+            @if (f('message')?.touched && f('message')?.invalid) {
+            <p class="text-red-400 text-sm">Message min 10 characters</p>
+            }
+          </div>
 
-          <button type="submit" [disabled]="loading" class="col-span-2 mt-4 bg-white text-[#001030] font-semibold py-3">
+          <!-- Button -->
+          <button type="submit" [disabled]="loading || contactForm.invalid"
+            class="col-span-2 mt-4 bg-white text-[#001030] font-semibold py-3 disabled:opacity-50">
             {{ loading ? 'Sending...' : 'Send Message' }}
           </button>
-
         </form>
 
-        <!-- Messages -->
+        <!-- Success / Error -->
         @if (successMsg) {
         <p class="text-green-400 mt-3">{{ successMsg }}</p>
         }
