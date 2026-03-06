@@ -100,3 +100,16 @@ input#img-3:checked ~ .carousel-dots label[for="img-3"] {
 .clip-right {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 70s linear infinite;
+}

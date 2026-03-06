@@ -195,4 +195,29 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     if (!isPlatformBrowser(this.platformId)) return;
     window.removeEventListener('resize', this.onResize);
   }
+  logos = [
+    'AAN1.jpg',
+    'ABIA.png',
+    'adhya.jpeg',
+    'agnee.jpg',
+    'sarita-handa.png',
+    'amaana.png',
+    'ayran.png',
+    'bhavya.jpg',
+    'champo.webp',
+    'deep.png',
+    'inertia_international.jpg',
+    'flower-forever.png',
+    'export.jpg',
+    'elite.jpg',
+    'internationl.png',
+    'jcinternational.jpg',
+    'PDSD.png',
+    'ranvik.jpg',
+    'raterias.jpg',
+    'sandhya.png',
+    'sharco.png',
+    'shivam.png',
+    'swift_corporation.jpg',
+  ];
 }
