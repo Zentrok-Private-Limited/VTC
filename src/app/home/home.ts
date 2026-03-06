@@ -196,28 +196,37 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     window.removeEventListener('resize', this.onResize);
   }
   logos = [
-    'AAN1.jpg',
-    'ABIA.png',
-    'adhya.jpeg',
-    'agnee.jpg',
-    'sarita-handa.png',
-    'amaana.png',
-    'ayran.png',
-    'bhavya.jpg',
-    'champo.webp',
-    'deep.png',
-    'inertia_international.jpg',
-    'flower-forever.png',
-    'export.jpg',
-    'elite.jpg',
-    'internationl.png',
-    'jcinternational.jpg',
-    'PDSD.png',
-    'ranvik.jpg',
-    'raterias.jpg',
-    'sandhya.png',
-    'sharco.png',
-    'shivam.png',
-    'swift_corporation.jpg',
-  ];
+  { img: 'AAN1.jpg', name: 'AAN' },   //1
+  { img: 'ABIA.webp', name: 'ABIA' },//2
+  { img: 'adhya.jpeg', name: 'Adhya' },//3
+  { img: 'agro.webp', name: 'Agro' },//4
+  { img: 'BharatHandicrafts.jpg', name: 'Bharat Handicrafts' },//5
+  { img: 'bhandari.png', name: 'Bhandari' },//6
+  { img: 'sarita-handa.png', name: 'Sarita Handa' },//7
+  { img: 'omica.png', name: 'Omica' },//8
+  { img: 'aryan.jpg', name: 'Aryan' },//9
+  { img: 'bhavya.jpg', name: 'Bhavya' },//10
+  { img: 'champo.webp', name: 'Champo' },//11
+  { img: 'deep.png', name: 'Deep' },//12
+  { img: 'inertia_international.jpg', name: 'Inertia International' },//13
+  { img: 'flower.jpg', name: 'Flower Forever' },//14
+  { img: 'export.jpg', name: 'Export' },//15
+  { img: 'elite1.webp', name: 'Elite' },//16
+  { img: 'internationl.png', name: 'International' },//17
+  { img: 'jcinternational.jpg', name: 'JC International' },//18
+  { img: 'ranvik.jpg', name: 'Ranvik' },//19
+  { img: 'raterias.jpg', name: 'Raterias' },//20
+  { img: 'sandhya.png', name: 'Sandhya Exports' },//21
+  { img: 'sharco.png', name: 'Sharco' },//22
+  { img: 'shivam.png', name: 'Shivam International' },//23
+  { img: 'swift_corporation.jpg', name: 'Swift Corporation' },//24
+  { img: 'PM.webp', name: 'PM Overseas' },//25
+  { img: 'Panache.webp', name: 'Panache' },//26
+  { img: 'mehar.jpg', name: 'Mehar Tableware' },//27
+  { img: 'Pacfo.webp', name: 'Pacfo' },//28
+  { img: 'moonlight.jpg', name: 'Moonlight ' },//29
+  { img: 'vinayak-packs.png', name: 'Vinayak Packs' },//30
+  { img: 'rr-industries.png', name: 'RR Industries' },//31
+  { img: 'natraj_handlooms.jpg', name: 'Natraj Handlooms' }//32
+];
 }
