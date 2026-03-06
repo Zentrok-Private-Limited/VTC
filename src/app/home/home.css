@@ -111,5 +111,5 @@ input#img-3:checked ~ .carousel-dots label[for="img-3"] {
 }
 
 .animate-scroll {
-  animation: scroll 70s linear infinite;
+  animation: scroll 80s linear infinite;
 }
