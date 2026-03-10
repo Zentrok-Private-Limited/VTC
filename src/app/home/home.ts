@@ -196,10 +196,10 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     window.removeEventListener('resize', this.onResize);
   }
   logos = [
-  { img: 'AAN1.jpg', name: 'AAN' },   //1
+  //{ img: 'AAN1.jpg', name: 'AAN' },   //1
   { img: 'ABIA.webp', name: 'ABIA' },//2
   { img: 'adhya.jpeg', name: 'Adhya' },//3
-  { img: 'agro.webp', name: 'Agro' },//4
+  //{ img: 'agro.webp', name: 'Agro' },//4
   { img: 'BharatHandicrafts.jpg', name: 'Bharat Handicrafts' },//5
   { img: 'bhandari.png', name: 'Bhandari' },//6
   { img: 'sarita-handa.png', name: 'Sarita Handa' },//7
@@ -210,9 +210,9 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   { img: 'deep.png', name: 'Deep' },//12
   { img: 'inertia_international.jpg', name: 'Inertia International' },//13
   { img: 'flower.jpg', name: 'Flower Forever' },//14
-  { img: 'export.jpg', name: 'Export' },//15
-  { img: 'elite1.webp', name: 'Elite' },//16
-  { img: 'internationl.png', name: 'International' },//17
+  //{ img: 'export.jpg', name: 'Export' },//15
+  //{ img: 'elite1.webp', name: 'Elite' },//16
+ // { img: 'internationl.png', name: 'International' },//17
   { img: 'jcinternational.jpg', name: 'JC International' },//18
   { img: 'ranvik.jpg', name: 'Ranvik' },//19
   { img: 'raterias.jpg', name: 'Raterias' },//20
