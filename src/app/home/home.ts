@@ -201,7 +201,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   { img: 'adhya.jpeg', name: 'Adhya' },//3
   //{ img: 'agro.webp', name: 'Agro' },//4
   { img: 'BharatHandicrafts.jpg', name: 'Bharat Handicrafts' },//5
-  { img: 'bhandari.png', name: 'Bhandari' },//6
+  //{ img: 'bhandari.png', name: 'Bhandari' },//6
   { img: 'sarita-handa.png', name: 'Sarita Handa' },//7
   { img: 'omica.png', name: 'Omica' },//8
   { img: 'aryan.jpg', name: 'Aryan' },//9
