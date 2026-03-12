@@ -196,37 +196,40 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     window.removeEventListener('resize', this.onResize);
   }
   logos = [
-  { img: 'AAN1.jpg', name: 'AAN' },   //1
-  { img: 'ABIA.webp', name: 'ABIA' },//2
-  { img: 'adhya.jpeg', name: 'Adhya' },//3
-  { img: 'agro.webp', name: 'Agro' },//4
+  { img: 'aan.webp', name: 'AAN Clothing LLP' },   //1
+  { img: 'ABIA.webp', name: 'Aestitic Living Merchats Pvt. Ltd' },//2
+  { img: 'adhya.jpeg', name: 'Adhya Design Pvt.Ltd' },//3
+  { img: 'aryan.jpg', name: 'Aryan Worldwide' },//4
+  { img: 'pdsd1.jpg', name: 'PDSD Exports' },//5
   { img: 'BharatHandicrafts.jpg', name: 'Bharat Handicrafts' },//5
-  { img: 'bhandari.png', name: 'Bhandari' },//6
-  { img: 'sarita-handa.png', name: 'Sarita Handa' },//7
-  { img: 'omica.png', name: 'Omica' },//8
-  { img: 'aryan.jpg', name: 'Aryan' },//9
-  { img: 'bhavya.jpg', name: 'Bhavya' },//10
-  { img: 'champo.webp', name: 'Champo' },//11
-  { img: 'deep.png', name: 'Deep' },//12
-  { img: 'inertia_international.jpg', name: 'Inertia International' },//13
-  { img: 'flower.jpg', name: 'Flower Forever' },//14
-  { img: 'export.jpg', name: 'Export' },//15
-  { img: 'elite1.webp', name: 'Elite' },//16
-  { img: 'internationl.png', name: 'International' },//17
-  { img: 'jcinternational.jpg', name: 'JC International' },//18
-  { img: 'ranvik.jpg', name: 'Ranvik' },//19
-  { img: 'raterias.jpg', name: 'Raterias' },//20
-  { img: 'sandhya.png', name: 'Sandhya Exports' },//21
-  { img: 'sharco.png', name: 'Sharco' },//22
-  { img: 'shivam.png', name: 'Shivam International' },//23
-  { img: 'swift_corporation.jpg', name: 'Swift Corporation' },//24
-  { img: 'PM.webp', name: 'PM Overseas' },//25
-  { img: 'Panache.webp', name: 'Panache' },//26
-  { img: 'mehar.jpg', name: 'Mehar Tableware' },//27
-  { img: 'Pacfo.webp', name: 'Pacfo' },//28
-  { img: 'moonlight.jpg', name: 'Moonlight ' },//29
-  { img: 'vinayak-packs.png', name: 'Vinayak Packs' },//30
-  { img: 'rr-industries.png', name: 'RR Industries' },//31
-  { img: 'natraj_handlooms.jpg', name: 'Natraj Handlooms' }//32
+  { img: 'bhavya.jpg', name: 'Bhavya Interational' },//7
+  { img: 'champo.webp', name: 'Champo Carpets' },//8
+  { img: 'deep.png', name: 'Deep OverSeas' },//9
+  { img: 'elite.png', name: 'Elite Home Decor' },//10
+  { img: 'hunar.jpg', name: 'Huner Creation' },//11
+  { img: 'Exports-Internationals.webp', name: 'Exports Internationals' },//12
+  { img: 'flower.jpg', name: 'Flower Forever' },//13
+  { img: 'inertia_international.jpg', name: 'Inertia International' },//14
+  { img: 'ila-home.jpg', name: 'ILA Home' },//15
+  { img: 'jcinternational.jpg', name: 'JC International' },//17
+  { img: 'mehar.jpg', name: 'Mehar Tablewear' },//18
+  { img: 'moonlight.jpg', name: 'Moonlight Exports' },//19
+  { img: 'narayana.jpg', name: 'Narayana Industries' },//20
+  { img: 'natraj_handlooms.jpg', name: 'Natraj Handlooms' },//21
+  { img: 'omica.png', name: 'Omica International pvt. ltd.' },//22
+  { img: 'Pacfo.webp', name: 'Pacfo International Pvt. Ltd.' },//23
+  // { img: 'saba3.jpg', name: 'Palanmurgan' },//24
+  { img: 'Panache1.jpg', name: 'Panache India International' },//25
+  { img: 'PM.webp', name: 'PM Overseas' },//26
+  { img: 'ranvik.jpg', name: 'Ranvik Exports Pvt.Ltd' },//27
+  { img: 'raterias.jpg', name: 'Raterias' },//28
+  { img: 'rr-industries.png', name: 'RR Industries' },//29
+  // { img: 'saba3.jpg', name: 'Saba OverSeas' },//30
+  { img: 'sandhya.png', name: 'Sandiya Exports Pvt. Ltd.' },//30
+  { img: 'sarita-handa.png', name: 'Sarita Handa' },//31
+  { img: 'sharco.png', name: 'Sharco Enterprises' },//32
+  { img: 'shivam.png', name: 'Shivam International' },//33
+  { img: 'swift_corporation.jpg', name: 'Swift Corporation' },//34
+  { img: 'vinayak-packs.png', name: 'Vinayak Packs' },//35
 ];
 }

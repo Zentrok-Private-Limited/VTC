@@ -213,80 +213,634 @@
         </div>
 
         <!-- Content -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-14 items-start">
+        <div class="gap-14 items-start">
 
-            <!-- Image -->
-            <div class="md:col-span-5 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-5 bg-blue-100 rounded-3xl -z-10"></div>
+            <!-- Calcium Content -->
+            <div *ngIf="activeSolution === 'box'">
+                <section class="max-w-6xl mx-auto px-4">
+                    <!-- Title -->
+                    <h2 class="text-3xl font-semibold text-blue-900 mb-4">
+                        Calcium Chloride Desiccant
+                    </h2>
+                    <div class="w-16 h-1 bg-blue-700 mb-6"></div>
+                    <!-- Description -->
+                    <p class="text-gray-700 mb-3 leading-relaxed">
+                        Calcium chloride desiccant is a highly efficient moisture absorber designed
+                        for long-distance ocean shipping, container storage and industrial protection.
+                        With up to 350% moisture absorption capacity, it protects products from mold,
+                        rust, corrosion and condensation during transportation and storage.
+                    </p>
 
-                    <!-- Calcium Image -->
-                    <img *ngIf="activeSolution === 'box'" src="/ccd.png" alt="Calcium Chloride Desiccants"
-                        class="w-full max-w-md rounded-2xl shadow-md">
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Available in multiple formats such as sachets, hanging strips and bulk bags,
+                        calcium chloride desiccants are widely used in export packaging, electronics,
+                        textiles, machinery and warehouse storage.
+                    </p>
 
-                    <!-- Magnesium Image -->
-                    <img *ngIf="activeSolution === 'container'" src="/mcd.png" alt="Magnesium Chloride Desiccants"
-                        class="w-full max-w-md rounded-2xl shadow-md">
-                </div>
+                    <!-- Product Cards -->
+                    <div class="grid md:grid-cols-2 gap-6">
+
+                        <!-- Card 1 -->
+                        <div class="p-4 text-center">
+                            <img src="/ccd2.png" alt="Calcium Chloride Desiccant Packet"
+                                class="mx-auto h-40 object-contain mb-4 rounded" />
+
+                            <h3 class="text-blue-700 font-semibold">
+                                Calcium Chloride Desiccant Packets
+                            </h3>
+
+                            <p class="text-gray-600 text-sm mt-2">
+                                Small sachet desiccant placed inside packaging boxes,
+                                electronics, garments and industrial products.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="p-4 text-center">
+                            <img src="/ccd1.png" alt="Hanging Desiccant Strip"
+                                class="mx-auto h-40 object-contain mb-4 rounded" />
+
+                            <h3 class="text-blue-700 font-semibold">
+                                Hanging Desiccant Strip
+                            </h3>
+
+                            <p class="text-gray-600 text-sm mt-2">
+                                Used for container shipping and warehouse storage.
+                                Designed to hang inside containers to absorb moisture.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="max-w-6xl mx-auto px-4 py-12">
+
+                    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                        <!-- Left Image -->
+                        <div class="bg-gray-100 border rounded-lg p-6 text-center">
+                            <img src="/ccd3.png" alt="Double Bag Desiccant Packet"
+                                class="mx-auto h-64 object-contain" />
+
+                            <!-- Certifications -->
+                            <div class="flex justify-center gap-3 mt-6 text-sm">
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded">DMF free</span>
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded">SGS ✓</span>
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded">ROHS ✓</span>
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded">MSDS ✓</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div>
+
+                            <h2 class="text-2xl md:text-3xl font-semibold text-blue-700 mb-4">
+                                Double Bag Desiccant Packet
+                            </h2>
+
+                            <ul class="space-y-2 text-gray-700 mb-6">
+                                <li>• Composition: CaCl₂ + Starch-based polymer</li>
+                                <li>• Appearance: White powder (dry) → Transparent gel (wet)</li>
+                                <li>• Absorption Capacity: ≥350% (at 50°C, 90% RH)</li>
+                                <li>• Packaging: Non-woven outer + Tyvek Paper/Duial Paper + OPP inner</li>
+                                <li>• Packaging Safety: Leak-proof, dust-free, moisture-locking</li>
+                                <li>• Environmental Safety: Non-toxic, odorless, eco-safe</li>
+                                <li>• Available Sizes: 2g / 5g / 10g / 50g / 100g / 200g / 250g</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Description -->
+                    <p class="text-gray-700 mt-8 leading-relaxed">
+                        Double-Bag Calcium Chloride Desiccant Pack is engineered for superior
+                        moisture absorption and leakage prevention. Using highly purified calcium
+                        chloride powder combined with a gel-forming polymer, it rapidly captures
+                        moisture from the air and converts it into a stable gel.
+                    </p>
+
+                </section>
+                <section class="max-w-6xl mx-auto px-4 py-12">
+
+                    <h2 class="text-2xl font-semibold text-blue-700 mb-6">
+                        Features
+                    </h2>
+
+                    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                        <!-- Left Content -->
+                        <div class="space-y-6 text-gray-700">
+
+                            <!-- Feature 1 -->
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-900 mb-2">
+                                    Ultra-High Absorption Capacity
+                                </h3>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Moisture absorption rate up to 350% of its weight (under 50°C / 90% RH, SGS
+                                        tested).</li>
+                                    <li>Over 10x the moisture absorption power of traditional desiccant.</li>
+                                    <li>Rapid moisture uptake ensures long-lasting dryness.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-900 mb-2">
+                                    Visual Moisture Indication
+                                </h3>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Powder turns into gel as moisture is absorbed.</li>
+                                    <li>Easily identify saturation level — no guesswork required.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-900 mb-2">
+                                    Leak-Proof Design
+                                </h3>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Inner layer: one side Tyvek® Paper / Duial Paper, one side transparent OPP film.
+                                    </li>
+                                    <li>Outer layer: customizable breathable non-woven fabric.</li>
+                                    <li>Gel formation locks in moisture — no liquid leakage.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-900 mb-2">
+                                    Safe & Eco-Friendly
+                                </h3>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>Non-toxic, odorless, and corrosion-free.</li>
+                                    <li>Complies with REACH, RoHS, and other international safety standards.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <!-- Right Image -->
+                        <div class="bg-gray-100 p-6 rounded-lg border text-center">
+
+                            <img src="/ccd3.png" alt="Tyvek Paper Packet Material"
+                                class="mx-auto h-64 object-contain" />
+
+                            <p class="text-blue-600 text-sm mt-4">
+                                Tyvek® Paper / Duial Paper Packet Material
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="py-14">
+
+                    <div class="max-w-6xl mx-auto px-4">
+
+                        <!-- Top Images -->
+                        <div class="grid md:grid-cols-2 gap-10 items-center">
+
+                            <!-- Left Circle Image -->
+                            <div class="flex justify-center">
+                                <div
+                                    class="w-100 h-100 rounded-full bg-gradient-to-b from-blue-200 to-blue-500 flex items-center justify-center p-6">
+
+                                    <img src="/ccd4.png" alt="Desiccant Process"
+                                        class="w-full" />
+
+                                </div>
+                            </div>
+
+                            <!-- Right Graph -->
+                            <div class="text-center">
+
+                                <h3 class="text-xl font-semibold text-blue-600 mb-4">
+                                    Moisture Absorption Curve
+                                </h3>
+
+                                <p class="text-sm text-gray-600 mb-4">
+                                    The following data is from SGS laboratory test results at 50°C temperature
+                                    and 90% relative humidity.
+                                </p>
+
+                                <img src="/ccd5.png" alt="Moisture Absorption Curve"
+                                    class="mx-auto w-full max-w-md" />
+
+                            </div>
+
+                        </div>
+
+                        <!-- Bottom Content -->
+                        <div class="mt-12 text-center max-w-3xl mx-auto">
+
+                            <h2 class="text-2xl md:text-3xl font-semibold text-blue-600 mb-6">
+                                How Does It Work?
+                            </h2>
+
+                            <ol class="list-decimal text-left pl-5 space-y-3 text-gray-700">
+
+                                <li>
+                                    Place the desiccant inside packaging, containers, or enclosed spaces.
+                                </li>
+
+                                <li>
+                                    The powder absorbs moisture and transforms into a solidified gel.
+                                </li>
+
+                                <li>
+                                    Once the desiccant feels hard or gelled, it has reached full absorption
+                                    and should be replaced.
+                                </li>
+
+                            </ol>
+
+                            <p class="text-gray-600 italic mt-4">
+                                The gel remains stable and sealed — no leakage, no mess.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="py-14">
+
+                    <div class="max-w-6xl mx-auto px-4">
+
+                        <!-- Applications -->
+                        <h2 class="text-2xl font-semibold text-blue-600 mb-4">
+                            Applications
+                        </h2>
+
+                        <ul class="space-y-2 text-gray-700 mb-10 list-disc pl-5">
+
+                            <li><strong>Household:</strong> wardrobes, shoe cabinets, storage bins.</li>
+
+                            <li><strong>Textiles & Leather:</strong> clothing, shoes, handbags.</li>
+
+                            <li><strong>Home Furnishings & Lighting:</strong> protects against mold and deformation.
+                            </li>
+
+                            <li><strong>Industrial & Military:</strong> electronics, precision instruments, military
+                                supplies.</li>
+
+                            <li><strong>Shipping & Logistics:</strong> ideal for preventing container rain during
+                                transit.</li>
+
+                        </ul>
+
+                        <!-- Specifications -->
+                        <h2 class="text-2xl font-semibold text-blue-600 text-center mb-6">
+                            Moisture Absorber Product Specifications
+                        </h2>
+
+                        <div class="overflow-x-auto">
+
+                            <table class="w-full border border-gray-300 text-sm">
+
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="border p-3 text-left">Weight (gram)</th>
+                                        <th class="border p-3 text-left">Packet Material</th>
+                                        <th class="border p-3 text-left">Size L×W (mm)</th>
+                                        <th class="border p-3 text-left">Package (pcs/ctn)</th>
+                                        <th class="border p-3 text-left">Carton Weight (kg/carton)</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td class="border p-3">2</td>
+                                        <td class="border p-3">Non-woven outer / Tyvek® Paper / OPP inner</td>
+                                        <td class="border p-3">55×90</td>
+                                        <td class="border p-3">3000</td>
+                                        <td class="border p-3">6</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border p-3">5</td>
+                                        <td class="border p-3">Non-woven outer / Tyvek® Paper / OPP inner</td>
+                                        <td class="border p-3">55×120</td>
+                                        <td class="border p-3">1500</td>
+                                        <td class="border p-3">7.5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border p-3">10</td>
+                                        <td class="border p-3">Non-woven outer / Tyvek® Paper / OPP inner</td>
+                                        <td class="border p-3">95×125</td>
+                                        <td class="border p-3">750</td>
+                                        <td class="border p-3">7.5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border p-3">50</td>
+                                        <td class="border p-3">Tyvek® Paper / Duial Paper</td>
+                                        <td class="border p-3">115×130</td>
+                                        <td class="border p-3">400</td>
+                                        <td class="border p-3">20</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border p-3">100</td>
+                                        <td class="border p-3">Tyvek® Paper / Duial Paper</td>
+                                        <td class="border p-3">145×155</td>
+                                        <td class="border p-3">200</td>
+                                        <td class="border p-3">20</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border p-3">200</td>
+                                        <td class="border p-3">Tyvek® Paper / Duial Paper</td>
+                                        <td class="border p-3">145×205</td>
+                                        <td class="border p-3">100</td>
+                                        <td class="border p-3">20</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border p-3">250</td>
+                                        <td class="border p-3">Tyvek® Paper / Duial Paper</td>
+                                        <td class="border p-3">150×240</td>
+                                        <td class="border p-3">80</td>
+                                        <td class="border p-3">20</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <section class="py-14">
+
+                    <div class="max-w-6xl mx-auto px-4">
+
+                        <!-- Top Section -->
+                        <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                            <!-- Image -->
+                            <div class="bg-white border rounded-lg p-6 shadow-sm">
+                                <img src="/ccd1.png" alt="Hanging Desiccant Strip"
+                                    class="mx-auto h-60 object-contain" />
+                            </div>
+
+                            <!-- Content -->
+                            <div>
+
+                                <h2 class="text-2xl font-semibold text-blue-600 mb-4">
+                                    Hanging Desiccant Strips
+                                </h2>
+
+                                <ul class="space-y-2 text-gray-700 mb-6">
+
+                                    <li><strong>Brand:</strong> SORBSTAR</li>
+                                    <li><strong>Composition:</strong> Calcium Chloride + Starch-based polymer</li>
+                                    <li><strong>Appearance:</strong> White powder (dry) → Transparent gel (wet)</li>
+                                    <li><strong>Absorption Capacity:</strong> ≥350% (at 50°C, 90% RH)</li>
+                                    <li><strong>Material:</strong> Tyvek® Paper / Duial Paper</li>
+                                    <li><strong>Net Weight:</strong> 500g per strip</li>
+                                    <li><strong>Dimensions:</strong> 115mm × 770mm</li>
+                                    <li><strong>Available Sizes:</strong> 1000g / 1500g / 2000g</li>
+                                    <li><strong>Certification:</strong> SGS, MSDS</li>
+
+                                </ul>
+
+                                <a routerLink="/contact"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded">
+                                    Get Quote →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-700 mt-10 leading-relaxed">
+                            Hanging desiccant strips are specially engineered moisture absorbers designed
+                            to control humidity in enclosed environments such as shipping containers,
+                            warehouses, and storage spaces. These strips quickly absorb moisture from the
+                            surrounding air and convert it into a stable gel, preventing container rain,
+                            mold growth, and corrosion during transportation.
+                        </p>
+
+                        <!-- Features -->
+                        <div class="mt-10">
+
+                            <h3 class="text-xl font-semibold text-blue-600 mb-4">
+                                Key Features
+                            </h3>
+
+                            <ul class="grid md:grid-cols-2 gap-3 list-disc pl-5 text-gray-700">
+
+                                <li>High absorption rate up to 350%</li>
+                                <li>Leak-proof Tyvek® packaging</li>
+                                <li>Prevents container condensation</li>
+                                <li>Easy to hang inside containers</li>
+                                <li>Long-lasting moisture control</li>
+                                <li>Safe and eco-friendly materials</li>
+
+                            </ul>
+
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="mt-10">
+
+                                <h3 class="text-xl font-semibold text-blue-600 mb-4">
+                                    Applications
+                                </h3>
+
+                                <ul class="list-disc pl-5 text-gray-700 space-y-2">
+
+                                    <li>Shipping containers and cargo transport</li>
+                                    <li>Warehouse and storage facilities</li>
+                                    <li>Electronics and machinery packaging</li>
+                                    <li>Furniture and textile exports</li>
+                                    <li>Automotive and industrial equipment</li>
+
+                                </ul>
+
+                            </div>
+
+                            <!-- How to Use -->
+                            <div class="mt-10">
+
+                                <h3 class="text-xl font-semibold text-blue-600 mb-4">
+                                    How to Use
+                                </h3>
+
+                                <ol class="list-decimal pl-5 text-gray-700 space-y-2">
+
+                                    <li>Open the container or storage area where moisture control is required.</li>
+                                    <li>Hang the desiccant strip securely inside the container.</li>
+                                    <li>Allow the strip to absorb moisture during transportation.</li>
+                                    <li>Replace the strip once the powder turns fully into gel.</li>
+
+                                </ol>
+
+                            </div>
+                        </div>
+                        <!-- Applications -->
+
+
+                    </div>
+
+                </section>
+                
+                <section class="py-14">
+
+                    <div class="max-w-4xl mx-auto px-4">
+
+                        <h2 class="text-2xl font-semibold text-blue-600 mb-6">
+                            Industrial Applications
+                        </h2>
+
+                        <ol class="space-y-5 text-gray-700">
+
+                            <li>
+                                <strong>Refrigeration & Cooling Systems</strong><br>
+                                Calcium chloride brine is widely used in industrial refrigeration systems
+                                because it remains liquid even at very low temperatures, making it ideal
+                                for cold storage and cooling processes.
+                            </li>
+
+                            <li>
+                                <strong>Moisture Control & Desiccants</strong><br>
+                                Due to its strong hygroscopic properties, calcium chloride is commonly
+                                used in desiccant products to absorb moisture in packaging, storage
+                                containers, and warehouses.
+                            </li>
+
+                            <li>
+                                <strong>De-icing and Snow Melting</strong><br>
+                                Calcium chloride rapidly melts ice and snow even at low temperatures,
+                                making it highly effective for road safety, parking lots, and airport
+                                runways.
+                            </li>
+
+                            <li>
+                                <strong>Drying Agent in Chemical Processing</strong><br>
+                                It is widely used as a drying agent in chemical laboratories and
+                                industrial production where moisture removal is required.
+                            </li>
+
+                            <li>
+                                <strong>Metallurgy & Metal Processing</strong><br>
+                                In aluminum and magnesium production, calcium chloride acts as a
+                                refining agent, improving metal purity and production efficiency.
+                            </li>
+
+                            <li>
+                                <strong>Fire-Resistant Textile Treatment</strong><br>
+                                Calcium chloride can be used in textile processing to enhance
+                                flame resistance and improve fabric durability.
+                            </li>
+
+                            <li>
+                                <strong>Dust Control on Roads</strong><br>
+                                Applied on unpaved roads and construction sites, calcium chloride
+                                binds dust particles and reduces airborne dust.
+                            </li>
+
+                            <li>
+                                <strong>Concrete Acceleration & Anti-Freeze Additive</strong><br>
+                                Used in construction to accelerate cement hydration, increase
+                                early strength of concrete, and improve performance in cold weather.
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+                </section>
             </div>
 
-            <!-- Text -->
-            <div class="md:col-span-7">
+            <!-- Magnesium Content -->
+            <div *ngIf="activeSolution === 'container'">
+                <p class="text-gray-700 leading-relaxed mb-2">
+                    <strong>Magnesium chloride desiccants</strong> provide effective and balanced
+                    moisture control for enclosed environments.
+                </p>
 
-                <h2 class="text-3xl md:text-4xl font-semibold text-blue-900 mb-3">
-                    {{ activeSolution === 'box'
-                    ? 'Calcium Chloride Desiccants'
-                    : 'Magnesium Chloride Desiccants' }}
-                </h2>
+                <p class="text-gray-700 leading-relaxed mb-2">
+                    They help protect goods from mold, corrosion, and packaging damage during
+                    storage and transportation.
+                </p>
 
-                <div class="w-16 h-1 bg-blue-700 mb-6"></div>
+                <p class="text-gray-700 leading-relaxed mb-2">
+                    Magnesium chloride desiccants perform consistently across varying temperature
+                    and humidity conditions.
+                </p>
 
-                <!-- Calcium Content -->
-                <div *ngIf="activeSolution === 'box'">
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        <strong>Calcium chloride desiccants</strong> are powerful moisture absorbers
-                        that chemically bind water vapor, delivering long-lasting moisture protection.
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        They are widely used to prevent corrosion, mold growth, and product damage
-                        during storage and transportation across multiple industries.
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Their high moisture-holding capacity makes them more effective than silica
-                        gel or clay in high-humidity conditions.
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed">
-                        Calcium chloride desiccants are ideal for export packaging, long-term storage,
-                        and demanding logistics environments.
-                    </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Their controlled absorption rate makes them suitable for long-duration
+                    storage where stable humidity regulation is required.
+                </p>
+                <div class="grid md:grid-cols-2 gap-2 text-gray-700">
+                    <div class="">
+                        <h3 class="text-xl font-semibold text-blue-900 mt-2">
+                            Key Features
+                        </h3>
+                        <ul class="text-gray-700">
+                            <li>Balanced moisture absorption</li>
+                            <li>Prevents mold and corrsion</li>
+                            <li>Ideal for container shipping</li>
+                            <li>Reliable log-term humidity control</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-900 mt-2">
+                            Applications
+                        </h3>
+                        <ul class="text-gray-700">
+                            <li>Export packaging</li>
+                            <li>Container cargo protection</li>
+                            <li>Textile & garments</li>
+                            <li>Electronics storage</li>
+                            <li>Machinery shipping</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <!-- Magnesium Content -->
-                <div *ngIf="activeSolution === 'container'">
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        <strong>Magnesium chloride desiccants</strong> provide effective and balanced
-                        moisture control for enclosed environments.
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        They help protect goods from mold, corrosion, and packaging damage during
-                        storage and transportation.
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Magnesium chloride desiccants perform consistently across varying temperature
-                        and humidity conditions.
-                    </p>
-
-                    <p class="text-gray-700 leading-relaxed">
-                        Their controlled absorption rate makes them suitable for long-duration
-                        storage where stable humidity regulation is required.
-                    </p>
-                </div>
-
+                <h3 class="text-xl font-semibold textt-blue-900 mt-2 mb-4">
+                    Technical Specifications
+                </h3>
+                <table class="w-full border border-gray-300 text-sm">
+                    <tr class="bg-gry-100">
+                        <th class="border p-3 text-left">
+                            Property
+                        </th>
+                        <th class="border p-3 text-left">
+                            Details
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="border p-3">Material</td>
+                        <td class="border p-3">Magnesium Chloride</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-3">
+                            Function
+                        </td>
+                        <td class="border p-3">
+                            Moisture Absorption
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border p-3">
+                            Usage
+                        </td>
+                        <td class="border p-3">
+                            Container Moisture Protection
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -314,17 +868,17 @@
 
             <!-- Right : Content -->
             <div class="md:col-span-8 space-y-4">
-                <p class="text-gray-100 leading-relaxed mb-4">
+                <p class="text-gray-100 leading-relaxed mb-2">
                     <strong>Adsorbent desiccants</strong> Adsorbent desiccants control moisture by attracting and
                     holding water vapor on their surface through physical adsorption.
                 </p>
 
-                <p class="text-gray-100 leading-relaxed mb-4">
+                <p class="text-gray-100 leading-relaxed mb-2">
                     They are commonly used to protect products from humidity-related issues such as corrosion, mold
                     growth, and packaging damage.
                 </p>
 
-                <p class="text-gray-100 leading-relaxed mb-4">
+                <p class="text-gray-100 leading-relaxed mb-2">
                     Adsorbent desiccants respond quickly to changes in humidity, making them ideal for controlled and
                     stable environments.
                 </p>
@@ -416,11 +970,11 @@
 
                 <!-- Silica -->
                 <div *ngIf="adsorbent === 'silicaGel'">
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-gray-700 leading-relaxed mb-2">
                         <strong>Silica gel desiccants</strong> adsorb moisture by trapping water
                         molecules on their surface, providing fast and reliable humidity control.
                     </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-gray-700 leading-relaxed mb-2">
                         They are widely used in electronics, pharmaceuticals, and packaging
                         applications.
                     </p>
@@ -431,11 +985,11 @@
 
                 <!-- Dry Clay -->
                 <div *ngIf="adsorbent === 'dryClayDesiccant'">
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-gray-700 leading-relaxed mb-2">
                         <strong>Dry clay desiccants</strong> are natural, cost-effective solutions
                         for general moisture protection.
                     </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-gray-700 leading-relaxed mb-2">
                         They are commonly used in shipping, storage, and industrial packaging.
                     </p>
                     <p class="text-gray-700 leading-relaxed">
@@ -445,11 +999,11 @@
 
                 <!-- Molecular Sieves -->
                 <div *ngIf="adsorbent === 'molecularSieves'">
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-gray-700 leading-relaxed mb-2">
                         <strong>Molecular sieves</strong> offer precise and selective moisture
                         adsorption at very low humidity levels.
                     </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
+                    <p class="text-gray-700 leading-relaxed mb-2">
                         They are ideal for sensitive applications such as pharmaceuticals and
                         specialty chemicals.
                     </p>
