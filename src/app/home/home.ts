@@ -224,7 +224,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   { img: 'ranvik.jpg', name: 'Ranvik Exports Pvt.Ltd' },//27
   { img: 'raterias.jpg', name: 'Raterias' },//28
   { img: 'rr-industries.png', name: 'RR Industries' },//29
-  // { img: 'saba3.jpg', name: 'Saba OverSeas' },//30
+  { img: 'saba3.jpg', name: 'Saba OverSeas' },//30
   { img: 'sandhya.png', name: 'Sandiya Exports Pvt. Ltd.' },//30
   { img: 'sarita-handa.png', name: 'Sarita Handa' },//31
   { img: 'sharco.png', name: 'Sharco Enterprises' },//32
