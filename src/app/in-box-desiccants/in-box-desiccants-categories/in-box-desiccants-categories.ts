@@ -27,18 +27,20 @@ export class InBoxDesiccantsCategories {
   categoriesData = DESCRIPTIVE_CATEGORIES;
 
   categorie: Category[] = [
+    { name: 'Calcium Chloride', slug: 'calcium-chloride' },
+    { name: 'Magnesium Chloride', slug: 'magnesium-chloride' },
     { name: 'Clay Desiccants', slug: 'clay-desiccants' },
     { name: 'Silica Gel Round Beads', slug: 'silica-gel-round-beads' },
     { name: 'Silica Gel Granules', slug: 'silica-gel-granules' },
     { name: 'Molecular Sieve', slug: 'molecular-sieve-desiccants' },
-    { name: 'Indicating & Specialty Desiccants', slug: 'indicating-specialty-desiccants' },
-    { name: 'Food Grade Desiccants', slug: 'food-grade-desiccants' },
+    { name: 'Indicating & Specialty ', slug: 'indicating-specialty-desiccants' },
+    { name: 'Food Grade ', slug: 'food-grade-desiccants' },
     { name: 'Activated Carbon', slug: 'activated-carbon' },
     { name: 'Oxygen Absorbers', slug: 'oxygen-absorbers' }
   ];
 
 
-  selectedCategory = 'clay-desiccants';
+  selectedCategory = 'calcium-chloride';
   projects: Product[] = [
 
     {
@@ -220,7 +222,52 @@ export class InBoxDesiccantsCategories {
       categorySlug: 'oxygen-absorbers',
       image: '/100cc.png',
       gram: '100cc OA'
-    }
+    },
+    // 🔹 calcuim cloride
+    {
+      title: 'Calcium Chloride Desiccant',
+      slug: 'calcium-chloride',
+      categorySlug: 'calcium-chloride',
+      image: '/calcuim2.png',
+      gram: '2g Calcuim Cloride'
+    },
+    {
+      title: 'Calcium Chloride Desiccant',
+      slug: 'calcium-chloride',
+      categorySlug: 'calcium-chloride',
+      image: '/calcuim1.png',
+      gram: '5G Calcuim Cloride'
+    },
+    {
+      title: 'Calcium Chloride Desiccant',
+      slug: 'calcium-chloride',
+      categorySlug: 'calcium-chloride',
+      image: '/calcuim3.png',
+      gram: '10G Calcuim Cloride'
+    },
+
+    // 🔹 Magnesium Chloride
+    {
+      title: 'Magnesium Chloride Desiccant',
+      slug: 'magnesium-chloride',
+      categorySlug: 'magnesium-chloride',
+      image: '/magnesium10g.png',
+      gram: '10g Magnesium Chloride'
+    },
+    // {
+    //   title: 'Magnesium Chloride Desiccant',
+    //   slug: 'magnesium-chloride',
+    //   categorySlug: 'magnesium-chloride',
+    //   image: '/calcuim1.png',
+    //   gram: '5G Calcuim Cloride'
+    // },
+    // {
+    //   title: 'Magnesium Chloride Desiccant',
+    //   slug: 'magnesium-chloride',
+    //   categorySlug: 'magnesium-chloride',
+    //   image: '/calcuim3.png',
+    //   gram: '10G Calcuim Cloride'
+    // }
   ];
 
   async ngOnInit(): Promise<void> {
@@ -233,7 +280,7 @@ export class InBoxDesiccantsCategories {
       });
     }
     this.filteredProjects = this.projects.filter(
-      p => p.categorySlug === 'clay-desiccants'
+      p => p.categorySlug === 'calcium-chloride'
     );
   }
 

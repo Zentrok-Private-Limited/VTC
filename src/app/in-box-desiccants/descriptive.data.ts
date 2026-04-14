@@ -43,112 +43,106 @@ export const DESCRIPTIVE_CATEGORIES = [
     slug: 'special',
     name: 'Special',
   },
+  {
+    slug: 'calcuim-chloride',
+    name: 'Calcuim Chlorider Desiccants',
+  },
+  {
+    slug: 'magnesium-chloride',
+    name: 'Magnesium Chloride Desiccants',
+  },
 ];
-
 
 export const DESCRIPTIVE_DATA = [
   {
-  slug: 'clay-desiccants',
-  name: 'Clay Desiccants',
+    slug: 'clay-desiccants',
+    name: 'Clay Desiccants',
 
-  /* CATEGORY IMAGES */
-  images: [
-    '/cl2g.png',
-    '/cl6g.png',
-    '/cl9g.png'
-  ],
+    /* CATEGORY IMAGES */
+    images: ['/cl2g.png', '/cl6g.png', '/cl9g.png'],
 
-  /* OVERVIEW */
-  description1:
-    'VTC® Clay Desiccant is an environmentally responsible moisture control solution made from high-quality natural clay minerals. Designed with sustainability in mind, it is packed in durable, biodegradable packaging material that ensures effective protection while reducing environmental impact.',
+    /* OVERVIEW */
+    description1:
+      'VTC® Clay Desiccant is an environmentally responsible moisture control solution made from high-quality natural clay minerals. Designed with sustainability in mind, it is packed in durable, biodegradable packaging material that ensures effective protection while reducing environmental impact.',
 
-  description2:
-    'This clay desiccant demonstrates excellent moisture adsorption properties and responds efficiently to changes in ambient humidity. It is widely used across industries such as food packaging, pharmaceuticals, medical devices, electronics, and general industrial storage.',
+    description2:
+      'This clay desiccant demonstrates excellent moisture adsorption properties and responds efficiently to changes in ambient humidity. It is widely used across industries such as food packaging, pharmaceuticals, medical devices, electronics, and general industrial storage.',
 
-  /* KEY FEATURES */
-  features: [
-    'Environment friendly natural clay',
-    'High moisture adsorption capacity',
-    'Biodegradable packaging material',
-    'Cost-effective moisture control solution',
-    'Chemically inert and non-toxic'
-  ],
-
-  /* APPLICATIONS */
-  applications: [
-    'Food packaging',
-    'Pharmaceuticals',
-    'Medical devices',
-    'Electronics',
-    'Industrial storage',
-    'Logistics & shipping'
-  ],
-
-  /* TECHNICAL SPECIFICATIONS */
-  specifications: {
-    material: 'Activated Natural Clay',
-    adsorptionCapacity: 'Up to 30% @ 90% RH',
-    packaging: 'Tyvek / Non-woven / Paper',
-    compliance: [
-      'DIN 55473',
-      'MIL-D-3464E',
-      'REACH compliant',
-      'RoHS compliant'
+    /* KEY FEATURES */
+    features: [
+      'Environment friendly natural clay',
+      'High moisture adsorption capacity',
+      'Biodegradable packaging material',
+      'Cost-effective moisture control solution',
+      'Chemically inert and non-toxic',
     ],
-    shelfLife: '2 years (sealed condition)'
-  },
 
-  /* PRODUCT VARIANTS */
-  products: [
-    {
-      slug: '2g-clay',
-      name: '2g Clay Desiccant',
-      gram: 'cl2g',
-      images: ['/cl2g.png'],
+    /* APPLICATIONS */
+    applications: [
+      'Food packaging',
+      'Pharmaceuticals',
+      'Medical devices',
+      'Electronics',
+      'Industrial storage',
+      'Logistics & shipping',
+    ],
+
+    /* TECHNICAL SPECIFICATIONS */
+    specifications: {
+      material: 'Activated Natural Clay',
+      adsorptionCapacity: 'Up to 30% @ 90% RH',
+      packaging: 'Tyvek / Non-woven / Paper',
+      compliance: ['DIN 55473', 'MIL-D-3464E', 'REACH compliant', 'RoHS compliant'],
+      shelfLife: '2 years (sealed condition)',
     },
-    {
-      slug: '6g-clay',
-      name: '6g Clay Desiccant',
-      gram: '6g',
-      images: ['/cl6g.png'],
-    },
-    {
-      slug: '9g-clay',
-      name: '9g Clay Desiccant',
-      gram: '9g',
-      images: ['/cl9g.png'],
-    },
-    {
-      slug: '17g-clay',
-      name: '17g Clay Desiccant',
-      gram: '17g',
-      images: ['/cl17g.png'],
-    },
-    {
-      slug: '33g-clay',
-      name: '33g Clay Desiccant',
-      gram: '33g',
-      images: ['/cl33g.png'],
-    },
-    {
-      slug: '66g-clay',
-      name: '66g Clay Desiccant',
-      gram: '66g',
-      images: ['/cl66g.png'],
-    }
-  ]
-},
+
+    /* PRODUCT VARIANTS */
+    products: [
+      {
+        slug: '2g-clay',
+        name: '2g Clay Desiccant',
+        gram: 'cl2g',
+        images: ['/cl2g.png'],
+      },
+      {
+        slug: '6g-clay',
+        name: '6g Clay Desiccant',
+        gram: '6g',
+        images: ['/cl6g.png'],
+      },
+      {
+        slug: '9g-clay',
+        name: '9g Clay Desiccant',
+        gram: '9g',
+        images: ['/cl9g.png'],
+      },
+      {
+        slug: '17g-clay',
+        name: '17g Clay Desiccant',
+        gram: '17g',
+        images: ['/cl17g.png'],
+      },
+      {
+        slug: '33g-clay',
+        name: '33g Clay Desiccant',
+        gram: '33g',
+        images: ['/cl33g.png'],
+      },
+      {
+        slug: '66g-clay',
+        name: '66g Clay Desiccant',
+        gram: '66g',
+        images: ['/cl66g.png'],
+      },
+    ],
+  },
   /* ---------------- SILICA GEL ROUND BEADS ---------------- */
   {
     slug: 'silica-gel-round-beads',
     name: 'Silica Gel Round Beads Desiccants',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/SG.png',
-      '/SG.png',
-      '/SG.png'
-    ],
+    images: ['/SG.png', '/SG.png', '/SG.png'],
 
     description1:
       'VTC® Silica Gel Round Beads Desiccants are manufactured from high-purity amorphous silica and are designed to provide superior moisture protection in sealed packaging environments.',
@@ -161,7 +155,7 @@ export const DESCRIPTIVE_DATA = [
       'High moisture adsorption capacity',
       'Uniform spherical bead structure',
       'Chemically inert and non-toxic',
-      'Excellent thermal and chemical stability'
+      'Excellent thermal and chemical stability',
     ],
 
     applications: [
@@ -169,7 +163,7 @@ export const DESCRIPTIVE_DATA = [
       'Pharmaceuticals',
       'Food packaging',
       'Optical instruments',
-      'Industrial storage'
+      'Industrial storage',
     ],
 
     products: [
@@ -177,27 +171,21 @@ export const DESCRIPTIVE_DATA = [
         slug: '2g-silica-round',
         name: '2g Silica Gel Round Beads',
         gram: '2g SG',
-        images: [
-          '/SG.png'
-        ]
+        images: ['/SG.png'],
       },
       {
         slug: '5g-silica-round',
         name: '5g Silica Gel Round Beads',
         gram: '5g SG',
-        images: [
-          '/SG.png'
-        ]
+        images: ['/SG.png'],
       },
       {
         slug: '10g-silica-round',
         name: '10g Silica Gel Round Beads',
         gram: '10g SG',
-        images: [
-          '/SG.png'
-        ]
-      }
-    ]
+        images: ['/SG.png'],
+      },
+    ],
   },
   /* ---------------- SILICA GEL GRANULES DESICCANTS ---------------- */
   {
@@ -205,11 +193,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Silica Gel Granules Desiccants',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/sgg.png',
-      '/sgg.png',
-      '/sgg.png'
-    ],
+    images: ['/sgg.png', '/sgg.png', '/sgg.png'],
 
     description1:
       'VTC® Silica Gel Granules Desiccants are produced from high-purity amorphous silica and engineered to deliver efficient moisture control across a wide range of packaging and storage environments.',
@@ -223,7 +207,7 @@ export const DESCRIPTIVE_DATA = [
       'Excellent thermal and chemical stability',
       'Free-flowing granular structure',
       'Non-toxic and chemically inert',
-      'Consistent performance in sealed packaging'
+      'Consistent performance in sealed packaging',
     ],
 
     /* CATEGORY APPLICATIONS */
@@ -232,7 +216,7 @@ export const DESCRIPTIVE_DATA = [
       'Pharmaceutical packaging',
       'Food packaging',
       'Industrial storage',
-      'Machinery and spare parts'
+      'Machinery and spare parts',
     ],
 
     products: [
@@ -240,33 +224,21 @@ export const DESCRIPTIVE_DATA = [
         slug: '2g-silica-granules',
         name: '2g Silica Gel Granules',
         gram: '2g SGG',
-        images: [
-          '/sgg.png',
-          '/sgg.png',
-          '/sgg.png'
-        ]
+        images: ['/sgg.png', '/sgg.png', '/sgg.png'],
       },
       {
         slug: '5g-silica-granules',
         name: '5g Silica Gel Granules',
         gram: '5g SGG',
-        images: [
-          '/sgg.png',
-          '/sgg.png',
-          '/sgg.png'
-        ]
+        images: ['/sgg.png', '/sgg.png', '/sgg.png'],
       },
       {
         slug: '10g-silica-granules',
         name: '10g Silica Gel Granules',
         gram: '10g SGG',
-        images: [
-          '/sgg.png',
-          '/sgg.png',
-          '/sgg.png'
-        ]
-      }
-    ]
+        images: ['/sgg.png', '/sgg.png', '/sgg.png'],
+      },
+    ],
   },
   /* ---------------- MOLECULAR SIEVE DESICCANTS ---------------- */
   {
@@ -274,11 +246,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Molecular Sieve Desiccants',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/ms1.png',
-      '/ms2.png',
-      '/ms2g.png'
-    ],
+    images: ['/ms1.png', '/ms2.png', '/ms2g.png'],
 
     description1:
       'VTC® Molecular Sieve Desiccants are premium synthetic aluminosilicate materials engineered for highly selective moisture adsorption, even at extremely low humidity levels.',
@@ -292,7 +260,7 @@ export const DESCRIPTIVE_DATA = [
       'Effective at very low relative humidity levels',
       'Uniform pore size structure',
       'Excellent thermal and chemical stability',
-      'Long service life'
+      'Long service life',
     ],
 
     /* CATEGORY APPLICATIONS */
@@ -301,7 +269,7 @@ export const DESCRIPTIVE_DATA = [
       'Medical devices',
       'Electronics',
       'Optical instruments',
-      'Industrial and diagnostic packaging'
+      'Industrial and diagnostic packaging',
     ],
 
     products: [
@@ -309,33 +277,21 @@ export const DESCRIPTIVE_DATA = [
         slug: '2g-molecular-sieve',
         name: '2g Molecular Sieve Desiccant',
         gram: '2g MS',
-        images: [
-          '/ms2g.png',
-          '/ms2g.png',
-          '/ms2g.png'
-        ]
+        images: ['/ms2g.png', '/ms2g.png', '/ms2g.png'],
       },
       {
         slug: '6g-molecular-sieve',
         name: '6g Molecular Sieve Desiccant',
         gram: '6g MS',
-        images: [
-          '/ms6g.png',
-          '/ms6g.png',
-          '/ms6g.png'
-        ]
+        images: ['/ms6g.png', '/ms6g.png', '/ms6g.png'],
       },
       {
         slug: '10g-molecular-sieve',
         name: '10g Molecular Sieve Desiccant',
         gram: '10g MS',
-        images: [
-          '/ms10g.png',
-          '/ms10g.png',
-          '/ms10g.png'
-        ]
-      }
-    ]
+        images: ['/ms10g.png', '/ms10g.png', '/ms10g.png'],
+      },
+    ],
   },
   /* ---------------- INDICATING & SPECIALTY DESICCANTS ---------------- */
   {
@@ -343,11 +299,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Indicating & Specialty Desiccants',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/is.png',
-      '/is.png',
-      '/is.png'
-    ],
+    images: ['/is.png', '/is.png', '/is.png'],
 
     description1:
       'Indicating & specialty desiccants are advanced moisture control solutions designed to absorb moisture while simultaneously providing a clear visual indication of humidity levels inside sealed packaging.',
@@ -361,7 +313,7 @@ export const DESCRIPTIVE_DATA = [
       'Reliable moisture adsorption',
       'Easy monitoring of saturation level',
       'Non-toxic and safe handling',
-      'Available in multiple sizes'
+      'Available in multiple sizes',
     ],
 
     /* CATEGORY APPLICATIONS */
@@ -370,7 +322,7 @@ export const DESCRIPTIVE_DATA = [
       'Pharmaceutical packaging',
       'Medical devices',
       'Optical instruments',
-      'Sensitive industrial components'
+      'Sensitive industrial components',
     ],
 
     products: [
@@ -378,13 +330,9 @@ export const DESCRIPTIVE_DATA = [
         slug: '2g-indicating-desiccant',
         name: '2g Indicating Desiccant',
         gram: '2g IS',
-        images: [
-          '/is.png',
-          '/is.png',
-          '/is.png'
-        ]
-      }
-    ]
+        images: ['/is.png', '/is.png', '/is.png'],
+      },
+    ],
   },
   /* ---------------- FOOD GRADE DESICCANTS ---------------- */
   {
@@ -392,11 +340,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Food Grade Desiccants',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/fg1g.png',
-      '/fg2g.png',
-      '/fg5g.png'
-    ],
+    images: ['/fg1g.png', '/fg2g.png', '/fg5g.png'],
 
     description1:
       'Food Grade Desiccants are specially designed moisture control solutions developed for direct and indirect contact with food products, helping preserve quality and freshness.',
@@ -410,7 +354,7 @@ export const DESCRIPTIVE_DATA = [
       'Complies with food safety standards',
       'Effective moisture control',
       'Odorless and chemically inert',
-      'Suitable for direct and indirect food contact'
+      'Suitable for direct and indirect food contact',
     ],
 
     /* CATEGORY APPLICATIONS */
@@ -419,7 +363,7 @@ export const DESCRIPTIVE_DATA = [
       'Confectionery',
       'Nutraceuticals',
       'Spices and seasonings',
-      'Agricultural products'
+      'Agricultural products',
     ],
 
     products: [
@@ -427,33 +371,21 @@ export const DESCRIPTIVE_DATA = [
         slug: '1g-food-grade-desiccant',
         name: '1g Food Grade Desiccant',
         gram: '1g FG',
-        images: [
-          '/fg1g.png',
-          '/fg1g.png',
-          '/fg1g.png'
-        ]
+        images: ['/fg1g.png', '/fg1g.png', '/fg1g.png'],
       },
       {
         slug: '2g-food-grade-desiccant',
         name: '2g Food Grade Desiccant',
         gram: '2g FG',
-        images: [
-          '/fg2g.png',
-          '/fg2g.png',
-          '/fg2g.png'
-        ]
+        images: ['/fg2g.png', '/fg2g.png', '/fg2g.png'],
       },
       {
         slug: '0.5g-food-grade-desiccant',
         name: '0.5g Food Grade Desiccant',
         gram: '0.5g FG',
-        images: [
-          '/fg05g.png',
-          '/fg05g.png',
-          '/fg05g.png'
-        ]
-      }
-    ]
+        images: ['/fg05g.png', '/fg05g.png', '/fg05g.png'],
+      },
+    ],
   },
   /* ---------------- ACTIVATED CARBON ---------------- */
   {
@@ -461,11 +393,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Activated Carbon',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/ac1.png',
-      '/ac2.png',
-      '/ac2g.png'
-    ],
+    images: ['/ac1.png', '/ac2.png', '/ac2g.png'],
 
     description1:
       'Activated Carbon is a highly porous adsorbent material designed for effective removal of odors, gases, and volatile organic compounds (VOCs) from enclosed environments.',
@@ -479,7 +407,7 @@ export const DESCRIPTIVE_DATA = [
       'Effective odor and gas removal',
       'Low dust generation',
       'Chemically stable and non-toxic',
-      'Suitable for packaging and air purification'
+      'Suitable for packaging and air purification',
     ],
 
     /* CATEGORY APPLICATIONS */
@@ -488,7 +416,7 @@ export const DESCRIPTIVE_DATA = [
       'Electronics packaging',
       'Odor control',
       'Industrial gas filtration',
-      'Moisture-sensitive packaging'
+      'Moisture-sensitive packaging',
     ],
 
     products: [
@@ -496,33 +424,21 @@ export const DESCRIPTIVE_DATA = [
         slug: '2g-activated-carbon',
         name: '2g Activated Carbon',
         gram: '2g AC',
-        images: [
-          '/ac2g.png',
-          '/ac2g.png',
-          '/ac2g.png'
-        ]
+        images: ['/ac2g.png', '/ac2g.png', '/ac2g.png'],
       },
       {
         slug: '6g-activated-carbon',
         name: '6g Activated Carbon',
         gram: '6g AC',
-        images: [
-          '/ac6g.png',
-          '/ac6g.png',
-          '/ac6g.png'
-        ]
+        images: ['/ac6g.png', '/ac6g.png', '/ac6g.png'],
       },
       {
         slug: '10g-activated-carbon',
         name: '10g Activated Carbon',
         gram: '10g AC',
-        images: [
-          '/ac10g.png',
-          '/ac10g.png',
-          '/ac10g.png'
-        ]
-      }
-    ]
+        images: ['/ac10g.png', '/ac10g.png', '/ac10g.png'],
+      },
+    ],
   },
   /* ---------------- OXYGEN ABSORBERS ---------------- */
   {
@@ -530,11 +446,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Oxygen Absorbers',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/oa.png',
-      '/50cc.png',
-      '/100cc.png'
-    ],
+    images: ['/oa.png', '/50cc.png', '/100cc.png'],
 
     description1:
       'Oxygen Absorbers are designed to reduce oxygen levels inside sealed packaging, preventing oxidation, microbial growth, and spoilage of sensitive products.',
@@ -548,7 +460,7 @@ export const DESCRIPTIVE_DATA = [
       'Helps extend product shelf life',
       'Prevents oxidation and mold growth',
       'Food-safe and non-toxic',
-      'Works without preservatives'
+      'Works without preservatives',
     ],
 
     /* CATEGORY APPLICATIONS */
@@ -557,7 +469,7 @@ export const DESCRIPTIVE_DATA = [
       'Pharmaceutical products',
       'Nutraceuticals',
       'Medical supplies',
-      'Moisture and oxygen-sensitive goods'
+      'Moisture and oxygen-sensitive goods',
     ],
 
     products: [
@@ -565,36 +477,24 @@ export const DESCRIPTIVE_DATA = [
         slug: '50cc-oxygen-absorber',
         name: '50cc Oxygen Absorber',
         gram: '50cc OA',
-        images: [
-          '/50cc.png',
-          '/50cc.png',
-          '/50cc.png'
-        ]
+        images: ['/50cc.png', '/50cc.png', '/50cc.png'],
       },
       {
         slug: '100cc-oxygen-absorber',
         name: '100cc Oxygen Absorber',
         gram: '100cc OA',
-        images: [
-          '/100cc.png',
-          '/100cc.png',
-          '/100cc.png'
-        ]
-      }
-    ]
+        images: ['/100cc.png', '/100cc.png', '/100cc.png'],
+      },
+    ],
   },
-  //======================= this is data of DS, DP, SQ/TP/DP ================================  
+  //======================= this is data of DS, DP, SQ/TP/DP ================================
   // ===================== DS ==============
   {
     slug: 'standard',
     name: 'Standard',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/vtc5g.png',
-      '/vtc2g.png',
-      '/vtc5g.png'
-    ],
+    images: ['/vtc5g.png', '/vtc2g.png', '/vtc5g.png'],
 
     description1:
       'VTC desiccants are manufactured using high-purity calcium chloride combined with a specially developed natural organic gelling agent. Calcium chloride is a highly hygroscopic material capable of attracting and binding large amounts of moisture from the surrounding air. Under controlled conditions of 95% relative humidity at 35°C over a period of 30 days, VTC desiccants demonstrate an exceptional moisture absorption capacity of over 300% of their net dry weight, making them highly effective in extreme humidity environments such as sea freight and long-distance transportation.',
@@ -609,7 +509,7 @@ export const DESCRIPTIVE_DATA = [
       'Effective prevention of container rain and condensation',
       'Stable gel formation with leak-proof performance',
       'Durable outer packaging for long transit cycles',
-      'Easy installation using hooks or hanging systems'
+      'Easy installation using hooks or hanging systems',
     ],
     applications: [
       'Export and import cargo containers',
@@ -617,40 +517,28 @@ export const DESCRIPTIVE_DATA = [
       'Machinery and spare parts',
       'Textiles, garments, and leather products',
       'Metal components and automotive parts',
-      'General industrial cargo'
+      'General industrial cargo',
     ],
     products: [
       {
         slug: 'vtc-250g',
         name: 'VTC 250g',
         gram: 'VTC 250g',
-        images: [
-          '/vtc250g.png',
-          '/vtc250g.png',
-          '/vtc250g.png'
-        ]
+        images: ['/vtc250g.png', '/vtc250g.png', '/vtc250g.png'],
       },
       {
         slug: 'vtc-250g-sticker',
         name: 'VTC 250g sticker',
         gram: 'DS 250g Sticker',
-        images: [
-          '/vtc250g.png',
-          '/vtc250g.png',
-          '/vtc250g.png'
-        ]
+        images: ['/vtc250g.png', '/vtc250g.png', '/vtc250g.png'],
       },
       {
         slug: 'vtc-500g',
         name: 'VTC 500g',
         gram: 'DS 500g',
-        images: [
-          '/vtc500g.png',
-          '/vtc500g.png',
-          '/vtc500g.png'
-        ]
+        images: ['/vtc500g.png', '/vtc500g.png', '/vtc500g.png'],
       },
-    ]
+    ],
   },
   // ===================== DP ==============
   {
@@ -658,11 +546,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'Heavy',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/vtc1000g.png',
-      '/vtc1000g.png',
-      '/vtc1000g.png'
-    ],
+    images: ['/vtc1000g.png', '/vtc1000g.png', '/vtc1000g.png'],
 
     description1:
       'DP Series container desiccants are heavy-duty moisture control solutions designed for extreme humidity conditions and long-duration sea shipments. Engineered using high-absorption calcium chloride–based technology, DP desiccants provide superior protection against container rain, cargo sweat, and condensation in high-risk logistics environments.',
@@ -677,7 +561,7 @@ export const DESCRIPTIVE_DATA = [
       'Prevents container rain and cargo sweat effectively',
       'Heavy-duty, leak-proof multi-layer packaging',
       'Stable gel formation with zero leakage risk',
-      'Suitable for high-weight and high-value cargo'
+      'Suitable for high-weight and high-value cargo',
     ],
     applications: [
       'Ocean freight containers',
@@ -685,23 +569,19 @@ export const DESCRIPTIVE_DATA = [
       'Machinery and heavy equipment',
       'Automotive components',
       'Export cargo on long transit routes',
-      'High-humidity and tropical shipping lanes'
+      'High-humidity and tropical shipping lanes',
     ],
     products: [
       {
         slug: 'vtc-1000g',
         name: 'VTC 1000g',
         gram: 'VTC 1000g',
-        images: [
-          '/vtc1000g.png',
-          '/vtc1000g.png',
-          '/vtc1000g.png'
-        ]
-      }
-    ]
+        images: ['/vtc1000g.png', '/vtc1000g.png', '/vtc1000g.png'],
+      },
+    ],
   },
   // ===================== DP ==============
-  
+
   // {
   //   slug: 'heavy',
   //   name: 'Heavy',
@@ -720,11 +600,7 @@ export const DESCRIPTIVE_DATA = [
     name: 'special',
 
     /* CATEGORY IMAGES */
-    images: [
-      '/VTC1000G.png',
-      '/banner2.png',
-      '/banner3.png'
-    ],
+    images: ['/VTC1000G.png', '/banner2.png', '/banner3.png'],
 
     description1:
       'Special Series container desiccants are specially engineered for applications where space optimization, flexible placement, and targeted moisture control are required inside shipping containers. These desiccants are designed using high-performance calcium chloride–based absorption technology, delivering effective moisture protection even in confined or difficult-to-access areas.',
@@ -739,7 +615,7 @@ export const DESCRIPTIVE_DATA = [
       'Effective in narrow gaps and limited spaces',
       'Prevents condensation and container rain',
       'Leak-proof packaging with stable gel formation',
-      'Suitable for long-duration sea and land transport'
+      'Suitable for long-duration sea and land transport',
     ],
     applications: [
       'Garments and textile shipments',
@@ -747,32 +623,156 @@ export const DESCRIPTIVE_DATA = [
       'Palletized and boxed cargo',
       'Containers with limited wall space',
       'Export cargo requiring targeted moisture control',
-      'High-humidity shipping environments'
+      'High-humidity shipping environments',
     ],
     products: [
       {
         slug: 'vtc-1000g',
         name: 'VTC 1000G',
         gram: 'VTC 1000G',
-        images: [
-          '/vtc1000g.png',
-          '/vtc1000g.png',
-          '/vtc1000g.png'
-        ]
+        images: ['/vtc1000g.png', '/vtc1000g.png', '/vtc1000g.png'],
       },
       {
         slug: 'vtc-1200g',
         name: 'VTC 1200G',
         gram: 'VTC 1200G',
-        images: [
-          '/vtc1200g.png',
-          '/vtc1200g.png',
-          '/vtc1200g.png'
-        ]
+        images: ['/vtc1200g.png', '/vtc1200g.png', '/vtc1200g.png'],
       },
-    ]
+    ],
   },
+  // ================== Calcium Chloride==================
+  {
+    slug: 'calcium-chloride',
+    name: 'Calcium Chloride Desiccant',
+
+    /* CATEGORY IMAGES */
+    images: ['/calcuim1.png', '/calcuim2.png', '/calcuim3.png'],
+
+    /* OVERVIEW */
+    description1:
+      'Calcium Chloride Desiccant is a high-performance moisture control solution designed for aggressive humidity absorption. It is formulated using premium grade calcium chloride, which has an exceptional ability to absorb and lock moisture from the surrounding environment.',
+
+    description2:
+      'This desiccant is widely used in demanding applications where high humidity protection is required for long-term storage and transportation. It is commonly used in shipping containers, electronics, pharmaceuticals, and industrial packaging to prevent corrosion, mold, and product degradation.',
+
+    /* KEY FEATURES */
+    features: [
+      'Extremely high moisture absorption capacity',
+      'Deliquescent nature (absorbs and turns into gel)',
+      'Long-lasting humidity protection',
+      'Suitable for high-humidity environments',
+      'Available in leak-proof sachet / canister form',
+    ],
+
+    /* APPLICATIONS */
+    applications: [
+      'Shipping containers',
+      'Sea freight protection',
+      'Electronics packaging',
+      'Pharmaceuticals',
+      'Automotive parts storage',
+      'Industrial equipment',
+      'Export packaging',
+    ],
+
+    /* TECHNICAL SPECIFICATIONS */
+    specifications: {
+      material: 'Calcium Chloride (CaCl2)',
+      adsorptionCapacity: 'Up to 200–300% of its weight (depending on RH)',
+      packaging: 'Tyvek / Non-woven / Paper / Canister form',
+      compliance: ['DIN 55473', 'MIL-D-3464E', 'REACH compliant', 'RoHS compliant'],
+      shelfLife: '2 years (sealed condition)',
+    },
+
+    /* PRODUCT VARIANTS */
+    products: [
+      {
+        slug: '2g-cacl2',
+        name: '2g Calcium Chloride Desiccant',
+        gram: '2g',
+        images: ['/calcuim2.png'],
+      },
+      {
+        slug: '5g-cacl2',
+        name: '5g Calcium Chloride Desiccant',
+        gram: '5g',
+        images: ['/calcuim1.png'],
+      },
+      {
+        slug: '10g-cacl2',
+        name: '10g Calcium Chloride Desiccant',
+        gram: '10g',
+        images: ['/calcuim3 .png'],
+      },
+    ],
+  },
+  {
+  slug: 'magnesium-chloride',
+  name: 'Magnesium Chloride Desiccant',
+
+  /* CATEGORY IMAGES */
+  images: ['/magnesium10g.png', '/magnesium10g.png', '/magnesium10g.png'],
+
+  /* OVERVIEW */
+  description1:
+    'Magnesium Chloride Desiccant is a moisture control agent designed for moderate humidity absorption applications. It utilizes magnesium chloride (MgCl₂), a hygroscopic compound capable of attracting and retaining moisture from the surrounding air.',
+
+  description2:
+    'This desiccant is suitable for controlled environments where steady humidity regulation is required. It is commonly used in packaging, storage, and industrial applications to help reduce moisture-related damage such as corrosion, mildew, and material degradation.',
+
+  /* KEY FEATURES */
+  features: [
+    'Moderate to high moisture absorption capacity',
+    'Hygroscopic nature for steady humidity control',
+    'Stable performance in controlled environments',
+    'Suitable for packaging and storage applications',
+    'Non-toxic and industrial-grade safe usage'
+  ],
+
+  /* APPLICATIONS */
+  applications: [
+    'Industrial packaging',
+    'Pharmaceutical storage',
+    'Food packaging (indirect use)',
+    'Electronics protection',
+    'Warehouse storage',
+    'Logistics and shipping'
+  ],
+
+  /* TECHNICAL SPECIFICATIONS */
+  specifications: {
+    material: 'Magnesium Chloride (MgCl₂)',
+    adsorptionCapacity: 'Up to 100–150% of its weight (depending on RH)',
+    packaging: 'Tyvek / Non-woven / Paper / Sachet form',
+    compliance: [
+      'DIN 55473',
+      'MIL-D-3464E',
+      'REACH compliant',
+      'RoHS compliant'
+    ],
+    shelfLife: '2 years (sealed condition)'
+  },
+
+  /* PRODUCT VARIANTS */
+  products: [
+    {
+      slug: '2g-mgcl2',
+      name: '2g Magnesium Chloride Desiccant',
+      gram: '2g',
+      images: ['/magnesium10g.png'],
+    },
+    {
+      slug: '5g-mgcl2',
+      name: '5g Magnesium Chloride Desiccant',
+      gram: '5g',
+      images: ['/magnesium10g.png'],
+    },
+    {
+      slug: '10g-mgcl2',
+      name: '10g Magnesium Chloride Desiccant',
+      gram: '10g',
+      images: ['/magnesium10g.png'],
+    },
+  ]
+}
 ];
-
-
-
