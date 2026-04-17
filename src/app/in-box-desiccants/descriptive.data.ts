@@ -711,7 +711,7 @@ export const DESCRIPTIVE_DATA = [
   name: 'Magnesium Chloride Desiccant',
 
   /* CATEGORY IMAGES */
-  images: ['/magnesium10g.png', '/magnesium10g.png', '/magnesium10g.png'],
+  images: ['/mcd1.png', '/mcd2.png', '/mcd3.png'],
 
   /* OVERVIEW */
   description1:
@@ -759,19 +759,19 @@ export const DESCRIPTIVE_DATA = [
       slug: '2g-mgcl2',
       name: '2g Magnesium Chloride Desiccant',
       gram: '2g',
-      images: ['/magnesium10g.png'],
+      images: ['/mcd2.png'],
     },
     {
       slug: '5g-mgcl2',
       name: '5g Magnesium Chloride Desiccant',
       gram: '5g',
-      images: ['/magnesium10g.png'],
+      images: ['/mcd1.png'],
     },
     {
       slug: '10g-mgcl2',
       name: '10g Magnesium Chloride Desiccant',
       gram: '10g',
-      images: ['/magnesium10g.png'],
+      images: ['/mcd3.png'],
     },
   ]
 }

@@ -251,23 +251,23 @@ export class InBoxDesiccantsCategories {
       title: 'Magnesium Chloride Desiccant',
       slug: 'magnesium-chloride',
       categorySlug: 'magnesium-chloride',
-      image: '/magnesium10g.png',
-      gram: '10g Magnesium Chloride'
+      image: '/mcd2.png',
+      gram: '2g Magnesium Chloride'
     },
-    // {
-    //   title: 'Magnesium Chloride Desiccant',
-    //   slug: 'magnesium-chloride',
-    //   categorySlug: 'magnesium-chloride',
-    //   image: '/calcuim1.png',
-    //   gram: '5G Calcuim Cloride'
-    // },
-    // {
-    //   title: 'Magnesium Chloride Desiccant',
-    //   slug: 'magnesium-chloride',
-    //   categorySlug: 'magnesium-chloride',
-    //   image: '/calcuim3.png',
-    //   gram: '10G Calcuim Cloride'
-    // }
+    {
+      title: 'Magnesium Chloride Desiccant',
+      slug: 'magnesium-chloride',
+      categorySlug: 'magnesium-chloride',
+      image: '/mcd1.png',
+      gram: '5G Magnesium Chloride'
+    },
+    {
+      title: 'Magnesium Chloride Desiccant',
+      slug: 'magnesium-chloride',
+      categorySlug: 'magnesium-chloride',
+      image: '/mcd3.png',
+      gram: '10G Magnesium Chloride'
+    }
   ];
 
   async ngOnInit(): Promise<void> {
